@@ -46,7 +46,7 @@ text-decoration: none;
     overflow: hidden;
     margin: 0 auto;
     text-align: center;
-    padding: 20vh 0 0 0;
+    padding: 15vh 0 0 0;
 }
 
 .cartOrg{
@@ -65,17 +65,33 @@ text-decoration: none;
 .cartTitle{
     color: darkgoldenrod;
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .cartParagraf{
     color: lightslategray;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .carousel-item img{
     width: 150px !important;
     border-radius: 50%;
+}
+
+.carslimg{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+.menuBtn{
+    background: none;
+    border: none;
+    color: white;
+    margin: 20px 5px 0 0;
+    font-size: 12px;
 }
 }
 
