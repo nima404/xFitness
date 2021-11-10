@@ -10,4 +10,5 @@ let timClick = document.querySelector("#timNameClick").addEventListener("click" 
     let HomeClick = document.querySelector("#homeClick").addEventListener("click" , function(){
         document.querySelector(".showHiddenClick").classList.replace("showHiddenClick" , "disShow");
         document.querySelector(".shHidTimdis").classList.replace( "shHidTimdis" ,"disShow");
+        document.getElementById("dissh").style.display = 'none';
         })
