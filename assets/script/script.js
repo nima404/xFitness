@@ -1,11 +1,10 @@
 
 
 function timNameClick() {
-    document.querySelector("#shHid").classList.replace("shHid", "showHiddenClick");
-    document.querySelector(".shHid").classList.replace("shHidTim", "shHidTimdis");
+    document.getElementById("shHidTim").style.display = "block";
+    document.getElementById("shHid").style.display = "none";
 }
 function homeClick() {
-    document.querySelector(".showHiddenClick").classList.replace("showHiddenClick", "disShow");
-    document.querySelector(".shHidTimdis").classList.replace("shHidTimdis", "disShow");
-    document.getElementById("dissh").style.display = 'none';
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("shHid").style.display = "block";
 }
