@@ -2,6 +2,7 @@
 font-family: Vazir-FD;
 list-style: none;
 text-decoration: none;
+user-select: none;
 }
 
 @font-face {
@@ -102,6 +103,33 @@ text-decoration: none;
     display: block;
 }
 
+.timCart{
+    box-shadow: 0 0 4px 0 rgb(226, 226, 226);
+    padding: 15px;
+    border-radius: 5px;
+}
+.timCart img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.timCart h5{
+    display: inline-block;
+    font-weight: bold;
+}
+.Exercisehistory{
+    font-size: 16px;
+    font-weight: bold;
+}
+.Exercisehistory span{
+    color: darkslategray;
+    font-size: 13px;
+}
+
+.disShow{
+    display: block;
+}
 }
 
 @media only screen and (min-width: 600px) and (max-width:767px){
