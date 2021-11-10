@@ -1,8 +1,8 @@
 
 
 function timNameClick() {
-    document.querySelector(".shHid").classList.replace("shHid", "showHiddenClick");
-    document.querySelector(".shHidTim").classList.replace("shHidTim", "shHidTimdis");
+    document.querySelector("#shHid").classList.replace("shHid", "showHiddenClick");
+    document.querySelector(".shHid").classList.replace("shHidTim", "shHidTimdis");
 }
 function homeClick() {
     document.querySelector(".showHiddenClick").classList.replace("showHiddenClick", "disShow");
