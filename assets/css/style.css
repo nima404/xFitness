@@ -99,7 +99,7 @@ user-select: none;
     display: block;
 }
 #shHidTim{
-    display: block;
+    display: none;
 }
 
 .timCart{
