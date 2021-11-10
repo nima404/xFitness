@@ -8,6 +8,6 @@ let timClick = document.querySelector("#timNameClick").addEventListener("click" 
     
 
     let HomeClick = document.querySelector("#homeClick").addEventListener("click" , function(){
-        document.querySelector(".shHid").classList.replace("showHiddenClick" , "disShow");
-        document.querySelector(".shHidTim").classList.replace( "shHidTimdis" ,"disShow");
+        document.querySelector(".showHiddenClick").classList.replace("showHiddenClick" , "disShow");
+        document.querySelector(".shHidTimdis").classList.replace( "shHidTimdis" ,"disShow");
         })
