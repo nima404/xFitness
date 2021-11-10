@@ -94,7 +94,7 @@ text-decoration: none;
     font-size: 12px;
 }
 
-.showHiddenClick , #shHidTim{
+.showHiddenClick{
     display: none;
 }
 .shHidTim{
