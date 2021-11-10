@@ -94,11 +94,12 @@ text-decoration: none;
     font-size: 12px;
 }
 
-.showHiddenClick{
+.showHiddenClick , #shHidTim{
     display: none;
 }
+
 .shHidTim{
-    display: block;
+    display: block !important;
 }
 
 }
