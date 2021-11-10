@@ -32,9 +32,9 @@
             <div class="col-12">
                 <button type="submit" class="menuBtn" id="homeClick" onclick="homeClick()">خانه</button>
                 /
-                <button type="submit" class="menuBtn" id="videoClick">ویدیو آموزشی</button>
-                /
                 <button type="submit" class="menuBtn" id="timNameClick" onclick="timNameClick()">اسامی تیم</button>
+                /
+                <button type="submit" class="menuBtn" id="videoClick">ویدیو آموزشی</button>
             </div>
         </div>
         <div class="row">
@@ -73,7 +73,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-12">
-                    <h4 class="titleVideo">اخرین ویدیو آموزشی</h4>
+                    <h4 class="titleVideo">معرفی تیم</h4>
                 </div>
             </div>
             <div class="row mt-2">
@@ -154,7 +154,7 @@
                     <div class="timCart">
                         <div class="row">
                             <div class="col-8">
-                                <h5>3-نیما تاجیک</h5>
+                                <h5>4-نیما تاجیک</h5>
                                 <p class="Exercisehistory">سابقه تمرین: <span> 1.5 سال متوالی </span></p>
                             </div>
                             <div class="col-4">
@@ -163,10 +163,63 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 mt-2">
+                    <div class="timCart">
+                        <div class="row">
+                            <div class="col-8">
+                                <h5>5-علی بیگلری</h5>
+                                <p class="Exercisehistory">سابقه تمرین: <span> 1 سال متوالی </span></p>
+                            </div>
+                            <div class="col-4">
+                                <img src="../xFitness/assets/img/aliBiglri.jpeg" alt="tim Cart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <div id="learnDis">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <div id="accordion">
+                        <div class="card">
+                          <div class="card-header">
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                              آموزش شنا سوئدی از مبتدی تا حرفه ای
+                            </a>
+                          </div>
+                          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                <p>قسمت اول :</p>
+                                <video width="350"  height="150px" controls>
+                                    <source src="../xFitness/assets/video/learnShena1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header">
+                            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                            تمرینات سرشانه
+                          </a>
+                          </div>
+                          <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                <p>قسمت اول :</p>
+                                <video width="350"  height="150px" controls>
+                                    <source src="../xFitness/assets/video/learnsarShane1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assets/script/script.js"></script>
 </body>
 

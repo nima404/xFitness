@@ -101,7 +101,9 @@ user-select: none;
 #shHidTim{
     display: none;
 }
-
+#learnDis{
+    display: none;
+}
 .timCart{
     box-shadow: 0 0 4px 0 rgb(226, 226, 226);
     padding: 15px;
