@@ -144,7 +144,7 @@ footer{
     background-color: rgb(218, 218, 218);
 }
 .desginBy{
-
+    font-size: 15px;
     margin: 0;
     padding: 5px;
     text-align: center;
@@ -152,7 +152,8 @@ footer{
 }
 .callWithLi{
     font-size: 14px;
-    margin: 10px;
+    margin: 3px;
+    display: inline-block;
 }
 .callWithUl a{
     text-decoration: none;
@@ -164,6 +165,18 @@ footer{
 }
 .footerTitle{
     font-weight: bold;
+}
+video{
+    border-radius: 6px;
+}
+.fa-instagram{
+    color: purple;
+}
+.fa-telegram{
+    color: blue;
+}
+.fa-phone{
+    color: white;
 }
 }
 
