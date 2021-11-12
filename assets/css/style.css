@@ -137,6 +137,34 @@ user-select: none;
     font-weight: bold;
     text-align: right;
 }
+footer{
+    background-color: rgb(226, 226, 226);
+}
+.backDesignBy{
+    background-color: rgb(218, 218, 218);
+}
+.desginBy{
+
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    color: rgb(148, 148, 148);
+}
+.callWithLi{
+    font-size: 14px;
+    margin: 10px;
+}
+.callWithUl a{
+    text-decoration: none;
+}
+.hoghooghir{
+    font-size: 10px;
+    color: gray;
+    margin: 0;
+}
+.footerTitle{
+    font-weight: bold;
+}
 }
 
 @media only screen and (min-width: 600px) and (max-width:767px){
