@@ -180,7 +180,7 @@ video{
 }
 }
 
-@media only screen and (min-width: 600px) and (max-width:767px){
+@media only screen and (min-width: 600px) and (max-width:768px){
 
     .navbarOrg{
         background-image: url(../img/BackEdit1-min.jpg);
@@ -344,7 +344,7 @@ video{
 }
 }
 
-@media only screen and (min-width: 768px) and (max-width:991px){
+@media only screen and (min-width: 769px) and (max-width:991px){
 
 }
 
