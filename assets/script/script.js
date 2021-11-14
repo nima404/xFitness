@@ -8,7 +8,6 @@ function homeClick() {
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "block";
 }
-
 let LearnClick = document.querySelector("#videoClick").addEventListener("click" , function(){
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "block";
