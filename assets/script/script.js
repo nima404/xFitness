@@ -15,7 +15,7 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click" 
 })
 
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['javad', 'bsshahs', 'lkadnf'], 'text', ['tomato', 'orange', 'lightblue']);
+consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'orange', 'darkgoldenrod']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
