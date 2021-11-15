@@ -187,6 +187,12 @@ video{
       margin-top: 14vh;
       font-size: 28px;
   }
+  .card-header{
+      background-color: white !important;
+  }
+  .btn{
+      font-size: 14px !important;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width:768px){
