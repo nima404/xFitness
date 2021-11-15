@@ -193,6 +193,9 @@ video{
   .btn{
       font-size: 14px !important;
   }
+  .btn:focus{
+      outline: none !important;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width:768px){
