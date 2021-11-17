@@ -197,6 +197,45 @@ video{
       outline: none !important;
       box-shadow: none !important;
   }
+
+  .dropbtn {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 12px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a {
+      font-size: 13px;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a button{
+      background: none;
+      border: none;
+  }
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
 }
 
 @media only screen and (min-width: 600px) and (max-width:768px){
