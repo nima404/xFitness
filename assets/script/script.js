@@ -2,14 +2,17 @@ function timNameClick() {
     document.getElementById("shHidTim").style.display = "block";
     document.getElementById("shHid").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
+    document.getElementById("service").style.display = "none";
 }
 function homeClick() {
     document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("service").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "block";
 }
 let LearnClick = document.querySelector("#videoClick").addEventListener("click" , function(){
     document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("service").style.display = "none";
     document.getElementById("learnDis").style.display = "block";
     document.getElementById("shHid").style.display = "none";
 })
@@ -83,3 +86,39 @@ function myFunction() {
       }
     }
   }
+
+  let srviceCLick = document.getElementById("ServicesClick").addEventListener("click" , function(){
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("service").style.display = "block";
+  })
+
+  let fNum = 1;
+let totalPrice = 195000;
+
+let plus = document.querySelector("#plus").addEventListener("click", function () {
+    if (fNum == 10) {
+        fNum = 10;
+        totalPrice = 1950000;
+    } else {
+        ++fNum;
+        totalPrice = totalPrice + 195000;
+    }
+
+    document.querySelector("#number").innerHTML = fNum;
+    document.querySelector("#price").innerHTML = 'قیمت کلی : ' + totalPrice;
+})
+
+let min = document.querySelector("#min").addEventListener("click", function () {
+    if (fNum == 1) {
+        fNum = 1;
+        totalPrice = 195000;
+    } else {
+        --fNum;
+        totalPrice = totalPrice - 195000;
+    }
+
+    document.querySelector("#number").innerHTML = fNum;
+    document.querySelector("#price").innerHTML = 'قیمت کلی : ' + totalPrice;
+})
