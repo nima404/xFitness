@@ -273,7 +273,7 @@ video{
     color: darkgoldenrod;
     font-family: 'Font Awesome 5 Brands';
   }
-  #price{
+  #price , #priceGainer{
       display: block;
       margin-top: 5px;
       font-size: 14px;

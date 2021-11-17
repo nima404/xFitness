@@ -94,31 +94,61 @@ function myFunction() {
     document.getElementById("service").style.display = "block";
   })
 
-  let fNum = 1;
-let totalPrice = 195000;
 
+
+
+
+let vayDobisNumber = 1;
+let vayDobisPrice = 195000;
 let plus = document.querySelector("#plus").addEventListener("click", function () {
-    if (fNum == 10) {
-        fNum = 10;
-        totalPrice = 1950000;
+    if (vayDobisNumber == 10) {
+        vayDobisNumber = 10;
+        vayDobisPrice = 1950000;
     } else {
-        ++fNum;
-        totalPrice = totalPrice + 195000;
+        ++vayDobisNumber;
+        vayDobisPrice = vayDobisPrice + 195000;
     }
 
-    document.querySelector("#number").innerHTML = fNum;
-    document.querySelector("#price").innerHTML = 'قیمت کلی : ' + totalPrice;
+    document.querySelector("#number").innerHTML = vayDobisNumber;
+    document.querySelector("#price").innerHTML = 'قیمت کلی : ' + vayDobisPrice;
+})
+let min = document.querySelector("#min").addEventListener("click", function () {
+    if (vayDobisNumber == 1) {
+        vayDobisNumber = 1;
+        vayDobisPrice = 195000;
+    } else {
+        --vayDobisNumber;
+        vayDobisPrice = vayDobisPrice - 195000;
+    }
+
+    document.querySelector("#number").innerHTML = vayDobisNumber;
+    document.querySelector("#price").innerHTML = 'قیمت کلی : ' + vayDobisPrice;
 })
 
-let min = document.querySelector("#min").addEventListener("click", function () {
-    if (fNum == 1) {
-        fNum = 1;
-        totalPrice = 195000;
+
+let GainerDobisNumber = 1;
+let GainerDobisPrice = 230000;
+let plusGainer = document.querySelector("#plusGainer").addEventListener("click", function () {
+    if (GainerDobisNumber == 10) {
+        GainerDobisNumber = 10;
+        GainerDobisPrice = 2300000;
     } else {
-        --fNum;
-        totalPrice = totalPrice - 195000;
+        ++GainerDobisNumber;
+        GainerDobisPrice = GainerDobisPrice + 230000;
     }
 
-    document.querySelector("#number").innerHTML = fNum;
-    document.querySelector("#price").innerHTML = 'قیمت کلی : ' + totalPrice;
+    document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
+    document.querySelector("#priceGainer").innerHTML = 'قیمت کلی : ' + GainerDobisPrice;
+})
+let minGainer = document.querySelector("#minGainer").addEventListener("click", function () {
+    if (GainerDobisNumber == 1) {
+        GainerDobisNumber = 1;
+        GainerDobisPrice = 230000;
+    } else {
+        --GainerDobisNumber;
+        GainerDobisPrice = GainerDobisPrice - 230000;
+    }
+
+    document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
+    document.querySelector("#priceGainer").innerHTML = 'قیمت کلی : ' + GainerDobisPrice;
 })
