@@ -219,6 +219,7 @@ video{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 5px;
+    margin-top: 5px;
   }
   
   .dropdown-content a {
@@ -232,6 +233,9 @@ video{
   .dropdown-content a button{
       background: none;
       border: none;
+      border-bottom: 1px solid darkgoldenrod;
+      padding: 5px 0px 6px 0;
+      width: 100px;
   }
   .dropdown a:hover {background-color: #ddd;}
   
