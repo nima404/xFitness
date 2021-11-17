@@ -32,10 +32,6 @@
             <div class="col-12 col-md-12">
                 <button type="submit" class="menuBtn" id="homeClick" onclick="homeClick()">خانه</button>
                 /
-                <button type="submit" class="menuBtn" id="timNameClick" onclick="timNameClick()">اسامی تیم</button>
-                /
-                <button type="submit" class="menuBtn" id="videoClick">ویدیو آموزشی</button>
-                /
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn"> خدمات <i class="fas fa-chevron-down"
                             style="font-size: 9px;"></i></button>
@@ -45,6 +41,10 @@
                         <a href="#about"><button type="submit">لباس ورزشی</button></a>
                     </div>
                 </div>
+                /
+                <button type="submit" class="menuBtn" id="videoClick">ویدیو آموزشی</button>
+                /
+                <button type="submit" class="menuBtn" id="timNameClick" onclick="timNameClick()">اسامی تیم</button>
             </div>
         </div>
         <div class="row">
@@ -278,16 +278,21 @@
             <div class="row mt-3">
                 <div class="col-12">
                     <div align=center>
-                    <form action="/action_page.php" method="get" class="formSerch">
-                        <input list="browsers" name="browser" id="browser" class="searchInput" placeholder="نام محصول را جست و جو کنید...">
-                        <datalist id="browsers">
-                          <option value="مکمل وی">
-                          <option value="مکمل گینر">
-                          <option value="آمینو">
-                          <option value="کراتین">
-                        </datalist>
-                        <button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+
+
+
+
+
+                    <form  class="formSerch">
+                        <input id="searchInput" class="searchInput" placeholder="نام محصول را جست و جو کنید...">
+                        <button type="button" class="searchBtn" onclick="searchBtn()"><i class="fas fa-search"></i></button>
                       </form>
+
+
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -317,7 +322,7 @@
                                         <div class="col-8">
                                             <button class="buyBtn" onclick="alert('این گزینه در حال ارتقا میباشد..!')">افزودن به سبد خرید</button>
                                         </div>
-                                        <div class="col-4" align=center><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +330,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 mt-3 mb-3">
+                <div class="col-12 mt-3 ">
                     <div class="serviceCard">
                         <div class="container">
                             <div class="row pt-3 pb-3">
@@ -352,13 +357,119 @@
                                         <div class="col-8">
                                             <button class="buyBtn" onclick="alert('این گزینه در حال ارتقا میباشد..!')">افزودن به سبد خرید</button>
                                         </div>
-                                        <div class="col-4" align=center><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle">قرص سوپر آمینو (apex)</p>
+                                    <span id="priceOrg">قیمت : 140.000</span>
+                                    <span class="Discountprice">155.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                    <button class="numberofnumber" id="plusAminoPex">+</button>
+                                    <span id="numberAminoPex">1</span>
+                                    <button class="numberofnumber" id="minAminoPex">-</button>
+                                </div>
+
+                                    <span id="priceAminoPex"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/superAminoApex.jpeg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="alert('این گزینه در حال ارتقا میباشد..!')">افزودن به سبد خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle">آمینو گلد 350 عددی (suppLand)</p>
+                                    <span id="priceOrg">قیمت : 695.000</span>
+                                    <span class="Discountprice">715.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                    <button class="numberofnumber" id="plusAminoGoldSupp">+</button>
+                                    <span id="numberAminoGoldSupp">1</span>
+                                    <button class="numberofnumber" id="minAminoGoldSupp">-</button>
+                                </div>
+
+                                    <span id="priceAminoGoldSupp"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/aminoGoldSupp.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="alert('این گزینه در حال ارتقا میباشد..!')">افزودن به سبد خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3 mb-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle">کراتین فارما پلاس 400گرمی</p>
+                                    <span id="priceOrg">قیمت : 380.000</span>
+                                    <span class="Discountprice">395.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                    <button class="numberofnumber" id="plusCratinFarma">+</button>
+                                    <span id="numberCratinFarma">1</span>
+                                    <button class="numberofnumber" id="minCratinFarma">-</button>
+                                </div>
+
+                                    <span id="priceCratinFarma"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/cartinFarmaPlus.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="alert('این گزینه در حال ارتقا میباشد..!')">افزودن به سبد خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

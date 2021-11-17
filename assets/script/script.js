@@ -17,7 +17,7 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click" 
     document.getElementById("shHid").style.display = "none";
 })
 
-// function([string1, string2],target id,[color1,color2])    
+
 consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
 
 function consoleText(words, id, colors) {
@@ -73,7 +73,7 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
-  // Close the dropdown if the user clicks outside of it
+
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -93,11 +93,28 @@ function myFunction() {
     document.getElementById("shHid").style.display = "none";
     document.getElementById("service").style.display = "block";
   })
+  var vaysr = ["وی", "مکمل وی", "وی دوبیس" , "مکمل وی دوبیس" , "vay" , "dobis" , "vay dobis" , "vaydobis"];
 
 
 
 
 
+
+
+  var searchINput = document.getElementById("searchInput");
+  var vssss = "وی";
+  console.log(searchINput.value);
+  function searchBtn() {
+      if(searchINput === vssss){
+          alert("hi");
+        }
+  }
+
+
+
+
+
+//   
 let vayDobisNumber = 1;
 let vayDobisPrice = 195000;
 let plus = document.querySelector("#plus").addEventListener("click", function () {
@@ -151,4 +168,88 @@ let minGainer = document.querySelector("#minGainer").addEventListener("click", f
 
     document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
     document.querySelector("#priceGainer").innerHTML = 'قیمت کلی : ' + GainerDobisPrice;
+})
+
+
+let AminoApexNumber = 1;
+let AminoApexPrice = 140000;
+let plusAminoPex = document.querySelector("#plusAminoPex").addEventListener("click", function () {
+    if (AminoApexNumber == 10) {
+        AminoApexNumber = 10;
+        AminoApexPrice = 1400000;
+    } else {
+        ++AminoApexNumber;
+        AminoApexPrice = AminoApexPrice + 140000;
+    }
+
+    document.querySelector("#numberAminoPex").innerHTML = AminoApexNumber;
+    document.querySelector("#priceAminoPex").innerHTML = 'قیمت کلی : ' + AminoApexPrice;
+})
+let minAminoPex = document.querySelector("#minAminoPex").addEventListener("click", function () {
+    if (AminoApexNumber == 1) {
+        AminoApexNumber = 1;
+        GainerDobisPrice = 140000;
+    } else {
+        --AminoApexNumber;
+        AminoApexPrice = AminoApexPrice - 140000;
+    }
+
+    document.querySelector("#numberAminoPex").innerHTML = AminoApexNumber;
+    document.querySelector("#priceAminoPex").innerHTML = 'قیمت کلی : ' + AminoApexPrice;
+})
+
+
+let AminoGoldSuppNumber = 1;
+let AminoGoldSuppPrice = 695000;
+let plusAminoGoldSupp = document.querySelector("#plusAminoGoldSupp").addEventListener("click", function () {
+    if (AminoGoldSuppNumber == 10) {
+        AminoGoldSuppNumber = 10;
+        AminoGoldSuppPrice = 6950000;
+    } else {
+        ++AminoGoldSuppNumber;
+        AminoGoldSuppPrice = AminoGoldSuppPrice + 695000;
+    }
+
+    document.querySelector("#numberAminoGoldSupp").innerHTML = AminoGoldSuppNumber;
+    document.querySelector("#priceAminoGoldSupp").innerHTML = 'قیمت کلی : ' + AminoGoldSuppPrice;
+})
+let minAminoGoldSupp = document.querySelector("#minAminoGoldSupp").addEventListener("click", function () {
+    if (AminoGoldSuppNumber == 1) {
+        AminoGoldSuppNumber = 1;
+        GainerDobisPrice = 695000;
+    } else {
+        --AminoGoldSuppNumber;
+        AminoGoldSuppPrice = AminoGoldSuppPrice - 695000;
+    }
+
+    document.querySelector("#numberAminoGoldSupp").innerHTML = AminoGoldSuppNumber;
+    document.querySelector("#priceAminoGoldSupp").innerHTML = 'قیمت کلی : ' + AminoGoldSuppPrice;
+})
+
+
+let CratinFarmaNumber = 1;
+let CratinFarmaPrice = 380000;
+let plusCratinFarma = document.querySelector("#plusCratinFarma").addEventListener("click", function () {
+    if (CratinFarmaNumber == 10) {
+        CratinFarmaNumber = 10;
+        CratinFarmaPrice = 3800000;
+    } else {
+        ++CratinFarmaNumber;
+        CratinFarmaPrice = CratinFarmaPrice + 380000;
+    }
+
+    document.querySelector("#numberCratinFarma").innerHTML = CratinFarmaNumber;
+    document.querySelector("#priceCratinFarma").innerHTML = 'قیمت کلی : ' + CratinFarmaPrice;
+})
+let minCratinFarma = document.querySelector("#minAminoGoldSupp").addEventListener("click", function () {
+    if (CratinFarmaNumber == 1) {
+        CratinFarmaNumber = 1;
+        GainerDobisPrice = 380000;
+    } else {
+        --CratinFarmaNumber;
+        CratinFarmaPrice = CratinFarmaPrice - 380000;
+    }
+
+    document.querySelector("#numberCratinFarma").innerHTML = CratinFarmaNumber;
+    document.querySelector("#priceCratinFarma").innerHTML = 'قیمت کلی : ' + CratinFarmaPrice;
 })

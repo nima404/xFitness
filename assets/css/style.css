@@ -213,8 +213,8 @@ video{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    /* min-width: 160px; */
+    background-color: #f1f1f1f6;
+    min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -263,17 +263,19 @@ video{
     padding: 7px;
   }
   .Discountprice{
+      font-weight: bolder;
     font-size: 13px;
     color: darkgoldenrod;
     text-decoration: line-through;
     font-family: 'Font Awesome 5 Brands';
   }
   #priceOrg{
+      font-weight: bolder;
     font-size: 13px;
     color: darkgoldenrod;
     font-family: 'Font Awesome 5 Brands';
   }
-  #price , #priceGainer{
+  #price , #priceGainer , #priceAminoPex{
       display: block;
       margin-top: 5px;
       font-size: 14px;
@@ -286,7 +288,7 @@ video{
       border-radius: 3px;
       color: darkgoldenrod;
   }
-  #number{
+  #number , #numberGainer , #numberAminoPex{
     font-family: 'Font Awesome 5 Brands';
   }
   .fa-star{
@@ -296,7 +298,7 @@ video{
   .searchInput{
     background: none;
     border: none;
-    box-shadow: 0px 0px 5px 0px rgb(189, 189, 189);
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
     border-radius: 5px;
     width: 60%;
     height: 4vh;
