@@ -99,8 +99,6 @@ function myFunction() {
 
 
 
-
-
   var searchINput = document.getElementById("searchInput");
   var vssss = "وی";
   console.log(searchINput.value);
