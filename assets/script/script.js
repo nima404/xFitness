@@ -20,7 +20,7 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click" 
 
 setTimeout(function(){
     confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!") 
-    }, 3000);
+    }, 5000);
 
 
 consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
@@ -78,6 +78,9 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
+function trashClick(){
+      document.getElementById("valueCopy").style.display = "none";
+  }
 
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
@@ -128,18 +131,23 @@ function myFunction() {
     // add to cart function's
     function vayClicked(){
         document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
+        document.getElementById("valueCopy").style.display = "block";
     }
     function gainerClicked(){
         document.getElementById("gainer").innerText = "مکمل گینر دوبیس به تعداد " + GainerDobisNumber + "عدد و به قیمت " + GainerDobisPrice + "هزار تومان.";
+        document.getElementById("valueCopy").style.display = "block";
     }
     function aminoSuperClicked(){
         document.getElementById("aminoSupper").innerText = "مکمل آمینو گلد 350عددی به تعداد " + AminoGoldSuppNumber + "عدد و به قیمت " + AminoGoldSuppPrice + "هزار تومان.";
+        document.getElementById("valueCopy").style.display = "block";
     }
     function aminpGold(){
         document.getElementById("aminoApex").innerText = "قرص سوپر آمینو به تعداد  (apex)" + AminoApexNumber + "عدد و به قیمت " + AminoApexPrice + "هزار تومان.";
+        document.getElementById("valueCopy").style.display = "block";
     }
     function cratinClicked(){
         document.getElementById("cratine").innerText = "مکمل کراتین به تعداد " + CratinFarmaNumber + "عدد و به قیمت " + CratinFarmaPrice + "هزار تومان.";
+        document.getElementById("valueCopy").style.display = "block";
     }
     // function vayClicked(){
     //     document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
