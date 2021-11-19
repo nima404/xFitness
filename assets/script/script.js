@@ -18,6 +18,11 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click" 
 })
 
 
+setTimeout(function(){
+    confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!") 
+    }, 3000);
+
+
 consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
 
 function consoleText(words, id, colors) {
@@ -92,10 +97,20 @@ function myFunction() {
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
     document.getElementById("service").style.display = "block";
+    // alert("1- توجه داشته باشید که بعد از انتخاب مکمل مورد نظر در سبد خرید کالاهای مورد نظر خود را با دکمه ی مربوطه کپی و از طریق دکمه ی اتمام سفارش در جای مناسب جای گذاری کنید")
   })
   var vaysr = ["وی", "مکمل وی", "وی دوبیس" , "مکمل وی دوبیس" , "vay" , "dobis" , "vay dobis" , "vaydobis"];
 
 
+//   copy
+
+  function copyBtn() {
+    var copyText = document.getElementById("inputVal");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    
+  }
 
 
 
@@ -106,13 +121,40 @@ function myFunction() {
       if(searchINput === vssss){
           alert("hi");
         }
-  }
-
-
-
-
-
+    }
+    
+    
+    
+    // add to cart function's
+    function vayClicked(){
+        document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
+    }
+    function gainerClicked(){
+        document.getElementById("gainer").innerText = "مکمل گینر دوبیس به تعداد " + GainerDobisNumber + "عدد و به قیمت " + GainerDobisPrice + "هزار تومان.";
+    }
+    function aminoSuperClicked(){
+        document.getElementById("aminoSupper").innerText = "مکمل آمینو گلد 350عددی به تعداد " + AminoGoldSuppNumber + "عدد و به قیمت " + AminoGoldSuppPrice + "هزار تومان.";
+    }
+    function aminpGold(){
+        document.getElementById("aminoApex").innerText = "قرص سوپر آمینو به تعداد  (apex)" + AminoApexNumber + "عدد و به قیمت " + AminoApexPrice + "هزار تومان.";
+    }
+    function cratinClicked(){
+        document.getElementById("cratine").innerText = "مکمل کراتین به تعداد " + CratinFarmaNumber + "عدد و به قیمت " + CratinFarmaPrice + "هزار تومان.";
+    }
+    // function vayClicked(){
+    //     document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
+    // }
+    // function vayClicked(){
+    //     document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
+    // }
+    
 //   
+
+
+
+
+
+// number and price of kala
 let vayDobisNumber = 1;
 let vayDobisPrice = 195000;
 let plus = document.querySelector("#plus").addEventListener("click", function () {
@@ -154,7 +196,7 @@ let plusGainer = document.querySelector("#plusGainer").addEventListener("click",
 
     document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
     document.querySelector("#priceGainer").innerHTML = 'قیمت کلی : ' + GainerDobisPrice;
-})
+});
 let minGainer = document.querySelector("#minGainer").addEventListener("click", function () {
     if (GainerDobisNumber == 1) {
         GainerDobisNumber = 1;
@@ -166,7 +208,7 @@ let minGainer = document.querySelector("#minGainer").addEventListener("click", f
 
     document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
     document.querySelector("#priceGainer").innerHTML = 'قیمت کلی : ' + GainerDobisPrice;
-})
+});
 
 
 let AminoApexNumber = 1;
@@ -182,7 +224,7 @@ let plusAminoPex = document.querySelector("#plusAminoPex").addEventListener("cli
 
     document.querySelector("#numberAminoPex").innerHTML = AminoApexNumber;
     document.querySelector("#priceAminoPex").innerHTML = 'قیمت کلی : ' + AminoApexPrice;
-})
+});
 let minAminoPex = document.querySelector("#minAminoPex").addEventListener("click", function () {
     if (AminoApexNumber == 1) {
         AminoApexNumber = 1;
@@ -194,7 +236,7 @@ let minAminoPex = document.querySelector("#minAminoPex").addEventListener("click
 
     document.querySelector("#numberAminoPex").innerHTML = AminoApexNumber;
     document.querySelector("#priceAminoPex").innerHTML = 'قیمت کلی : ' + AminoApexPrice;
-})
+});
 
 
 let AminoGoldSuppNumber = 1;
@@ -210,7 +252,7 @@ let plusAminoGoldSupp = document.querySelector("#plusAminoGoldSupp").addEventLis
 
     document.querySelector("#numberAminoGoldSupp").innerHTML = AminoGoldSuppNumber;
     document.querySelector("#priceAminoGoldSupp").innerHTML = 'قیمت کلی : ' + AminoGoldSuppPrice;
-})
+});
 let minAminoGoldSupp = document.querySelector("#minAminoGoldSupp").addEventListener("click", function () {
     if (AminoGoldSuppNumber == 1) {
         AminoGoldSuppNumber = 1;
@@ -222,7 +264,7 @@ let minAminoGoldSupp = document.querySelector("#minAminoGoldSupp").addEventListe
 
     document.querySelector("#numberAminoGoldSupp").innerHTML = AminoGoldSuppNumber;
     document.querySelector("#priceAminoGoldSupp").innerHTML = 'قیمت کلی : ' + AminoGoldSuppPrice;
-})
+});
 
 
 let CratinFarmaNumber = 1;
@@ -238,7 +280,7 @@ let plusCratinFarma = document.querySelector("#plusCratinFarma").addEventListene
 
     document.querySelector("#numberCratinFarma").innerHTML = CratinFarmaNumber;
     document.querySelector("#priceCratinFarma").innerHTML = 'قیمت کلی : ' + CratinFarmaPrice;
-})
+});
 let minCratinFarma = document.querySelector("#minAminoGoldSupp").addEventListener("click", function () {
     if (CratinFarmaNumber == 1) {
         CratinFarmaNumber = 1;
@@ -250,4 +292,4 @@ let minCratinFarma = document.querySelector("#minAminoGoldSupp").addEventListene
 
     document.querySelector("#numberCratinFarma").innerHTML = CratinFarmaNumber;
     document.querySelector("#priceCratinFarma").innerHTML = 'قیمت کلی : ' + CratinFarmaPrice;
-})
+});
