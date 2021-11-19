@@ -80,6 +80,8 @@ function myFunction() {
   
 function trashClick(){
       document.getElementById("valueCopy").style.display = "none";
+      document.getElementById("deleteFinish").style.display = "block";
+      document.getElementById("deleteFinish").innerHTML = "سبد خرید خالی میباشد...";
   }
 
   window.onclick = function(event) {
@@ -132,22 +134,27 @@ function trashClick(){
     function vayClicked(){
         document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
         document.getElementById("valueCopy").style.display = "block";
+        document.getElementById("deleteFinish").style.display = "none";
     }
     function gainerClicked(){
         document.getElementById("gainer").innerText = "مکمل گینر دوبیس به تعداد " + GainerDobisNumber + "عدد و به قیمت " + GainerDobisPrice + "هزار تومان.";
         document.getElementById("valueCopy").style.display = "block";
+        document.getElementById("deleteFinish").style.display = "none";
     }
     function aminoSuperClicked(){
         document.getElementById("aminoSupper").innerText = "مکمل آمینو گلد 350عددی به تعداد " + AminoGoldSuppNumber + "عدد و به قیمت " + AminoGoldSuppPrice + "هزار تومان.";
         document.getElementById("valueCopy").style.display = "block";
+        document.getElementById("deleteFinish").style.display = "none";
     }
     function aminpGold(){
         document.getElementById("aminoApex").innerText = "قرص سوپر آمینو به تعداد  (apex)" + AminoApexNumber + "عدد و به قیمت " + AminoApexPrice + "هزار تومان.";
         document.getElementById("valueCopy").style.display = "block";
+        document.getElementById("deleteFinish").style.display = "none";
     }
     function cratinClicked(){
         document.getElementById("cratine").innerText = "مکمل کراتین به تعداد " + CratinFarmaNumber + "عدد و به قیمت " + CratinFarmaPrice + "هزار تومان.";
         document.getElementById("valueCopy").style.display = "block";
+        document.getElementById("deleteFinish").style.display = "none";
     }
     // function vayClicked(){
     //     document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";

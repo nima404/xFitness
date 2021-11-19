@@ -420,6 +420,13 @@ video{
     border: 1px solid darkgoldenrod;
     border-radius: 5px;
 }
+#deleteFinish{
+    display: none;
+    text-align: center;
+    color: gray;
+    padding: 15px;
+    font-size: 14px;
+}
 }
 
 @media only screen and (min-width: 600px) and (max-width:768px){
