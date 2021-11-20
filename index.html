@@ -271,24 +271,27 @@
     </div>
 
     <div id="service">
+
         <div class="container">
-            <div class="row sticky-top" >
+
+            <div class="row sticky-top">
                 <div class="col-12 p-0">
                     <div align=center class="stickyedt">
                         <form class="formSerch">
                             <input id="searchInput" class="searchInput" placeholder="نام محصول را جست و جو کنید...">
                             <button type="button" class="searchBtn" onclick="searchBtn()"><i
                                     class="fas fa-search"></i></button>
-                                    
+
                         </form>
                         <div class="mt-2">
                             <button onclick="document.getElementById('id01').style.display='block'"
-                            class="w3-button w3-black posEstyle">مشاهده ی سبد خرید</button>
+                                class="posEstyle">مشاهده ی سبد خرید</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+
+            <div class="row" id="mokamel1">
                 <div class="col-12 mt-3">
                     <div class="serviceCard">
                         <div class="container">
@@ -473,7 +476,22 @@
                     </div>
                 </div>
 
+                
             </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="paginationOrg">
+                        <a class="pagintion activePagintion" id="page1">1</a>
+                        <a class="pagintion" id="page2">2</a>
+                        <a class="pagintion">3</a>
+                        <a class="pagintion">4</a>
+                        <a class="pagintion">5</a>
+                        <a class="pagintion">6</a>
+                      </div>
+                </div>
+            </div>
+
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -483,26 +501,67 @@
                                     <span onclick="document.getElementById('id01').style.display='none'"
                                         class="w3-button w3-display-topright"
                                         style="background: white !important; font-size: 25px;">&times;</span>
-                                    <button id="trashIcon" onclick="trashClick()"><i class="fas fa-trash"></i></button>
+                                    <!-- <button id="trashIcon" onclick="trashClick()"><i class="fas fa-trash"></i></button> -->
                                     <br><br>
                                     <span id="deleteFinish"></span>
-                                    <div id="valueCopy">
-                                    <div class="modalBody" id="vay"></div>
-                                    <div class="modalBody" id="gainer"></div>
-                                    <div class="modalBody" id="aminoApex"></div>
-                                    <div class="modalBody" id="aminoSupper"></div>
-                                    <div class="modalBody" id="cratine"></div>
-                                </div>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="modalBody" id="vay"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="vayDelBtn" onclick="vayDelBtn()"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </div>
+
+                                        <div class="col-10">
+                                            <div class="modalBody" id="gainer"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="gainerDelBtn" onclick="gainerDelBtn()"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </div>
+
+                                        <div class="col-10">
+                                            <div class="modalBody" id="aminoApex"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="aminoApexDelBtn" onclick="aminoApexDelBtn()"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </div>
+
+                                        <div class="col-10">
+                                            <div class="modalBody" id="aminoSupper"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="aminoSupperDelBtn" onclick="aminoSupperDelBtn()"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </div>
+
+                                        <div class="col-10">
+                                            <div class="modalBody" id="cratine"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="cratineDelBtn" onclick="cratineDelBtn()"><i
+                                                    class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+
+
+
+
                                 </div>
                                 <div align=center>
-                                   <a href="https://wa.me/989190186083"><button type="button" class="endTheCart">ثبت سفارشات..!</button></a>
-                                   <button type="button" class="copyBtn" id="copyBtn" onclick="copyBtn()">1-کپی کالا</button>
+                                    <a href="https://wa.me/989190186083"><button type="button" class="endTheCart">ثبت
+                                            سفارشات..!</button></a>
+                                    <button type="button" class="copyBtn" id="copyBtn" onclick="copyBtn()">1-کپی
+                                        کالا</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
