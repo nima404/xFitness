@@ -17,10 +17,10 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click",
     document.getElementById("shHid").style.display = "none";
 })
 
-let page1 = document.getElementById("page1").addEventListener("click" , function(){
+let page1 = document.getElementById("page1").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'block';
 })
-let page2 = document.getElementById("page2").addEventListener("click" , function(){
+let page2 = document.getElementById("page2").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'none';
 })
 
@@ -28,11 +28,11 @@ let page2 = document.getElementById("page2").addEventListener("click" , function
 //     confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!")
 // }, 4000);
 
-function nextClick(){
+function nextClick() {
     document.getElementById("listNameFirst").style.display = "none";
     document.getElementById("listNameSecond").style.display = "block";
 }
-function  preveClick(){
+function preveClick() {
     document.getElementById("listNameFirst").style.display = "block";
     document.getElementById("listNameSecond").style.display = "none";
 }
@@ -134,18 +134,17 @@ let srviceCLick = document.getElementById("ServicesClick").addEventListener("cli
     document.getElementById("service").style.display = "block";
     // alert("1- توجه داشته باشید که بعد از انتخاب مکمل مورد نظر در سبد خرید کالاهای مورد نظر خود را با دکمه ی مربوطه کپی و از طریق دکمه ی اتمام سفارش در جای مناسب جای گذاری کنید")
 })
-let ServicesTshirtClick = document.getElementById("ServicesTshirtClick").addEventListener("click" , function(){
+let ServicesTshirtClick = document.getElementById("ServicesTshirtClick").addEventListener("click", function () {
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
     document.getElementById("service").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "block";
 })
-var vaysr = ["وی", "مکمل وی", "وی دوبیس", "مکمل وی دوبیس", "vay", "dobis", "vay dobis", "vaydobis"];
 
 
 function handleCopy(classList) {
-    debugger 
+    debugger
     const r = document.createRange();
     r.selectNode(document.getElementsByClassName(classList));
     window.getSelection().removeAllRanges();
@@ -153,17 +152,44 @@ function handleCopy(classList) {
     document.execCommand("copy");
     window.getSelection().removeAllRanges();
     alert("کپی شد");
-  }
+}
 
 
 var searchINput = document.getElementById("searchInput");
-var vssss = "وی";
-console.log(searchINput.value);
+// var servicSearch = document.getElementById("service");
+
 function searchBtn() {
-    if (searchINput === vssss) {
-        alert("hi");
-    }
+
+    if (searchINput.value === "وی" || "vay" || "مکمل وی" || "وی دوبیس" || "vay dobis" || "vaydobis" || "vey") {
+        window.scrollTo({ top: 350, behavior: 'smooth' });
+    };
+
+    if (searchINput.value === "گینر" || "gainer" || "مکمل گینر" || "گینر دوبیس" || "gainer dobis" || "gainerdobis" || "geiner") {
+        window.scrollTo({ top: 550, behavior: 'smooth' });
+    };
+
+    if(searchINput.value === "امینو" || "amino" || "مکمل امینو" || "سوپر امینو" || "super amino" || "apex" || "Amino" || "superAmino" || "Aminosuper" || "aminosuper" || "superamino" || "آمینو"){
+        window.scrollTo({ top: 710, behavior: 'smooth' });
+    };
+
+    if(searchINput.value === "امینوگلد" || "suppland" || "ساپلند" || "aminogold" || "Aminogold"){
+        window.scrollTo({ top: 920, behavior: 'smooth' });
+    };
+
+    // if(searchINput.value === "کراتین" || "cratin" || "مکمل کراتین" || "کراتین فارما پلاس" || "cratin farma plus" || "farma" || "plus" || "farmaplus"){
+    //     window.scrollTo({ top: 1000, behavior: 'smooth' });
+    // }
+
+    // if(searchINput.value === ""){
+    //     document.getElementById("searchNo").innerHTML = "نتیجه ای یافت نشد...";
+    // }
+
+    // else{
+    //     window.scrollTo({ top: 0});
+    //     document.getElementById("searchNo").innerHTML = "نتیجه ای یافت نشد...";
+    // }
 }
+
 
 
 
