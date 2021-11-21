@@ -23,10 +23,19 @@ let page1 = document.getElementById("page1").addEventListener("click" , function
 let page2 = document.getElementById("page2").addEventListener("click" , function(){
     document.getElementById("mokamel1").style.display = 'none';
 })
-setTimeout(function () {
-    confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!")
-}, 4000);
 
+// setTimeout(function () {
+//     confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!")
+// }, 4000);
+
+function nextClick(){
+    document.getElementById("listNameFirst").style.display = "none";
+    document.getElementById("listNameSecond").style.display = "block";
+}
+function  preveClick(){
+    document.getElementById("listNameFirst").style.display = "block";
+    document.getElementById("listNameSecond").style.display = "none";
+}
 
 consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
 
@@ -121,22 +130,30 @@ let srviceCLick = document.getElementById("ServicesClick").addEventListener("cli
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
     document.getElementById("service").style.display = "block";
     // alert("1- توجه داشته باشید که بعد از انتخاب مکمل مورد نظر در سبد خرید کالاهای مورد نظر خود را با دکمه ی مربوطه کپی و از طریق دکمه ی اتمام سفارش در جای مناسب جای گذاری کنید")
+})
+let ServicesTshirtClick = document.getElementById("ServicesTshirtClick").addEventListener("click" , function(){
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("service").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "block";
 })
 var vaysr = ["وی", "مکمل وی", "وی دوبیس", "مکمل وی دوبیس", "vay", "dobis", "vay dobis", "vaydobis"];
 
 
-//   copy
-
-function copyBtn() {
-    var copyText = document.getElementById("inputVal");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyText.value);
-
-}
-
+function handleCopy(classList) {
+    debugger 
+    const r = document.createRange();
+    r.selectNode(document.getElementsByClassName(classList));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("کپی شد");
+  }
 
 
 var searchINput = document.getElementById("searchInput");
