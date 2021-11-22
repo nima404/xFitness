@@ -268,7 +268,7 @@ video{
   .dropdown a:hover {background-color: #ddd;}
   
   .show {display: block;}
-  #service , #serviceTshirt{
+  #service , #serviceTshirt , #BMICalc{
       display: none;
   }
   .serviceCard{
@@ -329,11 +329,12 @@ video{
     box-shadow: 0px 0px 2px 0px rgb(189 189 189);
     border-radius: 5px;
     width: 60%;
-    height: 4vh;
+    height: 5                                                                                                                               vh;
     font-size: 12px;
   }
   .searchInput:focus{
       outline: 1px solid darkgoldenrod;
+      border-radius: 5px;
   }
   .searchBtn{
       background: none;
@@ -453,14 +454,45 @@ display: none;
 .NamePN{
     background: none;
     border: none;
-    color: darkgoldenrod;
-    margin: 5px;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
 }
 .NamePN i{
     font-size: 18px;
 }
 #listNameSecond{
     display: none;
+}
+.tableCss{
+    border: 1px solid darkgoldenrod ;
+    border-radius: 4px ;
+    padding: 10px ;
+    width: 100%;
+    border-collapse: initial;
+}
+.thCss , .tdCss{
+    border: 1px dashed goldenrod;
+    padding: 6px;
+}
+.BmiInput{
+    background: none;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    padding: 5px;
+}
+.BMIEnter{
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+.BMIWhat{
+    font-weight: bold;
+}
+.BMIP{
+    text-align: justify;
+    line-height: 30px;
 }
 }
 

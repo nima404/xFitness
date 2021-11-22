@@ -3,15 +3,21 @@ function timNameClick() {
     document.getElementById("shHid").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("service").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
 }
 function homeClick() {
     document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
     document.getElementById("service").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "block";
 }
 let LearnClick = document.querySelector("#videoClick").addEventListener("click", function () {
     document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
     document.getElementById("service").style.display = "none";
     document.getElementById("learnDis").style.display = "block";
     document.getElementById("shHid").style.display = "none";
@@ -27,14 +33,8 @@ let page2 = document.getElementById("page2").addEventListener("click", function 
 // setTimeout(function () {
 //     confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!")
 // }, 4000);
-
-function nextClick() {
-    document.getElementById("listNameFirst").style.display = "none";
-    document.getElementById("listNameSecond").style.display = "block";
-}
 function preveClick() {
-    document.getElementById("listNameFirst").style.display = "block";
-    document.getElementById("listNameSecond").style.display = "none";
+    document.getElementById("listNameSecond").style.display = "block";
 }
 
 consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
@@ -131,28 +131,95 @@ let srviceCLick = document.getElementById("ServicesClick").addEventListener("cli
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
     document.getElementById("service").style.display = "block";
-    // alert("1- توجه داشته باشید که بعد از انتخاب مکمل مورد نظر در سبد خرید کالاهای مورد نظر خود را با دکمه ی مربوطه کپی و از طریق دکمه ی اتمام سفارش در جای مناسب جای گذاری کنید")
 })
 let ServicesTshirtClick = document.getElementById("ServicesTshirtClick").addEventListener("click", function () {
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
     document.getElementById("service").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "block";
 })
 
+let BMICal = document.getElementById("BMICal").addEventListener("click" , function(){
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("service").style.display = "none";
+    document.getElementById("BMICalc").style.display = "block";
+})
 
-function handleCopy(classList) {
-    debugger
-    const r = document.createRange();
-    r.selectNode(document.getElementsByClassName(classList));
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(r);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-    alert("کپی شد");
+
+
+
+
+
+
+function BMIFunc(){
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+    var heightOrg = height/100;
+    var BMIFirst = Number(weight) / Number(heightOrg) / Number(heightOrg);
+    var totalBMI = BMIFirst.toFixed(2);
+    document.getElementById("BMIResponse").innerHTML = " شاخص توده بدنی شما " + totalBMI + " است ";
 }
+
+
+
+
+
+
+// function handleCopy(className) {
+//     // debugger
+//     const r = document.createRange();
+//     var divsClass = document.getElementsByClassName("modalBody").value;
+//     r.selectNode(divsClass);
+//     window.getSelection().removeAllRanges();
+//     window.getSelection().addRange(r);
+//     document.execCommand("copy");
+//     window.getSelection().removeAllRanges();
+//     alert("کپی شد");
+// }
+
+
+
+// Copies a string to the clipboard. Must be called from within an event handler such as click.
+// May return false if it failed, but this is not always
+// possible. Browser support for Chrome 43+, Firefox 42+, Edge and IE 10+.
+// No Safari support, as of (Nov. 2015). Returns false.
+// IE: The clipboard feature may be disabled by an adminstrator. By default a prompt is
+// shown the first time the clipboard is used (per session).
+function copyToClipboard(text) {
+    if (window.clipboardData && window.clipboardData.setData) {
+      // IE specific code path to prevent textarea being shown while dialog is visible.
+      return clipboardData.setData("Text", text);
+  
+    } else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+      var textarea = document.createElement("textarea");
+      textarea.textContent = text;
+      textarea.style.position = "fixed"; // Prevent scrolling to bottom of page in MS Edge.
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        return document.execCommand("copy"); // Security exception may be thrown by some browsers.
+      } catch (ex) {
+        console.warn("Copy to clipboard failed.", ex);
+        return false;
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+  }
+  
+  document.querySelector("#copyBtn").onclick = function() {
+    var result = copyToClipboard(document.getElementById("vay").toString());
+    console.log("copied?", result);
+  };
+  
+
 
 
 var searchINput = document.getElementById("searchInput");
