@@ -479,6 +479,7 @@ display: none;
     border: 1px solid darkgoldenrod;
     border-radius: 5px;
     padding: 5px;
+    width: 30%;
 }
 .BMIEnter{
     background-color: darkgoldenrod;
