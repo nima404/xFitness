@@ -15,7 +15,24 @@ user-select: none;
         width: 0;
     }
 }
-
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(1px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-1px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(1px, 0, 0);
+    }
+  }
+  
 @media only screen and (max-width: 600px){
 
 .navbarOrg{
@@ -117,23 +134,6 @@ user-select: none;
   backface-visibility: hidden;
   perspective: 1000px;
 }
-@keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(1px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-1px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(1px, 0, 0);
-    }
-  }
 .timCart img{
     width: 100px;
     height: 100px;
@@ -457,6 +457,13 @@ display: none;
     color: rgb(165, 165, 165);
     font-size: 17px;
 }
+.NameNx{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+    display: none;
+}
 .NamePN i{
     font-size: 18px;
 }
@@ -486,7 +493,7 @@ display: none;
     border: none;
     border-radius: 5px;
     color: white;
-    padding: 10px;
+    padding: 8px;
 }
 .BMIWhat{
     font-weight: bold;
@@ -494,6 +501,12 @@ display: none;
 .BMIP{
     text-align: justify;
     line-height: 30px;
+}
+.finishSpan{
+    display: none;
+    font-size: 13px;
+    color: forestgreen;
+    font-weight: bold;
 }
 }
 

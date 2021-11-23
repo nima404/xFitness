@@ -35,6 +35,13 @@ let page2 = document.getElementById("page2").addEventListener("click", function 
 // }, 4000);
 function preveClick() {
     document.getElementById("listNameSecond").style.display = "block";
+    document.getElementById("preve").style.display = "none";
+    document.getElementById("next").style.display = "block";
+}
+function nextClick() {
+    document.getElementById("listNameSecond").style.display = "none";
+    document.getElementById("preve").style.display = "block";
+    document.getElementById("next").style.display = "none";
 }
 
 consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
@@ -265,26 +272,51 @@ function vayClicked() {
     document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
     document.getElementById("vay").style.display = "block";
     document.getElementById("vayDelBtn").style.display = "block";
+    document.getElementById("vayBuyFinished").style.display = "block";
+    document.getElementById("vayBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("vayBuyFinished").style.display = "none";
+}, 1000);
 }
 function gainerClicked() {
     document.getElementById("gainer").innerText = "مکمل گینر دوبیس به تعداد " + GainerDobisNumber + "عدد و به قیمت " + GainerDobisPrice + "هزار تومان.";
     document.getElementById("gainer").style.display = "block";
     document.getElementById("gainerDelBtn").style.display = "block";
+    document.getElementById("gainerBuyFinished").style.display = "block";
+    document.getElementById("gainerBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("gainerBuyFinished").style.display = "none";
+}, 1000);
 }
 function aminoSuperClicked() {
     document.getElementById("aminoSupper").innerText = "مکمل آمینو گلد 350عددی به تعداد " + AminoGoldSuppNumber + "عدد و به قیمت " + AminoGoldSuppPrice + "هزار تومان.";
     document.getElementById("aminoSupper").style.display = "block";
     document.getElementById("aminoSupperDelBtn").style.display = "block";
+    document.getElementById("AminoPexBuyFinished").style.display = "block";
+    document.getElementById("AminoPexBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("AminoPexBuyFinished").style.display = "none";
+}, 1000);
 }
 function aminpGold() {
     document.getElementById("aminoApex").innerText = "قرص سوپر آمینو به تعداد  (apex)" + AminoApexNumber + "عدد و به قیمت " + AminoApexPrice + "هزار تومان.";
     document.getElementById("aminoApex").style.display = "block";
     document.getElementById("aminoApexDelBtn").style.display = "block";
+    document.getElementById("aminpGoldBuyFinished").style.display = "block";
+    document.getElementById("aminpGoldBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("aminpGoldBuyFinished").style.display = "none";
+}, 1000);
 }
 function cratinClicked() {
     document.getElementById("cratine").innerText = "مکمل کراتین به تعداد " + CratinFarmaNumber + "عدد و به قیمت " + CratinFarmaPrice + "هزار تومان.";
     document.getElementById("cratine").style.display = "block";
     document.getElementById("cratineDelBtn").style.display = "block";
+    document.getElementById("cratinBuyFinished").style.display = "block";
+    document.getElementById("cratinBuyFinished").innerHTML = "به سبد خرید افزوده شد"
+    setInterval(function () {
+        document.getElementById("cratinBuyFinished").style.display = "none";
+}, 1000);
 }
 // function vayClicked(){
 //     document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
