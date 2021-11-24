@@ -26,11 +26,13 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click",
 let page1 = document.getElementById("page1").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'block';
     document.getElementById("mokamel2").style.display = 'none';
+    document.getElementById("mokamel4").style.display = 'none';
     document.getElementById("mokamel3").style.display = 'none';
 
     document.getElementById("page1").classList.add("activePagintion");
     document.getElementById("page2").classList.remove("activePagintion");
     document.getElementById("page3").classList.remove("activePagintion");
+    document.getElementById("page4").classList.remove("activePagintion");
 
     window.scroll({
         top: 0,
@@ -40,10 +42,12 @@ let page1 = document.getElementById("page1").addEventListener("click", function 
 let page2 = document.getElementById("page2").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'none';
     document.getElementById("mokamel3").style.display = 'none';
+    document.getElementById("mokamel4").style.display = 'none';
     document.getElementById("mokamel2").style.display = 'block';
     document.getElementById("page2").classList.add("activePagintion");
     document.getElementById("page1").classList.remove("activePagintion");
     document.getElementById("page3").classList.remove("activePagintion");
+    document.getElementById("page4").classList.remove("activePagintion");
 
     window.scroll({
         top: 0,
@@ -53,10 +57,27 @@ let page2 = document.getElementById("page2").addEventListener("click", function 
 let page3 = document.getElementById("page3").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'none';
     document.getElementById("mokamel2").style.display = 'none';
+    document.getElementById("mokamel4").style.display = 'none';
     document.getElementById("mokamel3").style.display = 'block';
     document.getElementById("page2").classList.remove("activePagintion");
     document.getElementById("page1").classList.remove("activePagintion");
+    document.getElementById("page4").classList.remove("activePagintion");
     document.getElementById("page3").classList.add("activePagintion");
+
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      });
+})
+let page4 = document.getElementById("page4").addEventListener("click", function () {
+    document.getElementById("mokamel1").style.display = 'none';
+    document.getElementById("mokamel2").style.display = 'none';
+    document.getElementById("mokamel3").style.display = 'none';
+    document.getElementById("mokamel4").style.display = 'block';
+    document.getElementById("page2").classList.remove("activePagintion");
+    document.getElementById("page1").classList.remove("activePagintion");
+    document.getElementById("page3").classList.remove("activePagintion");
+    document.getElementById("page4").classList.add("activePagintion");
 
     window.scroll({
         top: 0,
@@ -76,6 +97,11 @@ function nextClick() {
     document.getElementById("listNameSecond").style.display = "none";
     document.getElementById("preve").style.display = "block";
     document.getElementById("next").style.display = "none";
+
+    window.scroll({
+        top: 340,
+        behavior: 'smooth'
+      });
 }
 
 consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
@@ -980,6 +1006,315 @@ let minSideral = document.querySelector("#minSideral").addEventListener("click",
 }); 
 
 
+let AsmaVitNumber = 1;
+let AsmaVitPrice = 77000;
+let plusAsmaVit = document.querySelector("#plusAsmaVit").addEventListener("click", function () {
+    if (AsmaVitNumber == 10) {
+        AsmaVitNumber = 10;
+        AsmaVitPrice = 770000;
+    } else {
+        ++AsmaVitNumber;
+        AsmaVitPrice = AsmaVitPrice + 77000;
+    }
+
+    document.querySelector("#numberAsmaVit").innerHTML = AsmaVitNumber;
+    document.querySelector("#priceAsmaVit").innerHTML = 'قیمت کلی : ' + AsmaVitPrice;
+});
+let minAsmaVit = document.querySelector("#minAsmaVit").addEventListener("click", function () {
+    if (AsmaVitNumber == 1) {
+        AsmaVitNumber = 1;
+        AsmaVitPrice = 77000;
+    } else {
+        --AsmaVitNumber;
+        AsmaVitPrice = AsmaVitPrice - 77000;
+    }
+
+    document.querySelector("#numberAsmaVit").innerHTML = AsmaVitNumber;
+    document.querySelector("#priceAsmaVit").innerHTML = 'قیمت کلی : ' + AsmaVitPrice;
+}); 
+
+
+let IrofixNumber = 1;
+let IrofixPrice = 99000;
+let plusIrofix = document.querySelector("#plusIrofix").addEventListener("click", function () {
+    if (IrofixNumber == 10) {
+        IrofixNumber = 10;
+        IrofixPrice = 990000;
+    } else {
+        ++IrofixNumber;
+        IrofixPrice = IrofixPrice + 99000;
+    }
+
+    document.querySelector("#numberIrofix").innerHTML = IrofixNumber;
+    document.querySelector("#priceIrofix").innerHTML = 'قیمت کلی : ' + IrofixPrice;
+});
+let minIrofix = document.querySelector("#minIrofix").addEventListener("click", function () {
+    if (IrofixNumber == 1) {
+        IrofixNumber = 1;
+        IrofixPrice = 99000;
+    } else {
+        --IrofixNumber;
+        IrofixPrice = IrofixPrice - 99000;
+    }
+
+    document.querySelector("#numberIrofix").innerHTML = IrofixNumber;
+    document.querySelector("#priceIrofix").innerHTML = 'قیمت کلی : ' + IrofixPrice;
+}); 
+
+
+let IMMUNACENumber = 1;
+let IMMUNACEPrice = 86000;
+let plusIMMUNACE = document.querySelector("#plusIMMUNACE").addEventListener("click", function () {
+    if (IMMUNACENumber == 10) {
+        IMMUNACENumber = 10;
+        IMMUNACEPrice = 860000;
+    } else {
+        ++IMMUNACENumber;
+        IMMUNACEPrice = IMMUNACEPrice + 86000;
+    }
+
+    document.querySelector("#numberIMMUNACE").innerHTML = IMMUNACENumber;
+    document.querySelector("#priceIMMUNACE").innerHTML = 'قیمت کلی : ' + IMMUNACEPrice;
+});
+let minIMMUNACE = document.querySelector("#minIMMUNACE").addEventListener("click", function () {
+    if (IMMUNACENumber == 1) {
+        IMMUNACENumber = 1;
+        IMMUNACEPrice = 86000;
+    } else {
+        --IMMUNACENumber;
+        IMMUNACEPrice = IMMUNACEPrice - 86000;
+    }
+
+    document.querySelector("#numberIMMUNACE").innerHTML = IMMUNACENumber;
+    document.querySelector("#priceIMMUNACE").innerHTML = 'قیمت کلی : ' + IMMUNACEPrice;
+}); 
+
+
+let FeroglobinNumber = 1;
+let FeroglobinPrice = 69000;
+let plusFeroglobin = document.querySelector("#plusFeroglobin").addEventListener("click", function () {
+    if (FeroglobinNumber == 10) {
+        FeroglobinNumber = 10;
+        FeroglobinPrice = 690000;
+    } else {
+        ++FeroglobinNumber;
+        FeroglobinPrice = FeroglobinPrice + 69000;
+    }
+
+    document.querySelector("#numberFeroglobin").innerHTML = FeroglobinNumber;
+    document.querySelector("#priceFeroglobin").innerHTML = 'قیمت کلی : ' + FeroglobinPrice;
+});
+let minFeroglobin = document.querySelector("#minFeroglobin").addEventListener("click", function () {
+    if (FeroglobinNumber == 1) {
+        FeroglobinNumber = 1;
+        FeroglobinPrice = 69000;
+    } else {
+        --FeroglobinNumber;
+        FeroglobinPrice = FeroglobinPrice - 69000;
+    }
+
+    document.querySelector("#numberFeroglobin").innerHTML = FeroglobinNumber;
+    document.querySelector("#priceFeroglobin").innerHTML = 'قیمت کلی : ' + FeroglobinPrice;
+}); 
+
+
+let EnergeXNumber = 1;
+let EnergeXPrice = 188000;
+let plusEnergeX = document.querySelector("#plusEnergeX").addEventListener("click", function () {
+    if (EnergeXNumber == 10) {
+        EnergeXNumber = 10;
+        EnergeXPrice = 1880000;
+    } else {
+        ++EnergeXNumber;
+        EnergeXPrice = EnergeXPrice + 188000;
+    }
+
+    document.querySelector("#numberEnergeX").innerHTML = EnergeXNumber;
+    document.querySelector("#priceEnergeX").innerHTML = 'قیمت کلی : ' + EnergeXPrice;
+});
+let minEnergeX = document.querySelector("#minEnergeX").addEventListener("click", function () {
+    if (EnergeXNumber == 1) {
+        EnergeXNumber = 1;
+        EnergeXPrice = 188000;
+    } else {
+        --EnergeXNumber;
+        EnergeXPrice = EnergeXPrice - 188000;
+    }
+
+    document.querySelector("#numberEnergeX").innerHTML = EnergeXNumber;
+    document.querySelector("#priceEnergeX").innerHTML = 'قیمت کلی : ' + EnergeXPrice;
+}); 
+
+
+let Magnesium400Number = 1;
+let Magnesium400Price = 109000;
+let plusMagnesium400 = document.querySelector("#plusMagnesium400").addEventListener("click", function () {
+    if (Magnesium400Number == 10) {
+        Magnesium400Number = 10;
+        Magnesium400Price = 1090000;
+    } else {
+        ++Magnesium400Number;
+        Magnesium400Price = Magnesium400Price + 109000;
+    }
+
+    document.querySelector("#numberMagnesium400").innerHTML = Magnesium400Number;
+    document.querySelector("#priceMagnesium400").innerHTML = 'قیمت کلی : ' + Magnesium400Price;
+});
+let minMagnesium400 = document.querySelector("#minMagnesium400").addEventListener("click", function () {
+    if (Magnesium400Number == 1) {
+        Magnesium400Number = 1;
+        Magnesium400Price = 109000;
+    } else {
+        --Magnesium400Number;
+        Magnesium400Price = Magnesium400Price - 109000;
+    }
+
+    document.querySelector("#numberMagnesium400").innerHTML = Magnesium400Number;
+    document.querySelector("#priceMagnesium400").innerHTML = 'قیمت کلی : ' + Magnesium400Price;
+}); 
+
+
+let ZincB6Number = 1;
+let ZincB6Price = 84000;
+let plusZincB6 = document.querySelector("#plusZincB6").addEventListener("click", function () {
+    if (ZincB6Number == 10) {
+        ZincB6Number = 10;
+        ZincB6Price = 840000;
+    } else {
+        ++ZincB6Number;
+        ZincB6Price = ZincB6Price + 84000;
+    }
+
+    document.querySelector("#numberZincB6").innerHTML = ZincB6Number;
+    document.querySelector("#priceZincB6").innerHTML = 'قیمت کلی : ' + ZincB6Price;
+});
+let minZincB6 = document.querySelector("#minZincB6").addEventListener("click", function () {
+    if (ZincB6Number == 1) {
+        ZincB6Number = 1;
+        ZincB6Price = 84000;
+    } else {
+        --ZincB6Number;
+        ZincB6Price = ZincB6Price - 84000;
+    }
+
+    document.querySelector("#numberZincB6").innerHTML = ZincB6Number;
+    document.querySelector("#priceZincB6").innerHTML = 'قیمت کلی : ' + ZincB6Price;
+}); 
+
+
+let CalciPowerNumber = 1;
+let CalciPowerPrice = 78000;
+let plusCalciPower = document.querySelector("#plusCalciPower").addEventListener("click", function () {
+    if (CalciPowerNumber == 10) {
+        CalciPowerNumber = 10;
+        CalciPowerPrice = 780000;
+    } else {
+        ++CalciPowerNumber;
+        CalciPowerPrice = CalciPowerPrice + 78000;
+    }
+
+    document.querySelector("#numberCalciPower").innerHTML = CalciPowerNumber;
+    document.querySelector("#priceCalciPower").innerHTML = 'قیمت کلی : ' + CalciPowerPrice;
+});
+let minCalciPower = document.querySelector("#minCalciPower").addEventListener("click", function () {
+    if (CalciPowerNumber == 1) {
+        CalciPowerNumber = 1;
+        CalciPowerPrice = 78000;
+    } else {
+        --CalciPowerNumber;
+        CalciPowerPrice = CalciPowerPrice - 78000;
+    }
+
+    document.querySelector("#numberCalciPower").innerHTML = CalciPowerNumber;
+    document.querySelector("#priceCalciPower").innerHTML = 'قیمت کلی : ' + CalciPowerPrice;
+}); 
+
+
+let Calcium600Number = 1;
+let Calcium600Price = 119000;
+let plusCalcium600 = document.querySelector("#plusCalcium600").addEventListener("click", function () {
+    if (Calcium600Number == 10) {
+        Calcium600Number = 10;
+        Calcium600Price = 1190000;
+    } else {
+        ++Calcium600Number;
+        Calcium600Price = Calcium600Price + 119000;
+    }
+
+    document.querySelector("#numberCalcium600").innerHTML = Calcium600Number;
+    document.querySelector("#priceCalcium600").innerHTML = 'قیمت کلی : ' + Calcium600Price;
+});
+let minCalcium600 = document.querySelector("#minCalcium600").addEventListener("click", function () {
+    if (Calcium600Number == 1) {
+        Calcium600Number = 1;
+        Calcium600Price = 119000;
+    } else {
+        --Calcium600Number;
+        Calcium600Price = Calcium600Price - 119000;
+    }
+
+    document.querySelector("#numberCalcium600").innerHTML = Calcium600Number;
+    document.querySelector("#priceCalcium600").innerHTML = 'قیمت کلی : ' + Calcium600Price;
+}); 
+
+
+let AvodinNumber = 1;
+let AvodinPrice = 133000;
+let plusAvodin = document.querySelector("#plusAvodin").addEventListener("click", function () {
+    if (AvodinNumber == 10) {
+        AvodinNumber = 10;
+        AvodinPrice = 1330000;
+    } else {
+        ++AvodinNumber;
+        AvodinPrice = AvodinPrice + 133000;
+    }
+
+    document.querySelector("#numberAvodin").innerHTML = AvodinNumber;
+    document.querySelector("#priceAvodin").innerHTML = 'قیمت کلی : ' + AvodinPrice;
+});
+let minAvodin = document.querySelector("#minAvodin").addEventListener("click", function () {
+    if (AvodinNumber == 1) {
+        AvodinNumber = 1;
+        AvodinPrice = 133000;
+    } else {
+        --AvodinNumber;
+        AvodinPrice = AvodinPrice - 133000;
+    }
+
+    document.querySelector("#numberAvodin").innerHTML = AvodinNumber;
+    document.querySelector("#priceAvodin").innerHTML = 'قیمت کلی : ' + AvodinPrice;
+}); 
+
+
+let CaffeineNumber = 1;
+let CaffeinePrice = 113000;
+let plusCaffeine = document.querySelector("#plusCaffeine").addEventListener("click", function () {
+    if (CaffeineNumber == 10) {
+        CaffeineNumber = 10;
+        CaffeinePrice = 1130000;
+    } else {
+        ++CaffeineNumber;
+        CaffeinePrice = CaffeinePrice + 113000;
+    }
+
+    document.querySelector("#numberCaffeine").innerHTML = CaffeineNumber;
+    document.querySelector("#priceCaffeine").innerHTML = 'قیمت کلی : ' + CaffeinePrice;
+});
+let minCaffeine = document.querySelector("#minCaffeine").addEventListener("click", function () {
+    if (CaffeineNumber == 1) {
+        CaffeineNumber = 1;
+        CaffeinePrice = 113000;
+    } else {
+        --CaffeineNumber;
+        CaffeinePrice = CaffeinePrice - 113000;
+    }
+
+    document.querySelector("#numberCaffeine").innerHTML = CaffeineNumber;
+    document.querySelector("#priceCaffeine").innerHTML = 'قیمت کلی : ' + CaffeinePrice;
+}); 
+
+
+
 
 
 function vayDelBtn() {
@@ -1078,7 +1413,50 @@ function SideralDelBtn() {
     document.getElementById("Sideral").style.display = "none";
     document.getElementById("SideralDelBtn").style.display = "none";
 }
-
+function SideralDelBtn() {
+    document.getElementById("AsmaVit").style.display = "none";
+    document.getElementById("AsmaVitDelBtn").style.display = "none";
+}
+function IrofixDelBtn() {
+    document.getElementById("Irofix").style.display = "none";
+    document.getElementById("IrofixDelBtn").style.display = "none";
+}
+function IMMUNACEDelBtn() {
+    document.getElementById("IMMUNACE").style.display = "none";
+    document.getElementById("IMMUNACEDelBtn").style.display = "none";
+}
+function FeroglobinDelBtn() {
+    document.getElementById("Feroglobin").style.display = "none";
+    document.getElementById("FeroglobinDelBtn").style.display = "none";
+}
+function EnergeXDelBtn() {
+    document.getElementById("EnergeX").style.display = "none";
+    document.getElementById("EnergeXDelBtn").style.display = "none";
+}
+function Magnesium400DelBtn() {
+    document.getElementById("Magnesium400").style.display = "none";
+    document.getElementById("Magnesium400DelBtn").style.display = "none";
+}
+function ZincB6DelBtn() {
+    document.getElementById("ZincB6").style.display = "none";
+    document.getElementById("ZincB6DelBtn").style.display = "none";
+}
+function CalciPowerDelBtn() {
+    document.getElementById("CalciPower").style.display = "none";
+    document.getElementById("CalciPowerDelBtn").style.display = "none";
+}
+function Calcium600DelBtn() {
+    document.getElementById("Calcium600").style.display = "none";
+    document.getElementById("Calcium600DelBtn").style.display = "none";
+}
+function AvodinDelBtn() {
+    document.getElementById("Avodin").style.display = "none";
+    document.getElementById("AvodinDelBtn").style.display = "none";
+}
+function CaffeineDelBtn() {
+    document.getElementById("Caffeine").style.display = "none";
+    document.getElementById("CaffeineDelBtn").style.display = "none";
+}
 
 
 
@@ -1325,5 +1703,115 @@ function SideralClicked() {
     document.getElementById("SideralBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("SideralBuyFinished").style.display = "none";
+}, 1000);
+}
+function AsmaVitClicked() {
+    document.getElementById("AsmaVit").innerText = "  شربت آسماویت ویتابیوتیکس ۲۰۰ میلی لیتر   | AsmaVit  به تعداد " + AsmaVitNumber + "عدد و به قیمت " + AsmaVitPrice + "هزار تومان.";
+    document.getElementById("AsmaVit").style.display = "block";
+    document.getElementById("AsmaVitDelBtn").style.display = "block";
+    document.getElementById("AsmaVitBuyFinished").style.display = "block";
+    document.getElementById("AsmaVitBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("AsmaVitBuyFinished").style.display = "none";
+}, 1000);
+}
+function IrofixClicked() {
+    document.getElementById("Irofix").innerText = "  قطره آیروفیکس دایونیکس فارما   | Irofix  به تعداد " + IrofixNumber + "عدد و به قیمت " + IrofixPrice + "هزار تومان.";
+    document.getElementById("Irofix").style.display = "block";
+    document.getElementById("IrofixDelBtn").style.display = "block";
+    document.getElementById("IrofixBuyFinished").style.display = "block";
+    document.getElementById("IrofixBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("IrofixBuyFinished").style.display = "none";
+}, 1000);
+}
+function IMMUNACEClicked() {
+    document.getElementById("IMMUNACE").innerText = "  شربت ایمیونیس ویتابیوتیکس 200 میلی لیتر   | VITABIOTICS IMMUNACE  به تعداد " + IMMUNACENumber + "عدد و به قیمت " + IMMUNACEPrice + "هزار تومان.";
+    document.getElementById("IMMUNACE").style.display = "block";
+    document.getElementById("IMMUNACEDelBtn").style.display = "block";
+    document.getElementById("IMMUNACEBuyFinished").style.display = "block";
+    document.getElementById("IMMUNACEBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("IMMUNACEBuyFinished").style.display = "none";
+}, 1000);
+}
+function FeroglobinClicked() {
+    document.getElementById("Feroglobin").innerText = "  شربت فروگلوبین B12 ویتابیوتیکس ۲۰۰ میلی لیتر   | Feroglobin B12  به تعداد " + FeroglobinNumber + "عدد و به قیمت " + FeroglobinPrice + "هزار تومان.";
+    document.getElementById("Feroglobin").style.display = "block";
+    document.getElementById("FeroglobinDelBtn").style.display = "block";
+    document.getElementById("FeroglobinBuyFinished").style.display = "block";
+    document.getElementById("FeroglobinBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("FeroglobinBuyFinished").style.display = "none";
+}, 1000);
+}
+function EnergeXClicked() {
+    document.getElementById("EnergeX").innerText = "  قرص انرژکس گلدن لایف   | Energe-X  به تعداد " + EnergeXNumber + "عدد و به قیمت " + EnergeXPrice + "هزار تومان.";
+    document.getElementById("EnergeX").style.display = "block";
+    document.getElementById("EnergeXDelBtn").style.display = "block";
+    document.getElementById("EnergeXBuyFinished").style.display = "block";
+    document.getElementById("EnergeXBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("EnergeXBuyFinished").style.display = "none";
+}, 1000);
+}
+function Magnesium400Clicked() {
+    document.getElementById("Magnesium400").innerText = "  ساشه منیزیم 400 یوروویتال   | Magnesium 400  به تعداد " + Magnesium400Number + "عدد و به قیمت " + Magnesium400Price + "هزار تومان.";
+    document.getElementById("Magnesium400").style.display = "block";
+    document.getElementById("Magnesium400DelBtn").style.display = "block";
+    document.getElementById("Magnesium400BuyFinished").style.display = "block";
+    document.getElementById("Magnesium400BuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("Magnesium400BuyFinished").style.display = "none";
+}, 1000);
+}
+function ZincB6Clicked() {
+    document.getElementById("ZincB6").innerText = "  قرص سیستین B6 زینک رازک   | Cystine B6 Zinc  به تعداد " + ZincB6Number + "عدد و به قیمت " + ZincB6Price + "هزار تومان.";
+    document.getElementById("ZincB6").style.display = "block";
+    document.getElementById("ZincB6DelBtn").style.display = "block";
+    document.getElementById("ZincB6BuyFinished").style.display = "block";
+    document.getElementById("ZincB6BuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("ZincB6BuyFinished").style.display = "none";
+}, 1000);
+}
+function CalciPowerClicked() {
+    document.getElementById("CalciPower").innerText = "  قرص کلسی پاور هولیستیکا   | Calci Power  به تعداد " + CalciPowerNumber + "عدد و به قیمت " + CalciPowerPrice + "هزار تومان.";
+    document.getElementById("CalciPower").style.display = "block";
+    document.getElementById("CalciPowerDelBtn").style.display = "block";
+    document.getElementById("CalciPowerBuyFinished").style.display = "block";
+    document.getElementById("CalciPowerBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("CalciPowerBuyFinished").style.display = "none";
+}, 1000);
+}
+function Calcium600Clicked() {
+    document.getElementById("Calcium600").innerText = "  قرص کلسیم 600 و ویتامین D آلفا   | Calcium 600+D  به تعداد " + Calcium600Number + "عدد و به قیمت " + Calcium600Price + "هزار تومان.";
+    document.getElementById("Calcium600").style.display = "block";
+    document.getElementById("Calcium600DelBtn").style.display = "block";
+    document.getElementById("Calcium600BuyFinished").style.display = "block";
+    document.getElementById("Calcium600BuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("Calcium600BuyFinished").style.display = "none";
+}, 1000);
+}
+function AvodinClicked() {
+    document.getElementById("Avodin").innerText = "  کپسول آوودین هولیستیکا   | Avodin  به تعداد " + AvodinNumber + "عدد و به قیمت " + AvodinPrice + "هزار تومان.";
+    document.getElementById("Avodin").style.display = "block";
+    document.getElementById("AvodinDelBtn").style.display = "block";
+    document.getElementById("AvodinBuyFinished").style.display = "block";
+    document.getElementById("AvodinBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("AvodinBuyFinished").style.display = "none";
+}, 1000);
+}
+function CaffeineClicked() {
+    document.getElementById("Caffeine").innerText = "  قرص کافئین کارن   | Caffeine 200mg caren  به تعداد " + CaffeineNumber + "عدد و به قیمت " + CaffeinePrice + "هزار تومان.";
+    document.getElementById("Caffeine").style.display = "block";
+    document.getElementById("CaffeineDelBtn").style.display = "block";
+    document.getElementById("CaffeineBuyFinished").style.display = "block";
+    document.getElementById("CaffeineBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("CaffeineBuyFinished").style.display = "none";
 }, 1000);
 }

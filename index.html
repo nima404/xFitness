@@ -258,12 +258,25 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-12 col-md-12 col-lg-6 mt-2">
                         <div class="timCart">
                             <div class="row">
                                 <div class="col-8 col-md-8">
-                                    <h5>8-عباس روزبهانی</h5>
+                                    <h5>8-امیرعباس کریم زاده</h5>
+                                    <p class="Exercisehistory">سابقه تمرین: <span> 1 سال متوالی </span></p>
+                                    <p class="Exercisehistory">سابقه ورزشی: <span> کراس فیت </span></p>
+                                </div>
+                                <div class="col-4 col-md-4">
+                                    <img src="../xFitness/assets/img/amirabasKarimzade.jpeg" alt="tim Cart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6 mt-2">
+                        <div class="timCart">
+                            <div class="row">
+                                <div class="col-8 col-md-8">
+                                    <h5>9-عباس روزبهانی</h5>
                                     <p class="Exercisehistory">سابقه تمرین: <span> 6 ماه متوالی </span></p>
                                     <p class="Exercisehistory">سابقه ورزشی: <span> کراس فیت </span></p>
                                 </div>
@@ -277,7 +290,7 @@
                         <div class="timCart">
                             <div class="row">
                                 <div class="col-8 col-md-8">
-                                    <h5>9-رفیع احمد فیضی</h5>
+                                    <h5>10-رفیع احمد فیضی</h5>
                                     <p class="Exercisehistory">سابقه تمرین: <span> 3 ماه متوالی </span></p>
                                     <p class="Exercisehistory">سابقه ورزشی: <span> کراس فیت </span></p>
                                 </div>
@@ -291,8 +304,8 @@
                         <div class="timCart">
                             <div class="row">
                                 <div class="col-8 col-md-8">
-                                    <h5>10-احمدرضا اقلیمی</h5>
-                                    <p class="Exercisehistory">سابقه تمرین: <span> 2 ماه متوالی </span></p>
+                                    <h5>11-احمدرضا اقلیمی</h5>
+                                    <p class="Exercisehistory">سابقه تمرین: <span> 3 ماه متوالی </span></p>
                                     <p class="Exercisehistory">سابقه ورزشی: <span> کراس فیت </span></p>
                                 </div>
                                 <div class="col-4 col-md-4">
@@ -406,11 +419,11 @@
             <div class="row sticky-top">
                 <div class="col-12 p-0">
                     <div align=center class="stickyedt">
-                        <form class="formSerch">
+                        <!-- <form class="formSerch">
                             <input id="searchInput" class="searchInput" placeholder="نام محصول را جست و جو کنید...">
                             <button type="button" class="searchBtn" onclick="searchBtn()"><i
                                     class="fas fa-search"></i></button>
-                        </form>
+                        </form> -->
                         <div class="mt-2">
                             <button onclick="document.getElementById('id01').style.display='block'"
                                 class="posEstyle">مشاهده ی سبد خرید</button>
@@ -1508,17 +1521,514 @@
                     </div>
                 </div>
 
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle"> AsmaVit  | شربت آسماویت ویتابیوتیکس ۲۰۰ میلی لیتر  </p>
+                                    <span id="priceOrg">قیمت : 77.000</span>
+                                    <span class="Discountprice">85.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusAsmaVit">+</button>
+                                        <span id="numberAsmaVit">1</span>
+                                        <button class="numberofnumber" id="minAsmaVit">-</button>
+                                    </div>
+
+                                    <span id="priceAsmaVit"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/AsmaVit.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="AsmaVitClicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="AsmaVitBuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle"> Irofix  | قطره آیروفیکس دایونیکس فارما  </p>
+                                    <span id="priceOrg">قیمت : 99.000</span>
+                                    <span class="Discountprice">110.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusIrofix">+</button>
+                                        <span id="numberIrofix">1</span>
+                                        <button class="numberofnumber" id="minIrofix">-</button>
+                                    </div>
+
+                                    <span id="priceIrofix"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/Irofix.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="IrofixClicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="IrofixBuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle"> VITABIOTICS IMMUNACE  | شربت ایمیونیس ویتابیوتیکس 200 میلی لیتر  </p>
+                                    <span id="priceOrg">قیمت : 86.000</span>
+                                    <span class="Discountprice">95.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusIMMUNACE">+</button>
+                                        <span id="numberIMMUNACE">1</span>
+                                        <button class="numberofnumber" id="minIMMUNACE">-</button>
+                                    </div>
+
+                                    <span id="priceIMMUNACE"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/Immunace.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="IMMUNACEClicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="IMMUNACEBuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle"> Feroglobin B12  | شربت فروگلوبین B12 ویتابیوتیکس ۲۰۰ میلی لیتر  </p>
+                                    <span id="priceOrg">قیمت : 69.000</span>
+                                    <span class="Discountprice">74.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusFeroglobin">+</button>
+                                        <span id="numberFeroglobin">1</span>
+                                        <button class="numberofnumber" id="minFeroglobin">-</button>
+                                    </div>
+
+                                    <span id="priceFeroglobin"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/Feroglobin.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="FeroglobinClicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="FeroglobinBuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle"> Energe-X  | قرص انرژکس گلدن لایف  </p>
+                                    <span id="priceOrg">قیمت : 188.000</span>
+                                    <span class="Discountprice">210.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusEnergeX">+</button>
+                                        <span id="numberEnergeX">1</span>
+                                        <button class="numberofnumber" id="minEnergeX">-</button>
+                                    </div>
+
+                                    <span id="priceEnergeX"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/EnergeX.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="EnergeXClicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="EnergeXBuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle"> Magnesium 400  | ساشه منیزیم 400 یوروویتال  </p>
+                                    <span id="priceOrg">قیمت : 109.000</span>
+                                    <span class="Discountprice">117.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusMagnesium400">+</button>
+                                        <span id="numberMagnesium400">1</span>
+                                        <button class="numberofnumber" id="minMagnesium400">-</button>
+                                    </div>
+
+                                    <span id="priceMagnesium400"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/Magnesium400.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="Magnesium400Clicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="Magnesium400BuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         
+            <div class="row" id="mokamel4">
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle">Cystine B6 Zinc   | قرص سیستین B6 زینک رازک </p>
+                                    <span id="priceOrg">قیمت : 84.000</span>
+                                    <span class="Discountprice">90.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusZincB6">+</button>
+                                        <span id="numberZincB6">1</span>
+                                        <button class="numberofnumber" id="minZincB6">-</button>
+                                    </div>
+
+                                    <span id="priceZincB6"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/ZincB6.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="ZincB6Clicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="ZincB6BuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle">Calci Power   | قرص کلسی پاور هولیستیکا </p>
+                                    <span id="priceOrg">قیمت : 78.000</span>
+                                    <span class="Discountprice">83.500</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusCalciPower">+</button>
+                                        <span id="numberCalciPower">1</span>
+                                        <button class="numberofnumber" id="minCalciPower">-</button>
+                                    </div>
+
+                                    <span id="priceCalciPower"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/CalciPower.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="CalciPowerClicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="CalciPowerBuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle">Calcium 600+D   | قرص کلسیم 600 و ویتامین D آلفا </p>
+                                    <span id="priceOrg">قیمت : 119.000</span>
+                                    <span class="Discountprice">128.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusCalcium600">+</button>
+                                        <span id="numberCalcium600">1</span>
+                                        <button class="numberofnumber" id="minCalcium600">-</button>
+                                    </div>
+
+                                    <span id="priceCalcium600"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/Calcium600.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="Calcium600Clicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="Calcium600BuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle">Avodin   | کپسول آوودین هولیستیکا </p>
+                                    <span id="priceOrg">قیمت : 133.000</span>
+                                    <span class="Discountprice">142.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusAvodin">+</button>
+                                        <span id="numberAvodin">1</span>
+                                        <button class="numberofnumber" id="minAvodin">-</button>
+                                    </div>
+
+                                    <span id="priceAvodin"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/Avodin.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="AvodinClicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="AvodinBuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <div class="serviceCard">
+                        <div class="container">
+                            <div class="row pt-3 pb-3">
+                                <div class="col-8">
+                                    <p class="servicTitle">Caffeine 200mg caren   | قرص کافئین کارن </p>
+                                    <span id="priceOrg">قیمت : 113.000</span>
+                                    <span class="Discountprice">120.000</span>
+                                    <br>
+
+                                    <div class="mt-1">
+                                        <button class="numberofnumber" id="plusCaffeine">+</button>
+                                        <span id="numberCaffeine">1</span>
+                                        <button class="numberofnumber" id="minCaffeine">-</button>
+                                    </div>
+
+                                    <span id="priceCaffeine"></span>
+                                    <br>
+                                </div>
+                                <div class="col-4">
+                                    <img src="../xFitness/assets/img/Caffeine.jpg" alt="" class="serviceCardImg">
+                                </div>
+                                <div class="container">
+                                    <div class="row" style="align-items: center;">
+                                        <div class="col-8">
+                                            <button class="buyBtn" onclick="CaffeineClicked()">افزودن به سبد
+                                                خرید</button>
+                                        </div>
+                                        <div class="col-4" align=left><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <div align=right>
+                                                <span id="CaffeineBuyFinished" class="finishSpan"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="row">
                 <div class="col-12">
                     <div class="paginationOrg">
                         <a class="pagintion activePagintion" id="page1">1</a>
                         <a class="pagintion" id="page2">2</a>
                         <a class="pagintion" id="page3">3</a>
-                        <a class="pagintion">4</a>
-                        <a class="pagintion">5</a>
-                        <a class="pagintion">6</a>
+                        <a class="pagintion" id="page4">4</a>
                     </div>
                 </div>
             </div>
@@ -1729,6 +2239,94 @@
                                                 onclick="SideralDelBtn()"><i class="fas fa-trash"></i></button>
                                         </div>
 
+                                        <div class="col-10">
+                                            <div class="modalBody" id="AsmaVit"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="AsmaVitDelBtn"
+                                                onclick="AsmaVitDelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="Irofix"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="IrofixDelBtn"
+                                                onclick="IrofixDelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="IMMUNACE"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="IMMUNACEDelBtn"
+                                                onclick="IMMUNACEDelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="Feroglobin"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="FeroglobinDelBtn"
+                                                onclick="FeroglobinDelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="EnergeX"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="EnergeXDelBtn"
+                                                onclick="EnergeXDelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="Magnesium400"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="Magnesium400DelBtn"
+                                                onclick="Magnesium400DelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="ZincB6"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="ZincB6DelBtn"
+                                                onclick="ZincB6DelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="CalciPower"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="CalciPowerDelBtn"
+                                                onclick="CalciPowerDelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="Calcium600"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="Calcium600DelBtn"
+                                                onclick="Calcium600DelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="Avodin"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="AvodinDelBtn"
+                                                onclick="AvodinDelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                        
+                                        <div class="col-10">
+                                            <div class="modalBody" id="Caffeine"></div>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="delBtn" id="CaffeineDelBtn"
+                                                onclick="CaffeineDelBtn()"><i class="fas fa-trash"></i></button>
+                                        </div>
+
                                     </div>
 
 
@@ -1878,7 +2476,7 @@
                                 <li class="callWithLi"><i class="fab fa-instagram"></i> seyedjavadmazhari</li>
                             </a>
                             <a href="https://api.whatsapp.com/send?phone=989190186083&text=">
-                                <li class="callWithLi"><i class="fas fa-phone"></i> 09190186083</li>
+                                <li class="callWithLi"><i class="fas fa-phone"></i> 09023284000</li>
                             </a>
                             <a href="https://t.me/User_Pn">
                                 <li class="callWithLi"><i class="fab fa-telegram"></i> javadmazhari</li>

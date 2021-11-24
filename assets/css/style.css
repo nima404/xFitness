@@ -617,6 +617,12 @@ display: none;
     padding: 15px;
     border-radius: 5px;
 }
+.timCart:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
 .timCart img{
     width: 100px;
     height: 100px;
@@ -653,7 +659,7 @@ footer{
     background-color: rgb(218, 218, 218);
 }
 .desginBy{
-    font-size: 16px;
+    font-size: 15px;
     margin: 0;
     padding: 5px;
     text-align: center;
@@ -661,7 +667,9 @@ footer{
 }
 .callWithLi{
     font-size: 13px;
-    margin: 10px;
+    /* margin: 3px; */
+    display: inline-block;
+    color: darkslateblue;
 }
 .callWithUl a{
     text-decoration: none;
@@ -686,6 +694,7 @@ video{
 .fa-phone{
     color: white;
 }
+
 .hidden {
     opacity: 0;
   }
@@ -699,11 +708,307 @@ video{
   }
   .btn{
       font-size: 14px !important;
+      font-weight: bolder !important;
   }
   .btn:focus{
       outline: none !important;
       box-shadow: none !important;
   }
+
+  .dropbtn {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 12px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1f6;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .dropdown-content a {
+      font-size: 13px;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a button{
+      background: none;
+      border: none;
+      border-bottom: 1px solid darkgoldenrod;
+      padding: 5px 0px 6px 0;
+      width: 100px;
+  }
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  #service , #serviceTshirt , #BMICalc{
+      display: none;
+  }
+  .serviceCard{
+    box-shadow: 0px 0px 7px 0px rgb(228 228 228);
+  }
+  .serviceCardImg{
+      width: 100px;
+      height: 100px;
+  }
+  .servicTitle{
+      font-size: 18px;
+      font-weight: bolder;
+  }
+  .buyBtn{
+    background: darkgoldenrod;
+    color: white;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 7px;
+  }
+  .Discountprice{
+      font-weight: bolder;
+    font-size: 13px;
+    color: darkgoldenrod;
+    text-decoration: line-through;
+    font-family: 'Font Awesome 5 Brands';
+  }
+  #priceOrg{
+      font-weight: bolder;
+    font-size: 13px;
+    color: darkgoldenrod;
+    font-family: 'Font Awesome 5 Brands';
+  }
+  #price , #priceGainer , #priceAminoPex{
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: bolder;
+      font-family: 'Font Awesome 5 Brands';
+  }
+  .numberofnumber{
+      background: none;
+      border: 1px solid darkgoldenrod;
+      border-radius: 3px;
+      color: darkgoldenrod;
+  }
+  #number , #numberGainer , #numberAminoPex{
+    font-family: 'Font Awesome 5 Brands';
+  }
+  .fa-star{
+      color: darkgoldenrod;
+      font-size: 12px;
+  }
+  .searchInput{
+    background: none;
+    border: none;
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+    border-radius: 5px;
+    width: 60%;
+    height: 5                                                                                                                               vh;
+    font-size: 12px;
+  }
+  .searchInput:focus{
+      outline: 1px solid darkgoldenrod;
+      border-radius: 5px;
+  }
+  .searchBtn{
+      background: none;
+      border: 1px solid darkgoldenrod;
+      border-radius: 5px;
+      margin: 5px;
+      box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+  }
+  .fa-search{
+      font-size: 14px;
+      color: darkgoldenrod;
+  }
+  .formSerch{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .stickyedt{
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+    padding: 10px;
+    border-radius: 0px 0px 50px 50px;
+  }
+  .copyBtn{
+    background: none;
+    border: none;
+    box-shadow: 0 0 2px 0 darkgoldenrod;
+    border-radius: 5px;
+    padding: 10px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+
+.modalBody{
+display: none;
+    background: white;
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    font-size: 10px;
+}
+.posEstyle{
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid darkgoldenrod;
+    background: none;
+    font-size: 12px;
+    font-weight: bolder;
+    color: darkgoldenrod;
+}
+.fa-trash{
+    color: black;
+    font-size: 18px;
+}
+#trashIcon{
+    background: none;
+    border: none;
+    float: left;
+    padding: 15px;
+}
+.endTheCart{
+    width: 50%;
+    border: 2px solid darkgoldenrod;
+    background: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+.endTheCart:hover{
+    background: darkgoldenrod;
+    color: white;
+}
+#valueCopy{
+    text-align: center;
+}
+#inputVal{
+    height: 20vh;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+}
+#deleteFinish{
+    display: none;
+    text-align: center;
+    color: gray;
+    padding: 15px;
+    font-size: 14px;
+}
+.delBtn{
+    display: none;
+    border: none;
+    background: none;
+}
+.fa-trash{
+    font-size: 12px;
+}
+.paginationOrg{
+    text-align: left;
+    direction: ltr;
+    margin: 20px 0 20px 0;
+}
+.pagintion{
+    color: black !important;
+    padding: 7px;
+        font-size: 15px;
+        text-decoration: none;
+        font-family: cursive;
+}
+.activePagintion{
+    background-color: darkgoldenrod;
+    border-radius: 4px;
+    color: white !important;
+}
+.NamePN{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+}
+.NameNx{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+    display: none;
+}
+.NamePN i{
+    font-size: 18px;
+}
+#listNameSecond{
+    display: none;
+}
+.tableCss{
+    border: 1px solid darkgoldenrod ;
+    border-radius: 4px ;
+    padding: 10px ;
+    width: 100%;
+    border-collapse: initial;
+}
+.thCss , .tdCss{
+    border: 1px dashed goldenrod;
+    padding: 6px;
+}
+.BmiInput{
+    background: none;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+}
+.BMIEnter{
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+}
+.BMIWhat{
+    font-weight: bold;
+}
+.BMIP{
+    text-align: justify;
+    line-height: 30px;
+}
+.finishSpan{
+    display: none;
+    font-size: 13px;
+    color: forestgreen;
+    font-weight: bold;
+}
+.btnGymCss{
+    background: none;
+    border: 2px solid darkgoldenrod !important;
+    color: darkgoldenrod !important;
+    border-radius: 5px !important;
+    width: 50% !important;
+    padding: 8px !important;
+}
+#mokamel2 , #mokamel3{
+    display: none;
+}
 }
 
 @media only screen and (min-width: 769px) and (max-width:992px){
@@ -775,6 +1080,8 @@ video{
     height: 90px;
     border-radius: 50%;
     margin: 8px;
+    box-shadow: 0 0 2px 1px darkgoldenrod;
+    border: 2px solid white;
 }
 
 .menuBtn{
@@ -799,6 +1106,12 @@ video{
     padding: 15px;
     border-radius: 5px;
 }
+.timCart:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
 .timCart img{
     width: 100px;
     height: 100px;
@@ -810,12 +1123,13 @@ video{
     font-weight: bold;
 }
 .Exercisehistory{
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
+    margin: 2px;
 }
 .Exercisehistory span{
     color: darkslategray;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .disShow{
@@ -834,7 +1148,7 @@ footer{
     background-color: rgb(218, 218, 218);
 }
 .desginBy{
-    font-size: 16px;
+    font-size: 15px;
     margin: 0;
     padding: 5px;
     text-align: center;
@@ -842,7 +1156,9 @@ footer{
 }
 .callWithLi{
     font-size: 13px;
-    margin: 10px;
+    /* margin: 3px; */
+    display: inline-block;
+    color: darkslateblue;
 }
 .callWithUl a{
     text-decoration: none;
@@ -867,6 +1183,7 @@ video{
 .fa-phone{
     color: white;
 }
+
 .hidden {
     opacity: 0;
   }
@@ -880,11 +1197,307 @@ video{
   }
   .btn{
       font-size: 14px !important;
+      font-weight: bolder !important;
   }
   .btn:focus{
       outline: none !important;
       box-shadow: none !important;
   }
+
+  .dropbtn {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 12px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1f6;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .dropdown-content a {
+      font-size: 13px;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a button{
+      background: none;
+      border: none;
+      border-bottom: 1px solid darkgoldenrod;
+      padding: 5px 0px 6px 0;
+      width: 100px;
+  }
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  #service , #serviceTshirt , #BMICalc{
+      display: none;
+  }
+  .serviceCard{
+    box-shadow: 0px 0px 7px 0px rgb(228 228 228);
+  }
+  .serviceCardImg{
+      width: 100px;
+      height: 100px;
+  }
+  .servicTitle{
+      font-size: 18px;
+      font-weight: bolder;
+  }
+  .buyBtn{
+    background: darkgoldenrod;
+    color: white;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 7px;
+  }
+  .Discountprice{
+      font-weight: bolder;
+    font-size: 13px;
+    color: darkgoldenrod;
+    text-decoration: line-through;
+    font-family: 'Font Awesome 5 Brands';
+  }
+  #priceOrg{
+      font-weight: bolder;
+    font-size: 13px;
+    color: darkgoldenrod;
+    font-family: 'Font Awesome 5 Brands';
+  }
+  #price , #priceGainer , #priceAminoPex{
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: bolder;
+      font-family: 'Font Awesome 5 Brands';
+  }
+  .numberofnumber{
+      background: none;
+      border: 1px solid darkgoldenrod;
+      border-radius: 3px;
+      color: darkgoldenrod;
+  }
+  #number , #numberGainer , #numberAminoPex{
+    font-family: 'Font Awesome 5 Brands';
+  }
+  .fa-star{
+      color: darkgoldenrod;
+      font-size: 12px;
+  }
+  .searchInput{
+    background: none;
+    border: none;
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+    border-radius: 5px;
+    width: 60%;
+    height: 5                                                                                                                               vh;
+    font-size: 12px;
+  }
+  .searchInput:focus{
+      outline: 1px solid darkgoldenrod;
+      border-radius: 5px;
+  }
+  .searchBtn{
+      background: none;
+      border: 1px solid darkgoldenrod;
+      border-radius: 5px;
+      margin: 5px;
+      box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+  }
+  .fa-search{
+      font-size: 14px;
+      color: darkgoldenrod;
+  }
+  .formSerch{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .stickyedt{
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+    padding: 10px;
+    border-radius: 0px 0px 50px 50px;
+  }
+  .copyBtn{
+    background: none;
+    border: none;
+    box-shadow: 0 0 2px 0 darkgoldenrod;
+    border-radius: 5px;
+    padding: 10px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+
+.modalBody{
+display: none;
+    background: white;
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    font-size: 10px;
+}
+.posEstyle{
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid darkgoldenrod;
+    background: none;
+    font-size: 12px;
+    font-weight: bolder;
+    color: darkgoldenrod;
+}
+.fa-trash{
+    color: black;
+    font-size: 18px;
+}
+#trashIcon{
+    background: none;
+    border: none;
+    float: left;
+    padding: 15px;
+}
+.endTheCart{
+    width: 50%;
+    border: 2px solid darkgoldenrod;
+    background: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+.endTheCart:hover{
+    background: darkgoldenrod;
+    color: white;
+}
+#valueCopy{
+    text-align: center;
+}
+#inputVal{
+    height: 20vh;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+}
+#deleteFinish{
+    display: none;
+    text-align: center;
+    color: gray;
+    padding: 15px;
+    font-size: 14px;
+}
+.delBtn{
+    display: none;
+    border: none;
+    background: none;
+}
+.fa-trash{
+    font-size: 12px;
+}
+.paginationOrg{
+    text-align: left;
+    direction: ltr;
+    margin: 20px 0 20px 0;
+}
+.pagintion{
+    color: black !important;
+    padding: 7px;
+        font-size: 15px;
+        text-decoration: none;
+        font-family: cursive;
+}
+.activePagintion{
+    background-color: darkgoldenrod;
+    border-radius: 4px;
+    color: white !important;
+}
+.NamePN{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+}
+.NameNx{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+    display: none;
+}
+.NamePN i{
+    font-size: 18px;
+}
+#listNameSecond{
+    display: none;
+}
+.tableCss{
+    border: 1px solid darkgoldenrod ;
+    border-radius: 4px ;
+    padding: 10px ;
+    width: 100%;
+    border-collapse: initial;
+}
+.thCss , .tdCss{
+    border: 1px dashed goldenrod;
+    padding: 6px;
+}
+.BmiInput{
+    background: none;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+}
+.BMIEnter{
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+}
+.BMIWhat{
+    font-weight: bold;
+}
+.BMIP{
+    text-align: justify;
+    line-height: 30px;
+}
+.finishSpan{
+    display: none;
+    font-size: 13px;
+    color: forestgreen;
+    font-weight: bold;
+}
+.btnGymCss{
+    background: none;
+    border: 2px solid darkgoldenrod !important;
+    color: darkgoldenrod !important;
+    border-radius: 5px !important;
+    width: 50% !important;
+    padding: 8px !important;
+}
+#mokamel2 , #mokamel3{
+    display: none;
+}
 }
 
 @media only screen and (min-width: 993px) and (max-width:1200px){
@@ -956,6 +1569,8 @@ video{
     height: 90px;
     border-radius: 50%;
     margin: 8px;
+    box-shadow: 0 0 2px 1px darkgoldenrod;
+    border: 2px solid white;
 }
 
 .menuBtn{
@@ -980,6 +1595,12 @@ video{
     padding: 15px;
     border-radius: 5px;
 }
+.timCart:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
 .timCart img{
     width: 100px;
     height: 100px;
@@ -991,12 +1612,13 @@ video{
     font-weight: bold;
 }
 .Exercisehistory{
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
+    margin: 2px;
 }
 .Exercisehistory span{
     color: darkslategray;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .disShow{
@@ -1015,7 +1637,7 @@ footer{
     background-color: rgb(218, 218, 218);
 }
 .desginBy{
-    font-size: 16px;
+    font-size: 15px;
     margin: 0;
     padding: 5px;
     text-align: center;
@@ -1023,7 +1645,9 @@ footer{
 }
 .callWithLi{
     font-size: 13px;
-    margin: 10px;
+    /* margin: 3px; */
+    display: inline-block;
+    color: darkslateblue;
 }
 .callWithUl a{
     text-decoration: none;
@@ -1048,6 +1672,7 @@ video{
 .fa-phone{
     color: white;
 }
+
 .hidden {
     opacity: 0;
   }
@@ -1061,11 +1686,307 @@ video{
   }
   .btn{
       font-size: 14px !important;
+      font-weight: bolder !important;
   }
   .btn:focus{
       outline: none !important;
       box-shadow: none !important;
   }
+
+  .dropbtn {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 12px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1f6;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .dropdown-content a {
+      font-size: 13px;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a button{
+      background: none;
+      border: none;
+      border-bottom: 1px solid darkgoldenrod;
+      padding: 5px 0px 6px 0;
+      width: 100px;
+  }
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  #service , #serviceTshirt , #BMICalc{
+      display: none;
+  }
+  .serviceCard{
+    box-shadow: 0px 0px 7px 0px rgb(228 228 228);
+  }
+  .serviceCardImg{
+      width: 100px;
+      height: 100px;
+  }
+  .servicTitle{
+      font-size: 18px;
+      font-weight: bolder;
+  }
+  .buyBtn{
+    background: darkgoldenrod;
+    color: white;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 7px;
+  }
+  .Discountprice{
+      font-weight: bolder;
+    font-size: 13px;
+    color: darkgoldenrod;
+    text-decoration: line-through;
+    font-family: 'Font Awesome 5 Brands';
+  }
+  #priceOrg{
+      font-weight: bolder;
+    font-size: 13px;
+    color: darkgoldenrod;
+    font-family: 'Font Awesome 5 Brands';
+  }
+  #price , #priceGainer , #priceAminoPex{
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: bolder;
+      font-family: 'Font Awesome 5 Brands';
+  }
+  .numberofnumber{
+      background: none;
+      border: 1px solid darkgoldenrod;
+      border-radius: 3px;
+      color: darkgoldenrod;
+  }
+  #number , #numberGainer , #numberAminoPex{
+    font-family: 'Font Awesome 5 Brands';
+  }
+  .fa-star{
+      color: darkgoldenrod;
+      font-size: 12px;
+  }
+  .searchInput{
+    background: none;
+    border: none;
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+    border-radius: 5px;
+    width: 60%;
+    height: 5                                                                                                                               vh;
+    font-size: 12px;
+  }
+  .searchInput:focus{
+      outline: 1px solid darkgoldenrod;
+      border-radius: 5px;
+  }
+  .searchBtn{
+      background: none;
+      border: 1px solid darkgoldenrod;
+      border-radius: 5px;
+      margin: 5px;
+      box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+  }
+  .fa-search{
+      font-size: 14px;
+      color: darkgoldenrod;
+  }
+  .formSerch{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .stickyedt{
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+    padding: 10px;
+    border-radius: 0px 0px 50px 50px;
+  }
+  .copyBtn{
+    background: none;
+    border: none;
+    box-shadow: 0 0 2px 0 darkgoldenrod;
+    border-radius: 5px;
+    padding: 10px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+
+.modalBody{
+display: none;
+    background: white;
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    font-size: 10px;
+}
+.posEstyle{
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid darkgoldenrod;
+    background: none;
+    font-size: 12px;
+    font-weight: bolder;
+    color: darkgoldenrod;
+}
+.fa-trash{
+    color: black;
+    font-size: 18px;
+}
+#trashIcon{
+    background: none;
+    border: none;
+    float: left;
+    padding: 15px;
+}
+.endTheCart{
+    width: 50%;
+    border: 2px solid darkgoldenrod;
+    background: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+.endTheCart:hover{
+    background: darkgoldenrod;
+    color: white;
+}
+#valueCopy{
+    text-align: center;
+}
+#inputVal{
+    height: 20vh;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+}
+#deleteFinish{
+    display: none;
+    text-align: center;
+    color: gray;
+    padding: 15px;
+    font-size: 14px;
+}
+.delBtn{
+    display: none;
+    border: none;
+    background: none;
+}
+.fa-trash{
+    font-size: 12px;
+}
+.paginationOrg{
+    text-align: left;
+    direction: ltr;
+    margin: 20px 0 20px 0;
+}
+.pagintion{
+    color: black !important;
+    padding: 7px;
+        font-size: 15px;
+        text-decoration: none;
+        font-family: cursive;
+}
+.activePagintion{
+    background-color: darkgoldenrod;
+    border-radius: 4px;
+    color: white !important;
+}
+.NamePN{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+}
+.NameNx{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+    display: none;
+}
+.NamePN i{
+    font-size: 18px;
+}
+#listNameSecond{
+    display: none;
+}
+.tableCss{
+    border: 1px solid darkgoldenrod ;
+    border-radius: 4px ;
+    padding: 10px ;
+    width: 100%;
+    border-collapse: initial;
+}
+.thCss , .tdCss{
+    border: 1px dashed goldenrod;
+    padding: 6px;
+}
+.BmiInput{
+    background: none;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+}
+.BMIEnter{
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+}
+.BMIWhat{
+    font-weight: bold;
+}
+.BMIP{
+    text-align: justify;
+    line-height: 30px;
+}
+.finishSpan{
+    display: none;
+    font-size: 13px;
+    color: forestgreen;
+    font-weight: bold;
+}
+.btnGymCss{
+    background: none;
+    border: 2px solid darkgoldenrod !important;
+    color: darkgoldenrod !important;
+    border-radius: 5px !important;
+    width: 50% !important;
+    padding: 8px !important;
+}
+#mokamel2 , #mokamel3{
+    display: none;
+}
 }
 
 @media only screen and (min-width: 1201px){
@@ -1074,7 +1995,7 @@ video{
         background-image: url(../img/BackEdit1-min.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 65vh;
+        height: 50vh;
 
         /* min-height: 500px;  */
 
@@ -1137,6 +2058,8 @@ video{
     height: 90px;
     border-radius: 50%;
     margin: 8px;
+    box-shadow: 0 0 2px 1px darkgoldenrod;
+    border: 2px solid white;
 }
 
 .menuBtn{
@@ -1161,6 +2084,12 @@ video{
     padding: 15px;
     border-radius: 5px;
 }
+.timCart:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
 .timCart img{
     width: 100px;
     height: 100px;
@@ -1172,12 +2101,13 @@ video{
     font-weight: bold;
 }
 .Exercisehistory{
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
+    margin: 2px;
 }
 .Exercisehistory span{
     color: darkslategray;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .disShow{
@@ -1196,7 +2126,7 @@ footer{
     background-color: rgb(218, 218, 218);
 }
 .desginBy{
-    font-size: 16px;
+    font-size: 15px;
     margin: 0;
     padding: 5px;
     text-align: center;
@@ -1204,7 +2134,9 @@ footer{
 }
 .callWithLi{
     font-size: 13px;
-    margin: 10px;
+    /* margin: 3px; */
+    display: inline-block;
+    color: darkslateblue;
 }
 .callWithUl a{
     text-decoration: none;
@@ -1229,6 +2161,7 @@ video{
 .fa-phone{
     color: white;
 }
+
 .hidden {
     opacity: 0;
   }
@@ -1242,9 +2175,305 @@ video{
   }
   .btn{
       font-size: 14px !important;
+      font-weight: bolder !important;
   }
   .btn:focus{
       outline: none !important;
       box-shadow: none !important;
   }
+
+  .dropbtn {
+    color: white;
+    border: none;
+    background: none;
+    font-size: 12px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1f6;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .dropdown-content a {
+      font-size: 13px;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a button{
+      background: none;
+      border: none;
+      border-bottom: 1px solid darkgoldenrod;
+      padding: 5px 0px 6px 0;
+      width: 100px;
+  }
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  #service , #serviceTshirt , #BMICalc{
+      display: none;
+  }
+  .serviceCard{
+    box-shadow: 0px 0px 7px 0px rgb(228 228 228);
+  }
+  .serviceCardImg{
+      width: 100px;
+      height: 100px;
+  }
+  .servicTitle{
+      font-size: 18px;
+      font-weight: bolder;
+  }
+  .buyBtn{
+    background: darkgoldenrod;
+    color: white;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 7px;
+  }
+  .Discountprice{
+      font-weight: bolder;
+    font-size: 13px;
+    color: darkgoldenrod;
+    text-decoration: line-through;
+    font-family: 'Font Awesome 5 Brands';
+  }
+  #priceOrg{
+      font-weight: bolder;
+    font-size: 13px;
+    color: darkgoldenrod;
+    font-family: 'Font Awesome 5 Brands';
+  }
+  #price , #priceGainer , #priceAminoPex{
+      display: block;
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: bolder;
+      font-family: 'Font Awesome 5 Brands';
+  }
+  .numberofnumber{
+      background: none;
+      border: 1px solid darkgoldenrod;
+      border-radius: 3px;
+      color: darkgoldenrod;
+  }
+  #number , #numberGainer , #numberAminoPex{
+    font-family: 'Font Awesome 5 Brands';
+  }
+  .fa-star{
+      color: darkgoldenrod;
+      font-size: 12px;
+  }
+  .searchInput{
+    background: none;
+    border: none;
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+    border-radius: 5px;
+    width: 60%;
+    height: 5                                                                                                                               vh;
+    font-size: 12px;
+  }
+  .searchInput:focus{
+      outline: 1px solid darkgoldenrod;
+      border-radius: 5px;
+  }
+  .searchBtn{
+      background: none;
+      border: 1px solid darkgoldenrod;
+      border-radius: 5px;
+      margin: 5px;
+      box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+  }
+  .fa-search{
+      font-size: 14px;
+      color: darkgoldenrod;
+  }
+  .formSerch{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .stickyedt{
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px rgb(189 189 189);
+    padding: 10px;
+    border-radius: 0px 0px 50px 50px;
+  }
+  .copyBtn{
+    background: none;
+    border: none;
+    box-shadow: 0 0 2px 0 darkgoldenrod;
+    border-radius: 5px;
+    padding: 10px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+
+.modalBody{
+display: none;
+    background: white;
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    font-size: 10px;
+}
+.posEstyle{
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid darkgoldenrod;
+    background: none;
+    font-size: 12px;
+    font-weight: bolder;
+    color: darkgoldenrod;
+}
+.fa-trash{
+    color: black;
+    font-size: 18px;
+}
+#trashIcon{
+    background: none;
+    border: none;
+    float: left;
+    padding: 15px;
+}
+.endTheCart{
+    width: 50%;
+    border: 2px solid darkgoldenrod;
+    background: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+.endTheCart:hover{
+    background: darkgoldenrod;
+    color: white;
+}
+#valueCopy{
+    text-align: center;
+}
+#inputVal{
+    height: 20vh;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+}
+#deleteFinish{
+    display: none;
+    text-align: center;
+    color: gray;
+    padding: 15px;
+    font-size: 14px;
+}
+.delBtn{
+    display: none;
+    border: none;
+    background: none;
+}
+.fa-trash{
+    font-size: 12px;
+}
+.paginationOrg{
+    text-align: left;
+    direction: ltr;
+    margin: 20px 0 20px 0;
+}
+.pagintion{
+    color: black !important;
+    padding: 7px;
+        font-size: 15px;
+        text-decoration: none;
+        font-family: cursive;
+}
+.activePagintion{
+    background-color: darkgoldenrod;
+    border-radius: 4px;
+    color: white !important;
+}
+.NamePN{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+}
+.NameNx{
+    background: none;
+    border: none;
+    color: rgb(165, 165, 165);
+    font-size: 17px;
+    display: none;
+}
+.NamePN i{
+    font-size: 18px;
+}
+#listNameSecond{
+    display: none;
+}
+.tableCss{
+    border: 1px solid darkgoldenrod ;
+    border-radius: 4px ;
+    padding: 10px ;
+    width: 100%;
+    border-collapse: initial;
+}
+.thCss , .tdCss{
+    border: 1px dashed goldenrod;
+    padding: 6px;
+}
+.BmiInput{
+    background: none;
+    border: 1px solid darkgoldenrod;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+}
+.BMIEnter{
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+}
+.BMIWhat{
+    font-weight: bold;
+}
+.BMIP{
+    text-align: justify;
+    line-height: 30px;
+}
+.finishSpan{
+    display: none;
+    font-size: 13px;
+    color: forestgreen;
+    font-weight: bold;
+}
+.btnGymCss{
+    background: none;
+    border: 2px solid darkgoldenrod !important;
+    color: darkgoldenrod !important;
+    border-radius: 5px !important;
+    width: 50% !important;
+    padding: 8px !important;
+}
+#mokamel2 , #mokamel3{
+    display: none;
+}
 }
