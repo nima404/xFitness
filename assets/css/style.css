@@ -441,6 +441,7 @@ display: none;
     margin: 20px 0 20px 0;
 }
 .pagintion{
+    color: black !important;
     padding: 7px;
         font-size: 15px;
         text-decoration: none;
@@ -449,7 +450,7 @@ display: none;
 .activePagintion{
     background-color: darkgoldenrod;
     border-radius: 4px;
-    color: white;
+    color: white !important;
 }
 .NamePN{
     background: none;
@@ -493,7 +494,7 @@ display: none;
     border: none;
     border-radius: 5px;
     color: white;
-    padding: 8numberVitaminCpx;
+    padding: 8px;
 }
 .BMIWhat{
     font-weight: bold;
@@ -507,6 +508,17 @@ display: none;
     font-size: 13px;
     color: forestgreen;
     font-weight: bold;
+}
+.btnGymCss{
+    background: none;
+    border: 2px solid darkgoldenrod !important;
+    color: darkgoldenrod !important;
+    border-radius: 5px !important;
+    width: 50% !important;
+    padding: 8px !important;
+}
+#mokamel2 , #mokamel3{
+    display: none;
 }
 }
 

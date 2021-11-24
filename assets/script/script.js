@@ -26,6 +26,11 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click",
 let page1 = document.getElementById("page1").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'block';
     document.getElementById("mokamel2").style.display = 'none';
+    document.getElementById("mokamel3").style.display = 'none';
+
+    document.getElementById("page1").classList.add("activePagintion");
+    document.getElementById("page2").classList.remove("activePagintion");
+    document.getElementById("page3").classList.remove("activePagintion");
 
     window.scroll({
         top: 0,
@@ -34,7 +39,24 @@ let page1 = document.getElementById("page1").addEventListener("click", function 
 })
 let page2 = document.getElementById("page2").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'none';
+    document.getElementById("mokamel3").style.display = 'none';
     document.getElementById("mokamel2").style.display = 'block';
+    document.getElementById("page2").classList.add("activePagintion");
+    document.getElementById("page1").classList.remove("activePagintion");
+    document.getElementById("page3").classList.remove("activePagintion");
+
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      });
+})
+let page3 = document.getElementById("page3").addEventListener("click", function () {
+    document.getElementById("mokamel1").style.display = 'none';
+    document.getElementById("mokamel2").style.display = 'none';
+    document.getElementById("mokamel3").style.display = 'block';
+    document.getElementById("page2").classList.remove("activePagintion");
+    document.getElementById("page1").classList.remove("activePagintion");
+    document.getElementById("page3").classList.add("activePagintion");
 
     window.scroll({
         top: 0,
@@ -288,14 +310,14 @@ var searchINput = document.getElementById("searchInput");
 
 // number and price of kala
 let vayDobisNumber = 1;
-let vayDobisPrice = 195000;
+let vayDobisPrice = 1380000;
 let plus = document.querySelector("#plus").addEventListener("click", function () {
     if (vayDobisNumber == 10) {
         vayDobisNumber = 10;
-        vayDobisPrice = 1950000;
+        vayDobisPrice = 13800000;
     } else {
         ++vayDobisNumber;
-        vayDobisPrice = vayDobisPrice + 195000;
+        vayDobisPrice = vayDobisPrice + 1380000;
     }
 
     document.querySelector("#number").innerHTML = vayDobisNumber;
@@ -304,10 +326,10 @@ let plus = document.querySelector("#plus").addEventListener("click", function ()
 let min = document.querySelector("#min").addEventListener("click", function () {
     if (vayDobisNumber == 1) {
         vayDobisNumber = 1;
-        vayDobisPrice = 195000;
+        vayDobisPrice = 1380000;
     } else {
         --vayDobisNumber;
-        vayDobisPrice = vayDobisPrice - 195000;
+        vayDobisPrice = vayDobisPrice - 1380000;
     }
 
     document.querySelector("#number").innerHTML = vayDobisNumber;
@@ -316,14 +338,14 @@ let min = document.querySelector("#min").addEventListener("click", function () {
 
 
 let GainerDobisNumber = 1;
-let GainerDobisPrice = 230000;
+let GainerDobisPrice = 577000;
 let plusGainer = document.querySelector("#plusGainer").addEventListener("click", function () {
     if (GainerDobisNumber == 10) {
         GainerDobisNumber = 10;
-        GainerDobisPrice = 2300000;
+        GainerDobisPrice = 5770000;
     } else {
         ++GainerDobisNumber;
-        GainerDobisPrice = GainerDobisPrice + 230000;
+        GainerDobisPrice = GainerDobisPrice + 577000;
     }
 
     document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
@@ -332,10 +354,10 @@ let plusGainer = document.querySelector("#plusGainer").addEventListener("click",
 let minGainer = document.querySelector("#minGainer").addEventListener("click", function () {
     if (GainerDobisNumber == 1) {
         GainerDobisNumber = 1;
-        GainerDobisPrice = 230000;
+        GainerDobisPrice = 577000;
     } else {
         --GainerDobisNumber;
-        GainerDobisPrice = GainerDobisPrice - 230000;
+        GainerDobisPrice = GainerDobisPrice - 577000;
     }
 
     document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
@@ -344,14 +366,14 @@ let minGainer = document.querySelector("#minGainer").addEventListener("click", f
 
 
 let AminoApexNumber = 1;
-let AminoApexPrice = 140000;
+let AminoApexPrice = 618000;
 let plusAminoPex = document.querySelector("#plusAminoPex").addEventListener("click", function () {
     if (AminoApexNumber == 10) {
         AminoApexNumber = 10;
-        AminoApexPrice = 1400000;
+        AminoApexPrice = 6180000;
     } else {
         ++AminoApexNumber;
-        AminoApexPrice = AminoApexPrice + 140000;
+        AminoApexPrice = AminoApexPrice + 618000;
     }
 
     document.querySelector("#numberAminoPex").innerHTML = AminoApexNumber;
@@ -360,10 +382,10 @@ let plusAminoPex = document.querySelector("#plusAminoPex").addEventListener("cli
 let minAminoPex = document.querySelector("#minAminoPex").addEventListener("click", function () {
     if (AminoApexNumber == 1) {
         AminoApexNumber = 1;
-        GainerDobisPrice = 140000;
+        GainerDobisPrice = 618000;
     } else {
         --AminoApexNumber;
-        AminoApexPrice = AminoApexPrice - 140000;
+        AminoApexPrice = AminoApexPrice - 618000;
     }
 
     document.querySelector("#numberAminoPex").innerHTML = AminoApexNumber;
@@ -372,14 +394,14 @@ let minAminoPex = document.querySelector("#minAminoPex").addEventListener("click
 
 
 let AminoGoldSuppNumber = 1;
-let AminoGoldSuppPrice = 695000;
+let AminoGoldSuppPrice = 766000;
 let plusAminoGoldSupp = document.querySelector("#plusAminoGoldSupp").addEventListener("click", function () {
     if (AminoGoldSuppNumber == 10) {
         AminoGoldSuppNumber = 10;
-        AminoGoldSuppPrice = 6950000;
+        AminoGoldSuppPrice = 7660000;
     } else {
         ++AminoGoldSuppNumber;
-        AminoGoldSuppPrice = AminoGoldSuppPrice + 695000;
+        AminoGoldSuppPrice = AminoGoldSuppPrice + 766000;
     }
 
     document.querySelector("#numberAminoGoldSupp").innerHTML = AminoGoldSuppNumber;
@@ -388,10 +410,10 @@ let plusAminoGoldSupp = document.querySelector("#plusAminoGoldSupp").addEventLis
 let minAminoGoldSupp = document.querySelector("#minAminoGoldSupp").addEventListener("click", function () {
     if (AminoGoldSuppNumber == 1) {
         AminoGoldSuppNumber = 1;
-        GainerDobisPrice = 695000;
+        GainerDobisPrice = 766000;
     } else {
         --AminoGoldSuppNumber;
-        AminoGoldSuppPrice = AminoGoldSuppPrice - 695000;
+        AminoGoldSuppPrice = AminoGoldSuppPrice - 766000;
     }
 
     document.querySelector("#numberAminoGoldSupp").innerHTML = AminoGoldSuppNumber;
@@ -400,14 +422,14 @@ let minAminoGoldSupp = document.querySelector("#minAminoGoldSupp").addEventListe
 
 
 let CratinFarmaNumber = 1;
-let CratinFarmaPrice = 380000;
+let CratinFarmaPrice = 382000;
 let plusCratinFarma = document.querySelector("#plusCratinFarma").addEventListener("click", function () {
     if (CratinFarmaNumber == 10) {
         CratinFarmaNumber = 10;
-        CratinFarmaPrice = 3800000;
+        CratinFarmaPrice = 3820000;
     } else {
         ++CratinFarmaNumber;
-        CratinFarmaPrice = CratinFarmaPrice + 380000;
+        CratinFarmaPrice = CratinFarmaPrice + 382000;
     }
 
     document.querySelector("#numberCratinFarma").innerHTML = CratinFarmaNumber;
@@ -416,10 +438,10 @@ let plusCratinFarma = document.querySelector("#plusCratinFarma").addEventListene
 let minCratinFarma = document.querySelector("#minCratinFarma").addEventListener("click", function () {
     if (CratinFarmaNumber == 1) {
         CratinFarmaNumber = 1;
-        CratinFarmaPrice = 380000;
+        CratinFarmaPrice = 382000;
     } else {
         --CratinFarmaNumber;
-        CratinFarmaPrice = CratinFarmaPrice - 380000;
+        CratinFarmaPrice = CratinFarmaPrice - 382000;
     }
 
     document.querySelector("#numberCratinFarma").innerHTML = CratinFarmaNumber;
@@ -707,6 +729,257 @@ let minHerbalOmega = document.querySelector("#minHerbalOmega").addEventListener(
 }); 
 
 
+let XovitNumber = 1;
+let XovitPrice = 107000;
+let plusXovit = document.querySelector("#plusXovit").addEventListener("click", function () {
+    if (XovitNumber == 10) {
+        XovitNumber = 10;
+        XovitPrice = 1070000;
+    } else {
+        ++XovitNumber;
+        XovitPrice = XovitPrice + 107000;
+    }
+
+    document.querySelector("#numberXovit").innerHTML = XovitNumber;
+    document.querySelector("#priceXovit").innerHTML = 'قیمت کلی : ' + XovitPrice;
+});
+let minXovit = document.querySelector("#minXovit").addEventListener("click", function () {
+    if (XovitNumber == 1) {
+        XovitNumber = 1;
+        XovitPrice = 107000;
+    } else {
+        --XovitNumber;
+        XovitPrice = XovitPrice - 107000;
+    }
+
+    document.querySelector("#numberXovit").innerHTML = XovitNumber;
+    document.querySelector("#priceXovit").innerHTML = 'قیمت کلی : ' + XovitPrice;
+}); 
+
+
+let GumfiNumber = 1;
+let GumfiPrice = 74000;
+let plusGumfi = document.querySelector("#plusGumfi").addEventListener("click", function () {
+    if (GumfiNumber == 10) {
+        GumfiNumber = 10;
+        GumfiPrice = 740000;
+    } else {
+        ++GumfiNumber;
+        GumfiPrice = GumfiPrice + 74000;
+    }
+
+    document.querySelector("#numberGumfi").innerHTML = GumfiNumber;
+    document.querySelector("#priceGumfi").innerHTML = 'قیمت کلی : ' + GumfiPrice;
+});
+let minGumfi = document.querySelector("#minGumfi").addEventListener("click", function () {
+    if (GumfiNumber == 1) {
+        GumfiNumber = 1;
+        GumfiPrice = 74000;
+    } else {
+        --GumfiNumber;
+        GumfiPrice = GumfiPrice - 74000;
+    }
+
+    document.querySelector("#numberGumfi").innerHTML = GumfiNumber;
+    document.querySelector("#priceGumfi").innerHTML = 'قیمت کلی : ' + GumfiPrice;
+}); 
+
+
+let ZincPlusNumber = 1;
+let ZincPlusPrice = 105000;
+let plusZincPlus = document.querySelector("#plusZincPlus").addEventListener("click", function () {
+    if (ZincPlusNumber == 10) {
+        ZincPlusNumber = 10;
+        ZincPlusPrice = 1050000;
+    } else {
+        ++ZincPlusNumber;
+        ZincPlusPrice = ZincPlusPrice + 105000;
+    }
+
+    document.querySelector("#numberZincPlus").innerHTML = ZincPlusNumber;
+    document.querySelector("#priceZincPlus").innerHTML = 'قیمت کلی : ' + ZincPlusPrice;
+});
+let minZincPlus = document.querySelector("#minZincPlus").addEventListener("click", function () {
+    if (ZincPlusNumber == 1) {
+        ZincPlusNumber = 1;
+        ZincPlusPrice = 105000;
+    } else {
+        --ZincPlusNumber;
+        ZincPlusPrice = ZincPlusPrice - 105000;
+    }
+
+    document.querySelector("#numberZincPlus").innerHTML = ZincPlusNumber;
+    document.querySelector("#priceZincPlus").innerHTML = 'قیمت کلی : ' + ZincPlusPrice;
+}); 
+
+
+let ZincPlus5Number = 1;
+let ZincPlus5Price = 93000;
+let plusZincPlus5 = document.querySelector("#plusZincPlus5").addEventListener("click", function () {
+    if (ZincPlus5Number == 10) {
+        ZincPlus5Number = 10;
+        ZincPlus5Price = 930000;
+    } else {
+        ++ZincPlus5Number;
+        ZincPlus5Price = ZincPlus5Price + 93000;
+    }
+
+    document.querySelector("#numberZincPlus5").innerHTML = ZincPlus5Number;
+    document.querySelector("#priceZincPlus5").innerHTML = 'قیمت کلی : ' + ZincPlus5Price;
+});
+let minZincPlus5 = document.querySelector("#minZincPlus5").addEventListener("click", function () {
+    if (ZincPlus5Number == 1) {
+        ZincPlus5Number = 1;
+        ZincPlus5Price = 93000;
+    } else {
+        --ZincPlus5Number;
+        ZincPlus5Price = ZincPlus5Price - 93000;
+    }
+
+    document.querySelector("#numberZincPlus5").innerHTML = ZincPlus5Number;
+    document.querySelector("#priceZincPlus5").innerHTML = 'قیمت کلی : ' + ZincPlus5Price;
+}); 
+
+
+let WominaVitNumber = 1;
+let WominaVitPrice = 125000;
+let plusWominaVit = document.querySelector("#plusWominaVit").addEventListener("click", function () {
+    if (WominaVitNumber == 10) {
+        WominaVitNumber = 10;
+        WominaVitPrice = 1250000;
+    } else {
+        ++WominaVitNumber;
+        WominaVitPrice = WominaVitPrice + 125000;
+    }
+
+    document.querySelector("#numberWominaVit").innerHTML = WominaVitNumber;
+    document.querySelector("#priceWominaVit").innerHTML = 'قیمت کلی : ' + WominaVitPrice;
+});
+let minWominaVit = document.querySelector("#minWominaVit").addEventListener("click", function () {
+    if (WominaVitNumber == 1) {
+        WominaVitNumber = 1;
+        WominaVitPrice = 125000;
+    } else {
+        --WominaVitNumber;
+        WominaVitPrice = WominaVitPrice - 125000;
+    }
+
+    document.querySelector("#numberWominaVit").innerHTML = WominaVitNumber;
+    document.querySelector("#priceWominaVit").innerHTML = 'قیمت کلی : ' + WominaVitPrice;
+}); 
+
+let VitavisionNumber = 1;
+let VitavisionPrice = 465000;
+let plusVitavision = document.querySelector("#plusVitavision").addEventListener("click", function () {
+    if (VitavisionNumber == 10) {
+        VitavisionNumber = 10;
+        VitavisionPrice = 4650000;
+    } else {
+        ++VitavisionNumber;
+        VitavisionPrice = VitavisionPrice + 465000;
+    }
+
+    document.querySelector("#numberVitavision").innerHTML = VitavisionNumber;
+    document.querySelector("#priceVitavision").innerHTML = 'قیمت کلی : ' + VitavisionPrice;
+});
+let minVitavision = document.querySelector("#minVitavision").addEventListener("click", function () {
+    if (VitavisionNumber == 1) {
+        VitavisionNumber = 1;
+        VitavisionPrice = 465000;
+    } else {
+        --VitavisionNumber;
+        VitavisionPrice = VitavisionPrice - 465000;
+    }
+
+    document.querySelector("#numberVitavision").innerHTML = VitavisionNumber;
+    document.querySelector("#priceVitavision").innerHTML = 'قیمت کلی : ' + VitavisionPrice;
+}); 
+
+
+let SelenPlusNumber = 1;
+let SelenPlusPrice = 165000;
+let plusSelenPlus = document.querySelector("#plusSelenPlus").addEventListener("click", function () {
+    if (SelenPlusNumber == 10) {
+        SelenPlusNumber = 10;
+        SelenPlusPrice = 1650000;
+    } else {
+        ++SelenPlusNumber;
+        SelenPlusPrice = SelenPlusPrice + 165000;
+    }
+
+    document.querySelector("#numberSelenPlus").innerHTML = SelenPlusNumber;
+    document.querySelector("#priceSelenPlus").innerHTML = 'قیمت کلی : ' + SelenPlusPrice;
+});
+let minSelenPlus = document.querySelector("#minSelenPlus").addEventListener("click", function () {
+    if (SelenPlusNumber == 1) {
+        SelenPlusNumber = 1;
+        SelenPlusPrice = 165000;
+    } else {
+        --SelenPlusNumber;
+        SelenPlusPrice = SelenPlusPrice - 165000;
+    }
+
+    document.querySelector("#numberSelenPlus").innerHTML = SelenPlusNumber;
+    document.querySelector("#priceSelenPlus").innerHTML = 'قیمت کلی : ' + SelenPlusPrice;
+}); 
+
+
+let SideralForteNumber = 1;
+let SideralFortePrice = 244000;
+let plusSideralForte = document.querySelector("#plusSideralForte").addEventListener("click", function () {
+    if (SideralForteNumber == 10) {
+        SideralForteNumber = 10;
+        SideralFortePrice = 2440000;
+    } else {
+        ++SideralForteNumber;
+        SideralFortePrice = SideralFortePrice + 244000;
+    }
+
+    document.querySelector("#numberSideralForte").innerHTML = SideralForteNumber;
+    document.querySelector("#priceSideralForte").innerHTML = 'قیمت کلی : ' + SideralFortePrice;
+});
+let minSideralForte = document.querySelector("#minSideralForte").addEventListener("click", function () {
+    if (SideralForteNumber == 1) {
+        SideralForteNumber = 1;
+        SideralFortePrice = 244000;
+    } else {
+        --SideralForteNumber;
+        SideralFortePrice = SideralFortePrice - 244000;
+    }
+
+    document.querySelector("#numberSideralForte").innerHTML = SideralForteNumber;
+    document.querySelector("#priceSideralForte").innerHTML = 'قیمت کلی : ' + SideralFortePrice;
+}); 
+
+
+let SideralNumber = 1;
+let SideralPrice = 122000;
+let plusSideral = document.querySelector("#plusSideral").addEventListener("click", function () {
+    if (SideralNumber == 10) {
+        SideralNumber = 10;
+        SideralPrice = 1220000;
+    } else {
+        ++SideralNumber;
+        SideralPrice = SideralPrice + 122000;
+    }
+
+    document.querySelector("#numberSideral").innerHTML = SideralNumber;
+    document.querySelector("#priceSideral").innerHTML = 'قیمت کلی : ' + SideralPrice;
+});
+let minSideral = document.querySelector("#minSideral").addEventListener("click", function () {
+    if (SideralNumber == 1) {
+        SideralNumber = 1;
+        SideralPrice = 122000;
+    } else {
+        --SideralNumber;
+        SideralPrice = SideralPrice - 122000;
+    }
+
+    document.querySelector("#numberSideral").innerHTML = SideralNumber;
+    document.querySelector("#priceSideral").innerHTML = 'قیمت کلی : ' + SideralPrice;
+}); 
+
+
 
 
 function vayDelBtn() {
@@ -769,8 +1042,42 @@ function HerbalOmegaDelBtn() {
     document.getElementById("HerbalOmega").style.display = "none";
     document.getElementById("HerbalOmegaDelBtn").style.display = "none";
 }
-
-
+function XovitDelBtn() {
+    document.getElementById("Xovit").style.display = "none";
+    document.getElementById("XovitDelBtn").style.display = "none";
+}
+function GumfiDelBtn() {
+    document.getElementById("Gumfi").style.display = "none";
+    document.getElementById("GumfiDelBtn").style.display = "none";
+}
+function ZincPlusDelBtn() {
+    document.getElementById("ZincPlus").style.display = "none";
+    document.getElementById("ZincPlusDelBtn").style.display = "none";
+}
+function ZincPlus5DelBtn() {
+    document.getElementById("ZincPlus5").style.display = "none";
+    document.getElementById("ZincPlus5DelBtn").style.display = "none";
+}
+function WominaVitDelBtn() {
+    document.getElementById("WominaVit").style.display = "none";
+    document.getElementById("WominaVitDelBtn").style.display = "none";
+}
+function VitavisionDelBtn() {
+    document.getElementById("Vitavision").style.display = "none";
+    document.getElementById("VitavisionDelBtn").style.display = "none";
+}
+function SelenPlusDelBtn() {
+    document.getElementById("SelenPlus").style.display = "none";
+    document.getElementById("SelenPlusDelBtn").style.display = "none";
+}
+function SideralForteDelBtn() {
+    document.getElementById("SideralForte").style.display = "none";
+    document.getElementById("SideralForteDelBtn").style.display = "none";
+}
+function SideralDelBtn() {
+    document.getElementById("Sideral").style.display = "none";
+    document.getElementById("SideralDelBtn").style.display = "none";
+}
 
 
 
@@ -928,5 +1235,95 @@ function HerbalOmegaClicked() {
     document.getElementById("HerbalOmegaBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("HerbalOmegaBuyFinished").style.display = "none";
+}, 1000);
+}
+function XovitClicked() {
+    document.getElementById("Xovit").innerText = "  قرص ایکسوویت فورت هلث اید  | Xovit Forte به تعداد " + XovitNumber + "عدد و به قیمت " + XovitPrice + "هزار تومان.";
+    document.getElementById("Xovit").style.display = "block";
+    document.getElementById("XovitDelBtn").style.display = "block";
+    document.getElementById("XovitBuyFinished").style.display = "block";
+    document.getElementById("XovitBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("XovitBuyFinished").style.display = "none";
+}, 1000);
+}
+function GumfiClicked() {
+    document.getElementById("Gumfi").innerText = "  پاستیل مولتی ویتامین دکتر گامفی  | Dr.Gumfi به تعداد " + GumfiNumber + "عدد و به قیمت " + GumfiPrice + "هزار تومان.";
+    document.getElementById("Gumfi").style.display = "block";
+    document.getElementById("GumfiDelBtn").style.display = "block";
+    document.getElementById("GumfiBuyFinished").style.display = "block";
+    document.getElementById("GumfiBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("GumfiBuyFinished").style.display = "none";
+}, 1000);
+}
+function ZincPlusClicked() {
+    document.getElementById("ZincPlus").innerText = "  کپسول زینک پلاس 10 میلی گرمی ب کمپلکس  | Zinc-PLus 10mg به تعداد " + ZincPlusNumber + "عدد و به قیمت " + ZincPlusPrice + "هزار تومان.";
+    document.getElementById("ZincPlus").style.display = "block";
+    document.getElementById("ZincPlusDelBtn").style.display = "block";
+    document.getElementById("ZincPlusBuyFinished").style.display = "block";
+    document.getElementById("ZincPlusBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("ZincPlusBuyFinished").style.display = "none";
+}, 1000);
+}
+function ZincPlus5Clicked() {
+    document.getElementById("ZincPlus5").innerText = "  کپسول زینک پلاس 5 میلی گرمی ب کمپلکس  | Zinc-PLus 5mg به تعداد " + ZincPlus5Number + "عدد و به قیمت " + ZincPlus5Price + "هزار تومان.";
+    document.getElementById("ZincPlus5").style.display = "block";
+    document.getElementById("ZincPlus5DelBtn").style.display = "block";
+    document.getElementById("ZincPlus5BuyFinished").style.display = "block";
+    document.getElementById("ZincPlus5BuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("ZincPlus5BuyFinished").style.display = "none";
+}, 1000);
+}
+function WominaVitClicked() {
+    document.getElementById("WominaVit").innerText = "  سافت ژل وومیناویت  | Womina-Vit به تعداد " + WominaVitNumber + "عدد و به قیمت " + WominaVitPrice + "هزار تومان.";
+    document.getElementById("WominaVit").style.display = "block";
+    document.getElementById("WominaVitDelBtn").style.display = "block";
+    document.getElementById("WominaVitBuyFinished").style.display = "block";
+    document.getElementById("WominaVitBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("WominaVitBuyFinished").style.display = "none";
+}, 1000);
+}
+function VitavisionClicked() {
+    document.getElementById("Vitavision").innerText = "  کپسول ویتاویژن فورت  | Vitavision Forte به تعداد " + VitavisionNumber + "عدد و به قیمت " + VitavisionPrice + "هزار تومان.";
+    document.getElementById("Vitavision").style.display = "block";
+    document.getElementById("VitavisionDelBtn").style.display = "block";
+    document.getElementById("VitavisionBuyFinished").style.display = "block";
+    document.getElementById("VitavisionBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("VitavisionBuyFinished").style.display = "none";
+}, 1000);
+}
+function SelenPlusClicked() {
+    document.getElementById("SelenPlus").innerText = "  کپسول سلن پلاس یوروویتال  | Selen Plus به تعداد " + SelenPlusNumber + "عدد و به قیمت " + SelenPlusPrice + "هزار تومان.";
+    document.getElementById("SelenPlus").style.display = "block";
+    document.getElementById("SelenPlusDelBtn").style.display = "block";
+    document.getElementById("SelenPlusBuyFinished").style.display = "block";
+    document.getElementById("SelenPlusBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("SelenPlusBuyFinished").style.display = "none";
+}, 1000);
+}
+function SideralForteClicked() {
+    document.getElementById("SideralForte").innerText = "  کپسول سیدرال فورت  | Sideral Forte به تعداد " + SideralForteNumber + "عدد و به قیمت " + SideralFortePrice + "هزار تومان.";
+    document.getElementById("SideralForte").style.display = "block";
+    document.getElementById("SideralForteDelBtn").style.display = "block";
+    document.getElementById("SideralForteBuyFinished").style.display = "block";
+    document.getElementById("SideralForteBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("SideralForteBuyFinished").style.display = "none";
+}, 1000);
+}
+function SideralClicked() {
+    document.getElementById("Sideral").innerText = "  کپسول سیدرال   | Sideral  به تعداد " + SideralNumber + "عدد و به قیمت " + SideralPrice + "هزار تومان.";
+    document.getElementById("Sideral").style.display = "block";
+    document.getElementById("SideralDelBtn").style.display = "block";
+    document.getElementById("SideralBuyFinished").style.display = "block";
+    document.getElementById("SideralBuyFinished").innerHTML = "به سبد خرید افزوده شد";
+    setInterval(function () {
+        document.getElementById("SideralBuyFinished").style.display = "none";
 }, 1000);
 }
