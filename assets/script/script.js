@@ -1,3 +1,5 @@
+// نوبار کلیک
+
 function timNameClick() {
     document.getElementById("shHidTim").style.display = "block";
     document.getElementById("shHid").style.display = "none";
@@ -22,6 +24,14 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click",
     document.getElementById("learnDis").style.display = "block";
     document.getElementById("shHid").style.display = "none";
 })
+
+
+// let activerull = document.getElementById("rules");
+// if (activerull = true){
+//     alert("activ")
+// }
+
+// تغییر لیست مکمل ها در صفحه های یک دو سه چهار
 
 let page1 = document.getElementById("page1").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'block';
@@ -85,9 +95,16 @@ let page4 = document.getElementById("page4").addEventListener("click", function 
       });
 })
 
+
+// الرت بعد از لود صفحه برای خرید مکمل
+
 // setTimeout(function () {
 //     confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!")
 // }, 4000);
+
+
+
+// اسامی تیم (بیشتر و کمتر)
 function preveClick() {
     document.getElementById("listNameSecond").style.display = "block";
     document.getElementById("preve").style.display = "none";
@@ -104,8 +121,10 @@ function nextClick() {
       });
 }
 
-consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
 
+
+// افکت کلمات تایپ شونده روی عکس
+consoleText(['x Fitness', 'Crossfit', 'Trx'], 'text', ['white', 'white', 'white']);
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
     var visible = true;
@@ -155,12 +174,12 @@ function consoleText(words, id, colors) {
     }, 400)
 }
 
+
+
+// منو ی کشویی نوبار
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-
-
-
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -174,6 +193,20 @@ window.onclick = function (event) {
     }
 }
 
+
+
+
+
+// BMi
+
+function BMIFunc(){
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+    var heightOrg = height/100;
+    var BMIFirst = Number(weight) / Number(heightOrg) / Number(heightOrg);
+    var totalBMI = BMIFirst.toFixed(2);
+    document.getElementById("BMIResponse").innerHTML = " شاخص توده بدنی شما " + totalBMI + " است ";
+}
 let srviceCLick = document.getElementById("ServicesClick").addEventListener("click", function () {
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
@@ -204,137 +237,25 @@ let BMICal = document.getElementById("BMICal").addEventListener("click" , functi
 
 
 
+// دکمه ی کپی
 
-
-function BMIFunc(){
-    var weight = document.getElementById("weight").value;
-    var height = document.getElementById("height").value;
-    var heightOrg = height/100;
-    var BMIFirst = Number(weight) / Number(heightOrg) / Number(heightOrg);
-    var totalBMI = BMIFirst.toFixed(2);
-    document.getElementById("BMIResponse").innerHTML = " شاخص توده بدنی شما " + totalBMI + " است ";
+function handleCopy(className) {
+    // debugger
+    const r = document.createRange();
+    var divsClass = document.getElementsByClassName("modalBody").value;
+    r.selectNode(divsClass);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("کپی شد");
 }
 
 
 
+// تعداد و قیمت محصول
 
 
-
-// function handleCopy(className) {
-//     // debugger
-//     const r = document.createRange();
-//     var divsClass = document.getElementsByClassName("modalBody").value;
-//     r.selectNode(divsClass);
-//     window.getSelection().removeAllRanges();
-//     window.getSelection().addRange(r);
-//     document.execCommand("copy");
-//     window.getSelection().removeAllRanges();
-//     alert("کپی شد");
-// }
-
-
-
-// Copies a string to the clipboard. Must be called from within an event handler such as click.
-// May return false if it failed, but this is not always
-// possible. Browser support for Chrome 43+, Firefox 42+, Edge and IE 10+.
-// No Safari support, as of (Nov. 2015). Returns false.
-// IE: The clipboard feature may be disabled by an adminstrator. By default a prompt is
-// shown the first time the clipboard is used (per session).
-function copyToClipboard(text) {
-    if (window.clipboardData && window.clipboardData.setData) {
-      // IE specific code path to prevent textarea being shown while dialog is visible.
-      return clipboardData.setData("Text", text);
-  
-    } else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
-      var textarea = document.createElement("textarea");
-      textarea.textContent = text;
-      textarea.style.position = "fixed"; // Prevent scrolling to bottom of page in MS Edge.
-      document.body.appendChild(textarea);
-      textarea.select();
-      try {
-        return document.execCommand("copy"); // Security exception may be thrown by some browsers.
-      } catch (ex) {
-        console.warn("Copy to clipboard failed.", ex);
-        return false;
-      } finally {
-        document.body.removeChild(textarea);
-      }
-    }
-  }
-  
-  document.querySelector("#copyBtn").onclick = function() {
-    var result = copyToClipboard(document.getElementById("vay").toString());
-    console.log("copied?", result);
-  };
-  
-
-
-
-var searchINput = document.getElementById("searchInput");
-// var servicSearch = document.getElementById("service");
-
-// function searchBtn() {
-
-//     if (searchINput.value === "وی" || "vay" || "مکمل وی" || "وی دوبیس" || "vay dobis" || "vaydobis" || "vey") {
-//         window.scrollTo({ top: 350, behavior: 'smooth' });
-//     };
-
-//     if (searchINput.value === "گینر" || "gainer" || "مکمل گینر" || "گینر دوبیس" || "gainer dobis" || "gainerdobis" || "geiner") {
-//         window.scrollTo({ top: 550, behavior: 'smooth' });
-//     };
-
-//     if(searchINput.value === "امینو" || "amino" || "مکمل امینو" || "سوپر امینو" || "super amino" || "apex" || "Amino" || "superAmino" || "Aminosuper" || "aminosuper" || "superamino" || "آمینو"){
-//         window.scrollTo({ top: 710, behavior: 'smooth' });
-//     };
-
-//     if(searchINput.value === "امینوگلد" || "suppland" || "ساپلند" || "aminogold" || "Aminogold"){
-//         window.scrollTo({ top: 920, behavior: 'smooth' });
-//     };
-
-    // if(searchINput.value === "کراتین" || "cratin" || "مکمل کراتین" || "کراتین فارما پلاس" || "cratin farma plus" || "farma" || "plus" || "farmaplus"){
-    //     window.scrollTo({ top: 1000, behavior: 'smooth' });
-    // }
-
-    // if(searchINput.value === ""){
-    //     document.getElementById("searchNo").innerHTML = "نتیجه ای یافت نشد...";
-    // }
-
-    // else{
-    //     window.scrollTo({ top: 0});
-    //     document.getElementById("searchNo").innerHTML = "نتیجه ای یافت نشد...";
-    // }
-
-
-
-
-
-// add to cart function's
-
-// function vayClicked(){
-//     document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
-// }
-// function vayClicked(){
-//     document.getElementById("vay").innerText = "مکمل وی دوبیس به تعداد " + vayDobisNumber + "عدد و به قیمت " + vayDobisPrice + "هزار تومان.";
-// }
-
-//   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// number and price of kala
 let vayDobisNumber = 1;
 let vayDobisPrice = 1380000;
 let plus = document.querySelector("#plus").addEventListener("click", function () {
@@ -1316,6 +1237,8 @@ let minCaffeine = document.querySelector("#minCaffeine").addEventListener("click
 
 
 
+// حذف محصول در سبد خرید
+
 
 function vayDelBtn() {
     document.getElementById("vay").style.display = "none";
@@ -1463,6 +1386,8 @@ function CaffeineDelBtn() {
 
 
 
+
+// اطلاعات سبد خرید
 
 
 function vayClicked() {
