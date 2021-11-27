@@ -540,6 +540,11 @@ video{
 .titleInfoMokamel{
     color: darkgoldenrod;
 }
+.titleInfoMokamel:focus{
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+}
 .titleInfoMokamel i{
     color: darkgoldenrod;
 }

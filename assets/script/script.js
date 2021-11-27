@@ -257,14 +257,14 @@ function handleCopy(className) {
 
 
 let vayDobisNumber = 1;
-let vayDobisPrice = 1380000;
+let vayDobisPrice = 1219000;
 let plus = document.querySelector("#plus").addEventListener("click", function () {
     if (vayDobisNumber == 10) {
         vayDobisNumber = 10;
-        vayDobisPrice = 13800000;
+        vayDobisPrice = 12190000;
     } else {
         ++vayDobisNumber;
-        vayDobisPrice = vayDobisPrice + 1380000;
+        vayDobisPrice = vayDobisPrice + 1219000;
     }
 
     document.querySelector("#number").innerHTML = vayDobisNumber;
@@ -273,10 +273,10 @@ let plus = document.querySelector("#plus").addEventListener("click", function ()
 let min = document.querySelector("#min").addEventListener("click", function () {
     if (vayDobisNumber == 1) {
         vayDobisNumber = 1;
-        vayDobisPrice = 1380000;
+        vayDobisPrice = 1219000;
     } else {
         --vayDobisNumber;
-        vayDobisPrice = vayDobisPrice - 1380000;
+        vayDobisPrice = vayDobisPrice - 1219000;
     }
 
     document.querySelector("#number").innerHTML = vayDobisNumber;
@@ -285,14 +285,14 @@ let min = document.querySelector("#min").addEventListener("click", function () {
 
 
 let GainerDobisNumber = 1;
-let GainerDobisPrice = 577000;
+let GainerDobisPrice = 366000;
 let plusGainer = document.querySelector("#plusGainer").addEventListener("click", function () {
     if (GainerDobisNumber == 10) {
         GainerDobisNumber = 10;
-        GainerDobisPrice = 5770000;
+        GainerDobisPrice = 3660000;
     } else {
         ++GainerDobisNumber;
-        GainerDobisPrice = GainerDobisPrice + 577000;
+        GainerDobisPrice = GainerDobisPrice + 366000;
     }
 
     document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
@@ -301,10 +301,10 @@ let plusGainer = document.querySelector("#plusGainer").addEventListener("click",
 let minGainer = document.querySelector("#minGainer").addEventListener("click", function () {
     if (GainerDobisNumber == 1) {
         GainerDobisNumber = 1;
-        GainerDobisPrice = 577000;
+        GainerDobisPrice = 366000;
     } else {
         --GainerDobisNumber;
-        GainerDobisPrice = GainerDobisPrice - 577000;
+        GainerDobisPrice = GainerDobisPrice - 366000;
     }
 
     document.querySelector("#numberGainer").innerHTML = GainerDobisNumber;
