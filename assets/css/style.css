@@ -267,7 +267,7 @@ video{
   .dropdown a:hover {background-color: #ddd;}
   .show {display: block;}
 
-  #service , #serviceTshirt , #BMICalc{
+  #service , #serviceTshirt , #BMICalc , #DietCode{
       display: none;
   }
   .serviceCard{
@@ -553,6 +553,59 @@ video{
     line-height: 30px;
     margin-top: 10px;
 }
+.DietPic{
+    width: 100%; height: 100%;
+    border-radius: 5px;
+}
+.DietParagrafFirst{
+    text-align: justify;
+    color: darkslategray;
+    font-size: 13px;
+    line-height: 30px;
+}
+.DietTitle{
+    font-size: 18px;
+    font-weight: bold;
+    color: darkgoldenrod;
+    text-align: center;
+}
+table {
+    border-collapse: collapse !important;
+    width: 100%;
+  }
+  
+  td {
+    border: 1px solid #dddddd !important;
+    text-align: center !important;
+    font-size: 12px;
+  }
+  th{
+    border: 1px solid #dddddd !important;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+  }
+  tr:nth-child(even) {
+    background-color: rgba(184, 135, 11, 0.671);
+    color: white;
+  }
+  .WeightGain{
+      text-align: right;
+      font-family: 'Vazir-FD';
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+  }
+  .PDFDownloadOne{
+      text-decoration: none;
+      color: blue;
+      display: inline-block;
+      font-size: 12px;
+  }
+  .strongParagraf{
+      color: darkslategray;
+      font-size: 13px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width:768px){

@@ -34,7 +34,7 @@ let LearnClick = document.querySelector("#videoClick").addEventListener("click",
 // تغییر لیست مکمل ها در صفحه های یک دو سه چهار
 
 let page1 = document.getElementById("page1").addEventListener("click", function () {
-    document.getElementById("mokamel1").style.display = 'block';
+    document.getElementById("mokamel1").style.display = 'inline-flex';
     document.getElementById("mokamel2").style.display = 'none';
     document.getElementById("mokamel4").style.display = 'none';
     document.getElementById("mokamel3").style.display = 'none';
@@ -53,7 +53,7 @@ let page2 = document.getElementById("page2").addEventListener("click", function 
     document.getElementById("mokamel1").style.display = 'none';
     document.getElementById("mokamel3").style.display = 'none';
     document.getElementById("mokamel4").style.display = 'none';
-    document.getElementById("mokamel2").style.display = 'block';
+    document.getElementById("mokamel2").style.display = 'inline-flex';
     document.getElementById("page2").classList.add("activePagintion");
     document.getElementById("page1").classList.remove("activePagintion");
     document.getElementById("page3").classList.remove("activePagintion");
@@ -68,7 +68,7 @@ let page3 = document.getElementById("page3").addEventListener("click", function 
     document.getElementById("mokamel1").style.display = 'none';
     document.getElementById("mokamel2").style.display = 'none';
     document.getElementById("mokamel4").style.display = 'none';
-    document.getElementById("mokamel3").style.display = 'block';
+    document.getElementById("mokamel3").style.display = 'inline-flex';
     document.getElementById("page2").classList.remove("activePagintion");
     document.getElementById("page1").classList.remove("activePagintion");
     document.getElementById("page4").classList.remove("activePagintion");
@@ -83,7 +83,7 @@ let page4 = document.getElementById("page4").addEventListener("click", function 
     document.getElementById("mokamel1").style.display = 'none';
     document.getElementById("mokamel2").style.display = 'none';
     document.getElementById("mokamel3").style.display = 'none';
-    document.getElementById("mokamel4").style.display = 'block';
+    document.getElementById("mokamel4").style.display = 'inline-flex';
     document.getElementById("page2").classList.remove("activePagintion");
     document.getElementById("page1").classList.remove("activePagintion");
     document.getElementById("page3").classList.remove("activePagintion");
@@ -207,11 +207,13 @@ function BMIFunc(){
     var totalBMI = BMIFirst.toFixed(2);
     document.getElementById("BMIResponse").innerHTML = " شاخص توده بدنی شما " + totalBMI + " است ";
 }
+
 let srviceCLick = document.getElementById("ServicesClick").addEventListener("click", function () {
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
     document.getElementById("BMICalc").style.display = "none";
     document.getElementById("service").style.display = "block";
 })
@@ -220,17 +222,27 @@ let ServicesTshirtClick = document.getElementById("ServicesTshirtClick").addEven
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
     document.getElementById("service").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
     document.getElementById("BMICalc").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "block";
 })
-
 let BMICal = document.getElementById("BMICal").addEventListener("click" , function(){
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
     document.getElementById("service").style.display = "none";
     document.getElementById("BMICalc").style.display = "block";
+})
+let Diet = document.getElementById("Diet").addEventListener("click" , function(){
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("service").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
+    document.getElementById("DietCode").style.display = "block";
 })
 
 
