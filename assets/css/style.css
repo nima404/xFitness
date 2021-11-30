@@ -39,7 +39,7 @@ user-select: none;
         background-image: url(../img/BackEdit1-min.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50vh;
+        height: 55vh;
 
         /* min-height: 500px;  */
 
@@ -110,7 +110,7 @@ user-select: none;
     background: none;
     border: none;
     color: white;
-    margin: 20px 5px 0 0;
+    margin: 20px 0px 0 0;
     font-size: 12px;
 }
 
@@ -211,7 +211,7 @@ video{
   }
   .texteffectEdit{
       text-align: center;
-      margin-top: 14vh;
+      margin-top: 16vh;
       font-size: 28px;
   }
   .card-header{
@@ -231,8 +231,8 @@ video{
     border: none;
     background: none;
     font-size: 12px;
+    font-weight: bold;
   }
-
   .dropdown {
     position: relative;
     display: inline-block;
@@ -244,12 +244,11 @@ video{
     background-color: #f1f1f1f6;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.178);
     z-index: 1;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
-  
   .dropdown-content a {
       font-size: 13px;
     color: black;
@@ -266,8 +265,8 @@ video{
       width: 100px;
   }
   .dropdown a:hover {background-color: #ddd;}
-  
   .show {display: block;}
+
   #service , #serviceTshirt , #BMICalc{
       display: none;
   }
@@ -329,7 +328,7 @@ video{
     box-shadow: 0px 0px 2px 0px rgb(189 189 189);
     border-radius: 5px;
     width: 60%;
-    height: 5                                                                                                                               vh;
+    height: 5vh;
     font-size: 12px;
   }
   .searchInput:focus{
@@ -2029,7 +2028,7 @@ display: none;
         background-image: url(../img/BackEdit1-min.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50vh;
+        height: 100vh;
 
         /* min-height: 500px;  */
 
@@ -2088,8 +2087,8 @@ display: none;
 
 .carslimg{
     display: inline-block;
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin: 8px;
     box-shadow: 0 0 2px 1px darkgoldenrod;
@@ -2101,7 +2100,7 @@ display: none;
     border: none;
     color: white;
     margin: 20px 5px 0 0;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 #shHid{
@@ -2168,9 +2167,8 @@ footer{
 }
 .callWithLi{
     font-size: 13px;
-    /* margin: 3px; */
-    display: inline-block;
     color: darkslateblue;
+    margin: 12px;
 }
 .callWithUl a{
     text-decoration: none;
@@ -2201,8 +2199,8 @@ video{
   }
   .texteffectEdit{
       text-align: center;
-      margin-top: 14vh;
-      font-size: 28px;
+      margin-top: 35vh;
+      font-size: 35px;
   }
   .card-header{
       background-color: white !important;
@@ -2220,7 +2218,7 @@ video{
     color: white;
     border: none;
     background: none;
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .dropdown {
@@ -2509,5 +2507,9 @@ display: none;
 }
 #mokamel2 , #mokamel3{
     display: none;
+}
+.videoWeb{
+    width: 70%;
+    height: 80%;
 }
 }
