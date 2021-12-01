@@ -47,7 +47,12 @@ function copyToClipboard(element) {
 
 
 
-
+$(document).ready(function(){
+    $("#toggleWG").click(function(event){
+        event.preventDefault();
+      $("#tableWG").toggle();
+    });
+  });
 
 
 

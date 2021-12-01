@@ -554,8 +554,11 @@ video{
     margin-top: 10px;
 }
 .DietPic{
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 40%;
     border-radius: 5px;
+    display: block;
+    margin: 5px;
 }
 .DietParagrafFirst{
     text-align: justify;
@@ -630,7 +633,11 @@ table {
     text-align: center;
     margin: 10px 0 0 0;
     font-size: 16px;
+    color: black;
     font-weight: bold;
+  }
+  .cardWGTitle span{
+    font-size: 12px;
     color: darkgoldenrod;
   }
   .padStyl{
@@ -643,14 +650,27 @@ table {
   .spantakhfif{
     display: inline-block;
     font-weight: bold;
+    background-color: red;
+    border-radius: 5px;
+    padding: 0px 9px 0 9px;
+    color: white;
+    margin-right: 5px;
+    font-size: 12px;
   }
   .orgTakhfifDiv{
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
   }
-  .orgMani , .orgtakh{
-      display: inline;
+  .orgMani , .orgValyou{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .TomanSpan{
+    font-size: 9px;
+    font-weight: bold;
+    color: lightslategray;
   }
   .wGLable{
       font-size: 12px;
@@ -658,7 +678,7 @@ table {
   }
   .wGInput{
     width: 100%;
-    height: 20%;
+    height: 35px;
     border: none;
     background: none;
     box-shadow: 0 0 2px 0 rgb(194 194 194);
@@ -667,7 +687,7 @@ table {
   }
   #sexuality{
       width: 100%;
-    height: 20%;
+    height: 35px;
     border: none;
     background: none;
     box-shadow: 0 0 2px 0 rgb(194 194 194);
@@ -679,9 +699,11 @@ table {
     font-size: 15px;
     line-height: 30px;
     padding: 15px;
+    box-shadow: 0 0 6px 0px rgb(223 223 223);
+    border-radius: 5px;
   }
   .fInputWidth{
-      height: 40%;
+      height: 50%;
   }
   .endWGparagraf{
     text-align: justify;
@@ -717,6 +739,44 @@ table {
     line-height: 30px;
     text-align: justify;
     color: green;
+  }
+  #tableWG{
+      display: none;
+  }
+  #toggleWG{
+      display: flex;
+      align-items: center;
+    background: darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fa-caret-down{
+      padding: 5px;
+  }
+  .reqToW{
+    text-align: right;
+    font-family: 'Vazir-FD';
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #past{
+    font-size: 13px;
+    color: rgb(60, 97, 97);
+  }
+  .backToHome{
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+  }
+  .bhIcon{
+    font-size: 18px !important;
+    color: black !important;
+    padding: 5px !important;
   }
 }
 
