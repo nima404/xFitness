@@ -1,7 +1,7 @@
 *{
 font-family: Vazir-FD;
 list-style: none;
-text-decoration: none;
+text-decoration: none !important;
 user-select: none;
 }
 
@@ -605,6 +605,118 @@ table {
   .strongParagraf{
       color: darkslategray;
       font-size: 13px;
+  }
+  .WeightGainCardPic{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .WeightGainCard{
+      border-radius: 8px;
+      box-shadow: 0 0 2px 0 rgb(184, 184, 184);
+  }
+  .cardSpan{
+    margin: 0 7px 0 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .changeNum{
+      text-decoration: line-through !important;
+      color: lightslategray !important;
+      font-weight: normal !important;
+  }
+  .cardWGTitle{
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgoldenrod;
+  }
+  .padStyl{
+      padding: 5px;
+  }
+  .divtakhfif{
+      display: inline-block;
+      width: 10%;
+  }
+  .spantakhfif{
+    display: inline-block;
+    font-weight: bold;
+  }
+  .orgTakhfifDiv{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .orgMani , .orgtakh{
+      display: inline;
+  }
+  .wGLable{
+      font-size: 12px;
+      color: rgb(60, 97, 97);
+  }
+  .wGInput{
+    width: 100%;
+    height: 20%;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  #sexuality{
+      width: 100%;
+    height: 20%;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px; 
+  }
+  .PwGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+  }
+  .fInputWidth{
+      height: 40%;
+  }
+  .endWGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    color: darkgoldenrod;
+  }
+  .fa-caret-left , .fa-caret-right{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .saveInfo{
+    background: none;
+    border: 2px solid darkgoldenrod;
+    border-radius: 5px;
+    width: 40%;
+    padding: 8px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+  .sendInfo{
+    background: darkgoldenrod;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    width: 55%;
+  }
+  #saveCorrect{
+    font-size: 12px;
+    line-height: 30px;
+    text-align: justify;
+    color: green;
   }
 }
 

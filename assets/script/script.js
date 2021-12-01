@@ -1,3 +1,65 @@
+
+// function handleCopy(id) {
+//     const r = document.createRange();
+//     r.selectNode(document.getElementById(id));
+//     window.getSelection().removeAllRanges();
+//     window.getSelection().addRange(r);
+//     document.execCommand("copy");
+//     window.getSelection().removeAllRanges();
+//     alert("کپی شد");
+// }
+
+function copyToClipboard(element) {
+    var sexuality = document.getElementById("sexuality").value;
+    var old = document.getElementById("old").value;
+    var heightWG = document.getElementById("heightWG").value;
+    var wheighttWG = document.getElementById("wheighttWG").value;
+    var bloodtype = document.getElementById("bloodtype").value;
+    var Armcircumference = document.getElementById("Armcircumference").value;
+    var Traininghistory = document.getElementById("Traininghistory").value;
+    var Aroundtheabdomen = document.getElementById("Aroundtheabdomen").value;
+    var Roundleg = document.getElementById("Roundleg").value;
+    var Roundforearm = document.getElementById("Roundforearm").value;
+    var Hipcircumference = document.getElementById("Hipcircumference").value;
+    var Roundthigh = document.getElementById("Roundthigh").value;
+
+    document.getElementById("past").innerHTML = "جنسیت :" + " " + String(sexuality) + " " + "<br>" + "سن :" + " " + Number(old) + " " + "<br>" + "قد :" + " " + Number(heightWG) + " " + "<br>" +
+        "وزن :" + " " + Number(wheighttWG) + " " + "<br>" + "گروه خونی :" + " " + String(bloodtype) + " " + "<br>" + "دور بازو :" + " " + Number(Armcircumference) + " " + "<br>" +
+        "سابقه تمرینی :" + " " + Number(Traininghistory) + " " + "<br>" + "دور شکم :" + " " + Number(Aroundtheabdomen) + " " + "<br>" + "دور ساق : " + " " + Number(Roundleg) + " " + "<br>" +
+        "دور ساعد : " + " " + Number(Roundforearm) + " " + "<br>" + "دور باسن :" + " " + Number(Hipcircumference) + " " + "<br>" + "دور ران :" + " " + Number(Roundthigh)
+        ;
+
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    document.getElementById("saveCorrect").innerHTML = "اطلاعات شما در کلیپ بورد شما ذخیره شد ، در صورت صحیح بودن اطلاعات روی دکمه ثبت سفارش کلیک نمایید و سپس پیام کپی شده را انجا جای گذاری کنید."
+}
+
+
+// function svaeDiv() {
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // نوبار کلیک
 
 function timNameClick() {
@@ -47,7 +109,7 @@ let page1 = document.getElementById("page1").addEventListener("click", function 
     window.scroll({
         top: 0,
         behavior: 'smooth'
-      });
+    });
 })
 let page2 = document.getElementById("page2").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'none';
@@ -62,7 +124,7 @@ let page2 = document.getElementById("page2").addEventListener("click", function 
     window.scroll({
         top: 0,
         behavior: 'smooth'
-      });
+    });
 })
 let page3 = document.getElementById("page3").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'none';
@@ -77,7 +139,7 @@ let page3 = document.getElementById("page3").addEventListener("click", function 
     window.scroll({
         top: 0,
         behavior: 'smooth'
-      });
+    });
 })
 let page4 = document.getElementById("page4").addEventListener("click", function () {
     document.getElementById("mokamel1").style.display = 'none';
@@ -92,7 +154,7 @@ let page4 = document.getElementById("page4").addEventListener("click", function 
     window.scroll({
         top: 0,
         behavior: 'smooth'
-      });
+    });
 })
 
 
@@ -118,7 +180,7 @@ function nextClick() {
     window.scroll({
         top: 340,
         behavior: 'smooth'
-      });
+    });
 }
 
 
@@ -199,10 +261,10 @@ window.onclick = function (event) {
 
 // BMi
 
-function BMIFunc(){
+function BMIFunc() {
     var weight = document.getElementById("weight").value;
     var height = document.getElementById("height").value;
-    var heightOrg = height/100;
+    var heightOrg = height / 100;
     var BMIFirst = Number(weight) / Number(heightOrg) / Number(heightOrg);
     var totalBMI = BMIFirst.toFixed(2);
     document.getElementById("BMIResponse").innerHTML = " شاخص توده بدنی شما " + totalBMI + " است ";
@@ -226,7 +288,7 @@ let ServicesTshirtClick = document.getElementById("ServicesTshirtClick").addEven
     document.getElementById("BMICalc").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "block";
 })
-let BMICal = document.getElementById("BMICal").addEventListener("click" , function(){
+let BMICal = document.getElementById("BMICal").addEventListener("click", function () {
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
@@ -235,7 +297,7 @@ let BMICal = document.getElementById("BMICal").addEventListener("click" , functi
     document.getElementById("service").style.display = "none";
     document.getElementById("BMICalc").style.display = "block";
 })
-let Diet = document.getElementById("Diet").addEventListener("click" , function(){
+let Diet = document.getElementById("Diet").addEventListener("click", function () {
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("shHid").style.display = "none";
@@ -251,17 +313,17 @@ let Diet = document.getElementById("Diet").addEventListener("click" , function()
 
 // دکمه ی کپی
 
-function handleCopy(className) {
-    // debugger
-    const r = document.createRange();
-    var divsClass = document.getElementsByClassName("modalBody").value;
-    r.selectNode(divsClass);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(r);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-    alert("کپی شد");
-}
+// function handleCopy(className) {
+//     // debugger
+//     const r = document.createRange();
+//     var divsClass = document.getElementsByClassName("modalBody").value;
+//     r.selectNode(divsClass);
+//     window.getSelection().removeAllRanges();
+//     window.getSelection().addRange(r);
+//     document.execCommand("copy");
+//     window.getSelection().removeAllRanges();
+//     alert("کپی شد");
+// }
 
 
 
@@ -489,7 +551,7 @@ let minDayvit = document.querySelector("#minDayVit").addEventListener("click", f
 
     document.querySelector("#numberDayVit").innerHTML = DayVitNumber;
     document.querySelector("#priceDayVit").innerHTML = 'قیمت کلی : ' + DayVitPrice;
-}); 
+});
 
 
 let OsteoPlusNumber = 1;
@@ -517,7 +579,7 @@ let minOsteoPlus = document.querySelector("#minOsteoPlus").addEventListener("cli
 
     document.querySelector("#numberOsteoPlus").innerHTML = OsteoPlusNumber;
     document.querySelector("#priceOsteoPlus").innerHTML = 'قیمت کلی : ' + OsteoPlusPrice;
-}); 
+});
 
 
 let FastRunNumber = 1;
@@ -545,7 +607,7 @@ let minFastRun = document.querySelector("#minFastRun").addEventListener("click",
 
     document.querySelector("#numberFastRun").innerHTML = FastRunNumber;
     document.querySelector("#priceFastRun").innerHTML = 'قیمت کلی : ' + FastRunPrice;
-}); 
+});
 
 
 let CollagenPowderNumber = 1;
@@ -573,7 +635,7 @@ let minCollagenPowder = document.querySelector("#minCollagenPowder").addEventLis
 
     document.querySelector("#numberCollagenPowder").innerHTML = CollagenPowderNumber;
     document.querySelector("#priceCollagenPowder").innerHTML = 'قیمت کلی : ' + CollagenPowderPrice;
-}); 
+});
 
 
 let OmegaHNumber = 1;
@@ -601,7 +663,7 @@ let minOmegaH = document.querySelector("#minOmegaH").addEventListener("click", f
 
     document.querySelector("#numberOmegaH").innerHTML = OmegaHNumber;
     document.querySelector("#priceOmegaH").innerHTML = 'قیمت کلی : ' + OmegaHPrice;
-}); 
+});
 
 
 let FefolNumber = 1;
@@ -629,7 +691,7 @@ let minFefol = document.querySelector("#minFefol").addEventListener("click", fun
 
     document.querySelector("#numberFefol").innerHTML = FefolNumber;
     document.querySelector("#priceFefol").innerHTML = 'قیمت کلی : ' + FefolPrice;
-}); 
+});
 
 
 let OsteoOneNumber = 1;
@@ -657,7 +719,7 @@ let minOsteoOne = document.querySelector("#minOsteoOne").addEventListener("click
 
     document.querySelector("#numberOsteoOne").innerHTML = OsteoOneNumber;
     document.querySelector("#priceOsteoOne").innerHTML = 'قیمت کلی : ' + OsteoOnePrice;
-}); 
+});
 
 
 let HerbalOmegaNumber = 1;
@@ -685,7 +747,7 @@ let minHerbalOmega = document.querySelector("#minHerbalOmega").addEventListener(
 
     document.querySelector("#numberHerbalOmega").innerHTML = HerbalOmegaNumber;
     document.querySelector("#priceHerbalOmega").innerHTML = 'قیمت کلی : ' + HerbalOmegaPrice;
-}); 
+});
 
 
 let XovitNumber = 1;
@@ -713,7 +775,7 @@ let minXovit = document.querySelector("#minXovit").addEventListener("click", fun
 
     document.querySelector("#numberXovit").innerHTML = XovitNumber;
     document.querySelector("#priceXovit").innerHTML = 'قیمت کلی : ' + XovitPrice;
-}); 
+});
 
 
 let GumfiNumber = 1;
@@ -741,7 +803,7 @@ let minGumfi = document.querySelector("#minGumfi").addEventListener("click", fun
 
     document.querySelector("#numberGumfi").innerHTML = GumfiNumber;
     document.querySelector("#priceGumfi").innerHTML = 'قیمت کلی : ' + GumfiPrice;
-}); 
+});
 
 
 let ZincPlusNumber = 1;
@@ -769,7 +831,7 @@ let minZincPlus = document.querySelector("#minZincPlus").addEventListener("click
 
     document.querySelector("#numberZincPlus").innerHTML = ZincPlusNumber;
     document.querySelector("#priceZincPlus").innerHTML = 'قیمت کلی : ' + ZincPlusPrice;
-}); 
+});
 
 
 let ZincPlus5Number = 1;
@@ -797,7 +859,7 @@ let minZincPlus5 = document.querySelector("#minZincPlus5").addEventListener("cli
 
     document.querySelector("#numberZincPlus5").innerHTML = ZincPlus5Number;
     document.querySelector("#priceZincPlus5").innerHTML = 'قیمت کلی : ' + ZincPlus5Price;
-}); 
+});
 
 
 let WominaVitNumber = 1;
@@ -825,7 +887,7 @@ let minWominaVit = document.querySelector("#minWominaVit").addEventListener("cli
 
     document.querySelector("#numberWominaVit").innerHTML = WominaVitNumber;
     document.querySelector("#priceWominaVit").innerHTML = 'قیمت کلی : ' + WominaVitPrice;
-}); 
+});
 
 let VitavisionNumber = 1;
 let VitavisionPrice = 465000;
@@ -852,7 +914,7 @@ let minVitavision = document.querySelector("#minVitavision").addEventListener("c
 
     document.querySelector("#numberVitavision").innerHTML = VitavisionNumber;
     document.querySelector("#priceVitavision").innerHTML = 'قیمت کلی : ' + VitavisionPrice;
-}); 
+});
 
 
 let SelenPlusNumber = 1;
@@ -880,7 +942,7 @@ let minSelenPlus = document.querySelector("#minSelenPlus").addEventListener("cli
 
     document.querySelector("#numberSelenPlus").innerHTML = SelenPlusNumber;
     document.querySelector("#priceSelenPlus").innerHTML = 'قیمت کلی : ' + SelenPlusPrice;
-}); 
+});
 
 
 let SideralForteNumber = 1;
@@ -908,7 +970,7 @@ let minSideralForte = document.querySelector("#minSideralForte").addEventListene
 
     document.querySelector("#numberSideralForte").innerHTML = SideralForteNumber;
     document.querySelector("#priceSideralForte").innerHTML = 'قیمت کلی : ' + SideralFortePrice;
-}); 
+});
 
 
 let SideralNumber = 1;
@@ -936,7 +998,7 @@ let minSideral = document.querySelector("#minSideral").addEventListener("click",
 
     document.querySelector("#numberSideral").innerHTML = SideralNumber;
     document.querySelector("#priceSideral").innerHTML = 'قیمت کلی : ' + SideralPrice;
-}); 
+});
 
 
 let AsmaVitNumber = 1;
@@ -964,7 +1026,7 @@ let minAsmaVit = document.querySelector("#minAsmaVit").addEventListener("click",
 
     document.querySelector("#numberAsmaVit").innerHTML = AsmaVitNumber;
     document.querySelector("#priceAsmaVit").innerHTML = 'قیمت کلی : ' + AsmaVitPrice;
-}); 
+});
 
 
 let IrofixNumber = 1;
@@ -992,7 +1054,7 @@ let minIrofix = document.querySelector("#minIrofix").addEventListener("click", f
 
     document.querySelector("#numberIrofix").innerHTML = IrofixNumber;
     document.querySelector("#priceIrofix").innerHTML = 'قیمت کلی : ' + IrofixPrice;
-}); 
+});
 
 
 let IMMUNACENumber = 1;
@@ -1020,7 +1082,7 @@ let minIMMUNACE = document.querySelector("#minIMMUNACE").addEventListener("click
 
     document.querySelector("#numberIMMUNACE").innerHTML = IMMUNACENumber;
     document.querySelector("#priceIMMUNACE").innerHTML = 'قیمت کلی : ' + IMMUNACEPrice;
-}); 
+});
 
 
 let FeroglobinNumber = 1;
@@ -1048,7 +1110,7 @@ let minFeroglobin = document.querySelector("#minFeroglobin").addEventListener("c
 
     document.querySelector("#numberFeroglobin").innerHTML = FeroglobinNumber;
     document.querySelector("#priceFeroglobin").innerHTML = 'قیمت کلی : ' + FeroglobinPrice;
-}); 
+});
 
 
 let EnergeXNumber = 1;
@@ -1076,7 +1138,7 @@ let minEnergeX = document.querySelector("#minEnergeX").addEventListener("click",
 
     document.querySelector("#numberEnergeX").innerHTML = EnergeXNumber;
     document.querySelector("#priceEnergeX").innerHTML = 'قیمت کلی : ' + EnergeXPrice;
-}); 
+});
 
 
 let Magnesium400Number = 1;
@@ -1104,7 +1166,7 @@ let minMagnesium400 = document.querySelector("#minMagnesium400").addEventListene
 
     document.querySelector("#numberMagnesium400").innerHTML = Magnesium400Number;
     document.querySelector("#priceMagnesium400").innerHTML = 'قیمت کلی : ' + Magnesium400Price;
-}); 
+});
 
 
 let ZincB6Number = 1;
@@ -1132,7 +1194,7 @@ let minZincB6 = document.querySelector("#minZincB6").addEventListener("click", f
 
     document.querySelector("#numberZincB6").innerHTML = ZincB6Number;
     document.querySelector("#priceZincB6").innerHTML = 'قیمت کلی : ' + ZincB6Price;
-}); 
+});
 
 
 let CalciPowerNumber = 1;
@@ -1160,7 +1222,7 @@ let minCalciPower = document.querySelector("#minCalciPower").addEventListener("c
 
     document.querySelector("#numberCalciPower").innerHTML = CalciPowerNumber;
     document.querySelector("#priceCalciPower").innerHTML = 'قیمت کلی : ' + CalciPowerPrice;
-}); 
+});
 
 
 let Calcium600Number = 1;
@@ -1188,7 +1250,7 @@ let minCalcium600 = document.querySelector("#minCalcium600").addEventListener("c
 
     document.querySelector("#numberCalcium600").innerHTML = Calcium600Number;
     document.querySelector("#priceCalcium600").innerHTML = 'قیمت کلی : ' + Calcium600Price;
-}); 
+});
 
 
 let AvodinNumber = 1;
@@ -1216,7 +1278,7 @@ let minAvodin = document.querySelector("#minAvodin").addEventListener("click", f
 
     document.querySelector("#numberAvodin").innerHTML = AvodinNumber;
     document.querySelector("#priceAvodin").innerHTML = 'قیمت کلی : ' + AvodinPrice;
-}); 
+});
 
 
 let CaffeineNumber = 1;
@@ -1244,7 +1306,7 @@ let minCaffeine = document.querySelector("#minCaffeine").addEventListener("click
 
     document.querySelector("#numberCaffeine").innerHTML = CaffeineNumber;
     document.querySelector("#priceCaffeine").innerHTML = 'قیمت کلی : ' + CaffeinePrice;
-}); 
+});
 
 
 
@@ -1410,7 +1472,7 @@ function vayClicked() {
     document.getElementById("vayBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("vayBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function gainerClicked() {
     document.getElementById("gainer").innerText = "مکمل گینر دوبیس به تعداد " + GainerDobisNumber + "عدد و به قیمت " + GainerDobisPrice + "هزار تومان.";
@@ -1420,7 +1482,7 @@ function gainerClicked() {
     document.getElementById("gainerBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("gainerBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function aminoSuperClicked() {
     document.getElementById("aminoSupper").innerText = "مکمل آمینو گلد 350عددی به تعداد " + AminoGoldSuppNumber + "عدد و به قیمت " + AminoGoldSuppPrice + "هزار تومان.";
@@ -1430,7 +1492,7 @@ function aminoSuperClicked() {
     document.getElementById("AminoPexBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("AminoPexBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function aminpGold() {
     document.getElementById("aminoApex").innerText = "قرص سوپر آمینو به تعداد  (apex)" + AminoApexNumber + "عدد و به قیمت " + AminoApexPrice + "هزار تومان.";
@@ -1440,7 +1502,7 @@ function aminpGold() {
     document.getElementById("aminpGoldBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("aminpGoldBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function cratinClicked() {
     document.getElementById("cratine").innerText = "مکمل کراتین به تعداد " + CratinFarmaNumber + "عدد و به قیمت " + CratinFarmaPrice + "هزار تومان.";
@@ -1450,7 +1512,7 @@ function cratinClicked() {
     document.getElementById("cratinBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("cratinBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function vitaminCClicked() {
     document.getElementById("vitaminC").innerText = "ویتامین سی به تعداد " + VitaminCNumber + "عدد و به قیمت " + VitaminCPrice + "هزار تومان.";
@@ -1460,7 +1522,7 @@ function vitaminCClicked() {
     document.getElementById("VitaminCBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("VitaminCBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function HairVitClicked() {
     document.getElementById("HairVit").innerText = " ویتامین مو | Hair-vit به تعداد " + HairVitNumber + "عدد و به قیمت " + HairVitPrice + "هزار تومان.";
@@ -1470,7 +1532,7 @@ function HairVitClicked() {
     document.getElementById("HairVitBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("HairVitBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function DayVitClicked() {
     document.getElementById("DayVit").innerText = "  مولتی ویتامین | Day-vit به تعداد " + DayVitNumber + "عدد و به قیمت " + DayVitPrice + "هزار تومان.";
@@ -1480,7 +1542,7 @@ function DayVitClicked() {
     document.getElementById("DayVitBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("DayVitBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function OsteoPlusClicked() {
     document.getElementById("OsteoPlus").innerText = "  قرص استئوپلاس  | OsteaPlus به تعداد " + OsteoPlusNumber + "عدد و به قیمت " + OsteoPlusPrice + "هزار تومان.";
@@ -1490,7 +1552,7 @@ function OsteoPlusClicked() {
     document.getElementById("OsteoPlusBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("OsteoPlusBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function FastRunClicked() {
     document.getElementById("FastRun").innerText = "  کپسول فست ران  | FastRun به تعداد " + FastRunNumber + "عدد و به قیمت " + FastRunPrice + "هزار تومان.";
@@ -1500,7 +1562,7 @@ function FastRunClicked() {
     document.getElementById("FastRunBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("FastRunBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function CollagenPowderClicked() {
     document.getElementById("CollagenPowder").innerText = "  پودر کلاژن  | Collagen-Powder به تعداد " + CollagenPowderNumber + "عدد و به قیمت " + CollagenPowderPrice + "هزار تومان.";
@@ -1510,7 +1572,7 @@ function CollagenPowderClicked() {
     document.getElementById("CollagenPowderBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("CollagenPowderBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function OmegaHClicked() {
     document.getElementById("OmegaH").innerText = "  قرص امگا اچ 3  | Omega-H3 به تعداد " + OmegaHNumber + "عدد و به قیمت " + OmegaHPrice + "هزار تومان.";
@@ -1520,7 +1582,7 @@ function OmegaHClicked() {
     document.getElementById("OmegaHBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("OmegaHBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function FefolClicked() {
     document.getElementById("Fefol").innerText = "  کپسول ففول  | Fefol به تعداد " + FefolNumber + "عدد و به قیمت " + FefolPrice + "هزار تومان.";
@@ -1530,7 +1592,7 @@ function FefolClicked() {
     document.getElementById("FefolBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("FefolBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function OsteoOneClicked() {
     document.getElementById("OsteoOne").innerText = "  قرص استئوکینون  | Osteo Quinone به تعداد " + OsteoOneNumber + "عدد و به قیمت " + OsteoOnePrice + "هزار تومان.";
@@ -1540,7 +1602,7 @@ function OsteoOneClicked() {
     document.getElementById("OsteoOneBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("OsteoOneBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function HerbalOmegaClicked() {
     document.getElementById("HerbalOmega").innerText = "  کپسول هربال امگا 3  | Herbal Omega 3 به تعداد " + HerbalOmegaNumber + "عدد و به قیمت " + HerbalOmegaPrice + "هزار تومان.";
@@ -1550,7 +1612,7 @@ function HerbalOmegaClicked() {
     document.getElementById("HerbalOmegaBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("HerbalOmegaBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function XovitClicked() {
     document.getElementById("Xovit").innerText = "  قرص ایکسوویت فورت هلث اید  | Xovit Forte به تعداد " + XovitNumber + "عدد و به قیمت " + XovitPrice + "هزار تومان.";
@@ -1560,7 +1622,7 @@ function XovitClicked() {
     document.getElementById("XovitBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("XovitBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function GumfiClicked() {
     document.getElementById("Gumfi").innerText = "  پاستیل مولتی ویتامین دکتر گامفی  | Dr.Gumfi به تعداد " + GumfiNumber + "عدد و به قیمت " + GumfiPrice + "هزار تومان.";
@@ -1570,7 +1632,7 @@ function GumfiClicked() {
     document.getElementById("GumfiBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("GumfiBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function ZincPlusClicked() {
     document.getElementById("ZincPlus").innerText = "  کپسول زینک پلاس 10 میلی گرمی ب کمپلکس  | Zinc-PLus 10mg به تعداد " + ZincPlusNumber + "عدد و به قیمت " + ZincPlusPrice + "هزار تومان.";
@@ -1580,7 +1642,7 @@ function ZincPlusClicked() {
     document.getElementById("ZincPlusBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("ZincPlusBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function ZincPlus5Clicked() {
     document.getElementById("ZincPlus5").innerText = "  کپسول زینک پلاس 5 میلی گرمی ب کمپلکس  | Zinc-PLus 5mg به تعداد " + ZincPlus5Number + "عدد و به قیمت " + ZincPlus5Price + "هزار تومان.";
@@ -1590,7 +1652,7 @@ function ZincPlus5Clicked() {
     document.getElementById("ZincPlus5BuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("ZincPlus5BuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function WominaVitClicked() {
     document.getElementById("WominaVit").innerText = "  سافت ژل وومیناویت  | Womina-Vit به تعداد " + WominaVitNumber + "عدد و به قیمت " + WominaVitPrice + "هزار تومان.";
@@ -1600,7 +1662,7 @@ function WominaVitClicked() {
     document.getElementById("WominaVitBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("WominaVitBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function VitavisionClicked() {
     document.getElementById("Vitavision").innerText = "  کپسول ویتاویژن فورت  | Vitavision Forte به تعداد " + VitavisionNumber + "عدد و به قیمت " + VitavisionPrice + "هزار تومان.";
@@ -1610,7 +1672,7 @@ function VitavisionClicked() {
     document.getElementById("VitavisionBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("VitavisionBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function SelenPlusClicked() {
     document.getElementById("SelenPlus").innerText = "  کپسول سلن پلاس یوروویتال  | Selen Plus به تعداد " + SelenPlusNumber + "عدد و به قیمت " + SelenPlusPrice + "هزار تومان.";
@@ -1620,7 +1682,7 @@ function SelenPlusClicked() {
     document.getElementById("SelenPlusBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("SelenPlusBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function SideralForteClicked() {
     document.getElementById("SideralForte").innerText = "  کپسول سیدرال فورت  | Sideral Forte به تعداد " + SideralForteNumber + "عدد و به قیمت " + SideralFortePrice + "هزار تومان.";
@@ -1630,7 +1692,7 @@ function SideralForteClicked() {
     document.getElementById("SideralForteBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("SideralForteBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function SideralClicked() {
     document.getElementById("Sideral").innerText = "  کپسول سیدرال   | Sideral  به تعداد " + SideralNumber + "عدد و به قیمت " + SideralPrice + "هزار تومان.";
@@ -1640,7 +1702,7 @@ function SideralClicked() {
     document.getElementById("SideralBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("SideralBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function AsmaVitClicked() {
     document.getElementById("AsmaVit").innerText = "  شربت آسماویت ویتابیوتیکس ۲۰۰ میلی لیتر   | AsmaVit  به تعداد " + AsmaVitNumber + "عدد و به قیمت " + AsmaVitPrice + "هزار تومان.";
@@ -1650,7 +1712,7 @@ function AsmaVitClicked() {
     document.getElementById("AsmaVitBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("AsmaVitBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function IrofixClicked() {
     document.getElementById("Irofix").innerText = "  قطره آیروفیکس دایونیکس فارما   | Irofix  به تعداد " + IrofixNumber + "عدد و به قیمت " + IrofixPrice + "هزار تومان.";
@@ -1660,7 +1722,7 @@ function IrofixClicked() {
     document.getElementById("IrofixBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("IrofixBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function IMMUNACEClicked() {
     document.getElementById("IMMUNACE").innerText = "  شربت ایمیونیس ویتابیوتیکس 200 میلی لیتر   | VITABIOTICS IMMUNACE  به تعداد " + IMMUNACENumber + "عدد و به قیمت " + IMMUNACEPrice + "هزار تومان.";
@@ -1670,7 +1732,7 @@ function IMMUNACEClicked() {
     document.getElementById("IMMUNACEBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("IMMUNACEBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function FeroglobinClicked() {
     document.getElementById("Feroglobin").innerText = "  شربت فروگلوبین B12 ویتابیوتیکس ۲۰۰ میلی لیتر   | Feroglobin B12  به تعداد " + FeroglobinNumber + "عدد و به قیمت " + FeroglobinPrice + "هزار تومان.";
@@ -1680,7 +1742,7 @@ function FeroglobinClicked() {
     document.getElementById("FeroglobinBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("FeroglobinBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function EnergeXClicked() {
     document.getElementById("EnergeX").innerText = "  قرص انرژکس گلدن لایف   | Energe-X  به تعداد " + EnergeXNumber + "عدد و به قیمت " + EnergeXPrice + "هزار تومان.";
@@ -1690,7 +1752,7 @@ function EnergeXClicked() {
     document.getElementById("EnergeXBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("EnergeXBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function Magnesium400Clicked() {
     document.getElementById("Magnesium400").innerText = "  ساشه منیزیم 400 یوروویتال   | Magnesium 400  به تعداد " + Magnesium400Number + "عدد و به قیمت " + Magnesium400Price + "هزار تومان.";
@@ -1700,7 +1762,7 @@ function Magnesium400Clicked() {
     document.getElementById("Magnesium400BuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("Magnesium400BuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function ZincB6Clicked() {
     document.getElementById("ZincB6").innerText = "  قرص سیستین B6 زینک رازک   | Cystine B6 Zinc  به تعداد " + ZincB6Number + "عدد و به قیمت " + ZincB6Price + "هزار تومان.";
@@ -1710,7 +1772,7 @@ function ZincB6Clicked() {
     document.getElementById("ZincB6BuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("ZincB6BuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function CalciPowerClicked() {
     document.getElementById("CalciPower").innerText = "  قرص کلسی پاور هولیستیکا   | Calci Power  به تعداد " + CalciPowerNumber + "عدد و به قیمت " + CalciPowerPrice + "هزار تومان.";
@@ -1720,7 +1782,7 @@ function CalciPowerClicked() {
     document.getElementById("CalciPowerBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("CalciPowerBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function Calcium600Clicked() {
     document.getElementById("Calcium600").innerText = "  قرص کلسیم 600 و ویتامین D آلفا   | Calcium 600+D  به تعداد " + Calcium600Number + "عدد و به قیمت " + Calcium600Price + "هزار تومان.";
@@ -1730,7 +1792,7 @@ function Calcium600Clicked() {
     document.getElementById("Calcium600BuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("Calcium600BuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function AvodinClicked() {
     document.getElementById("Avodin").innerText = "  کپسول آوودین هولیستیکا   | Avodin  به تعداد " + AvodinNumber + "عدد و به قیمت " + AvodinPrice + "هزار تومان.";
@@ -1740,7 +1802,7 @@ function AvodinClicked() {
     document.getElementById("AvodinBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("AvodinBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
 function CaffeineClicked() {
     document.getElementById("Caffeine").innerText = "  قرص کافئین کارن   | Caffeine 200mg caren  به تعداد " + CaffeineNumber + "عدد و به قیمت " + CaffeinePrice + "هزار تومان.";
@@ -1750,5 +1812,5 @@ function CaffeineClicked() {
     document.getElementById("CaffeineBuyFinished").innerHTML = "به سبد خرید افزوده شد";
     setInterval(function () {
         document.getElementById("CaffeineBuyFinished").style.display = "none";
-}, 1000);
+    }, 1000);
 }
