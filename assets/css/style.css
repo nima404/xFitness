@@ -778,6 +778,19 @@ table {
     color: black !important;
     padding: 5px !important;
   }
+  .GroupingProgramTitle{
+    font-size: 15px;
+    font-family: 'Vazir-FD';
+    font-weight: bold;
+    padding: 15px;
+  }
+  .GroupingProgramParagraf{
+    font-size: 14px;
+    padding: 15px;
+  }
+  .paddVal{
+    padding: 0 10px 10px 10px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width:768px){
