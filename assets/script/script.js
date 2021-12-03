@@ -9,6 +9,8 @@
 //     alert("کپی شد");
 // }
 
+
+// golden
 function copyToClipboard(element) {
     var fname = document.getElementById("fname").value;
     var sexuality = document.getElementById("sexuality").value;
@@ -38,7 +40,6 @@ function copyToClipboard(element) {
 
     document.getElementById("saveCorrect").innerHTML = "اطلاعات شما در کلیپ بورد شما ذخیره شد ، در صورت صحیح بودن اطلاعات روی دکمه ثبت سفارش کلیک نمایید و سپس پیام کپی شده را انجا جای گذاری کنید."
 }
-
 
 function copyToClipboardWeghtLoss(element) {
     var fname = document.getElementById("fname").value;
@@ -70,9 +71,62 @@ function copyToClipboardWeghtLoss(element) {
     document.getElementById("saveCorrect").innerHTML = "اطلاعات شما در کلیپ بورد شما ذخیره شد ، در صورت صحیح بودن اطلاعات روی دکمه ثبت سفارش کلیک نمایید و سپس پیام کپی شده را انجا جای گذاری کنید."
 }
 
-// function svaeDiv() {
-    
-// }
+// silver
+function copyToClipboardpastSilver(element) {
+    var fname = document.getElementById("fname").value;
+    var sexuality = document.getElementById("sexuality").value;
+    var old = document.getElementById("old").value;
+    var heightWG = document.getElementById("heightWG").value;
+    var wheighttWG = document.getElementById("wheighttWG").value;
+    var bloodtype = document.getElementById("bloodtype").value;
+    var Armcircumference = document.getElementById("Armcircumference").value;
+    var Aroundtheabdomen = document.getElementById("Aroundtheabdomen").value;
+    var Roundleg = document.getElementById("Roundleg").value;
+    var Roundforearm = document.getElementById("Roundforearm").value;
+    var Hipcircumference = document.getElementById("Hipcircumference").value;
+    var Roundthigh = document.getElementById("Roundthigh").value;
+
+    document.getElementById("pastSilver").innerHTML =  "دوره افزایش وزن مبتدی (نقره ای)" + " " + "<br>" + fname + " " + "<br>" + "جنسیت :" + " " + String(sexuality) + " " + "<br>" + "سن :" + " " + Number(old) + " " + "<br>" + "قد :" + " " + Number(heightWG) + " " + "<br>" +
+        "وزن :" + " " + Number(wheighttWG) + " " + "<br>" + "گروه خونی :" + " " + String(bloodtype) + " " + "<br>" + "دور بازو :" + " " + Number(Armcircumference) + " " + "<br>"  + "دور شکم :" + " " + Number(Aroundtheabdomen) + " " + "<br>" + "دور ساق : " + " " + Number(Roundleg) + " " + "<br>" +
+        "دور ساعد : " + " " + Number(Roundforearm) + " " + "<br>" + "دور باسن :" + " " + Number(Hipcircumference) + " " + "<br>" + "دور ران :" + " " + Number(Roundthigh)
+        ;
+
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    document.getElementById("saveCorrect").innerHTML = "اطلاعات شما در کلیپ بورد شما ذخیره شد ، در صورت صحیح بودن اطلاعات روی دکمه ثبت سفارش کلیک نمایید و سپس پیام کپی شده را انجا جای گذاری کنید."
+}
+
+function copyToClipboardpastLossSilver(element) {
+    var fname = document.getElementById("fname").value;
+    var sexuality = document.getElementById("sexuality").value;
+    var old = document.getElementById("old").value;
+    var heightWG = document.getElementById("heightWG").value;
+    var wheighttWG = document.getElementById("wheighttWG").value;
+    var bloodtype = document.getElementById("bloodtype").value;
+    var Armcircumference = document.getElementById("Armcircumference").value;
+    var Aroundtheabdomen = document.getElementById("Aroundtheabdomen").value;
+    var Roundleg = document.getElementById("Roundleg").value;
+    var Roundforearm = document.getElementById("Roundforearm").value;
+    var Hipcircumference = document.getElementById("Hipcircumference").value;
+    var Roundthigh = document.getElementById("Roundthigh").value;
+
+    document.getElementById("pastLossSilver").innerHTML =  "دوره کاهش وزن مبتدی (نقره ای)" + " " + "<br>" + fname + " " + "<br>" + "جنسیت :" + " " + String(sexuality) + " " + "<br>" + "سن :" + " " + Number(old) + " " + "<br>" + "قد :" + " " + Number(heightWG) + " " + "<br>" +
+        "وزن :" + " " + Number(wheighttWG) + " " + "<br>" + "گروه خونی :" + " " + String(bloodtype) + " " + "<br>" + "دور بازو :" + " " + Number(Armcircumference) + " " + "<br>"  + "دور شکم :" + " " + Number(Aroundtheabdomen) + " " + "<br>" + "دور ساق : " + " " + Number(Roundleg) + " " + "<br>" +
+        "دور ساعد : " + " " + Number(Roundforearm) + " " + "<br>" + "دور باسن :" + " " + Number(Hipcircumference) + " " + "<br>" + "دور ران :" + " " + Number(Roundthigh)
+        ;
+
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    document.getElementById("saveCorrect").innerHTML = "اطلاعات شما در کلیپ بورد شما ذخیره شد ، در صورت صحیح بودن اطلاعات روی دکمه ثبت سفارش کلیک نمایید و سپس پیام کپی شده را انجا جای گذاری کنید."
+}
 
 
 

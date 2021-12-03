@@ -640,6 +640,9 @@ table {
     font-size: 12px;
     color: darkgoldenrod;
   }
+  .cardWGTitleTow span{
+      color: gray !important;
+  }
   .padStyl{
       padding: 5px;
   }

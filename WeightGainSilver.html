@@ -73,10 +73,6 @@
                     <label class="wGLable" for="bloodtype">گروه خونی</label>
                     <input class="wGInput" type="text" id="bloodtype" name="bloodtype" placeholder="AB+">
                     <br><br>
-                    <label class="wGLable" for="Traininghistory">سابقه تمرینی</label>
-                    <input class="wGInput" type="number" id="Traininghistory" name="Traininghistory"
-                        placeholder="3 سال">
-                    <br><br>
                     <label class="wGLable" for="Roundleg">دور ساق</label>
                     <input class="wGInput" type="number" id="Roundleg" name="Roundleg" placeholder="30cm">
                     <br><br>
@@ -115,18 +111,6 @@
         <div class="row mt-3">
             <div class="col-12">
                 <div>
-                    <p>
-                        توجه داشته باشید عکس از زاویه های
-                        <br>
-                        روبرو
-                        ،
-                        پشت
-                        ،
-                        بغل
-
-                        <br>
-                        نیاز این دوره میباشد.
-                    </p>
                     <p class="endWGparagraf"><i class="fa fa-caret-left" aria-hidden="true"></i>
                         پس از پر کردن اطلاعات بالا اول روی دکمه ی ذخیره اطلاعات کلیک کرده و سپس روی دکمه ثبت درخواست
                         کلیک نمایید. (اطلاعات شما در کلیپ بورد شما کپی شده است)
@@ -136,14 +120,14 @@
                 </div>
             </div>
             <div class="col-12" align=center>
-                <div id="past"></div>
+                <div id="pastSilver"></div>
             </div>
         </div>
 
         <div class="row mt-3">
             <div class="col-12">
                 <div align=center>
-                    <button onclick="copyToClipboard('#past')" class="saveInfo">ذخیره اطلاعات</button>
+                    <button onclick="copyToClipboardpastSilver('#pastSilver')" class="saveInfo">ذخیره اطلاعات</button>
                     <br>
                     <span id="saveCorrect"></span>
                     <br>
