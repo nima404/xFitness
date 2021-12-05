@@ -1,15 +1,4 @@
 
-// function handleCopy(id) {
-//     const r = document.createRange();
-//     r.selectNode(document.getElementById(id));
-//     window.getSelection().removeAllRanges();
-//     window.getSelection().addRange(r);
-//     document.execCommand("copy");
-//     window.getSelection().removeAllRanges();
-//     alert("کپی شد");
-// }
-
-
 // golden
 function copyToClipboard(element) {
     var fname = document.getElementById("fname").value;
@@ -138,8 +127,13 @@ $(document).ready(function(){
       $("#tableWG").toggle();
     });
   });
-
-
+  
+  $(document).ready(function(){
+    $("#exerciseToggle").click(function(event){
+        event.preventDefault();
+      $("#exerciseTable").toggle();
+    });
+  });
 
 
 
@@ -158,30 +152,86 @@ function timNameClick() {
     document.getElementById("learnDis").style.display = "none";
     document.getElementById("service").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("exercise").style.display = "none";
     document.getElementById("BMICalc").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
+
 }
 function homeClick() {
     document.getElementById("shHidTim").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "none";
     document.getElementById("BMICalc").style.display = "none";
     document.getElementById("service").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
     document.getElementById("learnDis").style.display = "none";
+    document.getElementById("exercise").style.display = "none";
     document.getElementById("shHid").style.display = "block";
 }
 let LearnClick = document.querySelector("#videoClick").addEventListener("click", function () {
     document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
     document.getElementById("serviceTshirt").style.display = "none";
     document.getElementById("BMICalc").style.display = "none";
     document.getElementById("service").style.display = "none";
     document.getElementById("learnDis").style.display = "block";
+    document.getElementById("exercise").style.display = "none";
     document.getElementById("shHid").style.display = "none";
 })
 
 
-// let activerull = document.getElementById("rules");
-// if (activerull = true){
-//     alert("activ")
-// }
+// click List
+
+let srviceCLick = document.getElementById("ServicesClick").addEventListener("click", function () {
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("exercise").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
+    document.getElementById("service").style.display = "block";
+})
+let ServicesTshirtClick = document.getElementById("ServicesTshirtClick").addEventListener("click", function () {
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("service").style.display = "none";
+    document.getElementById("exercise").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "block";
+})
+let BMICal = document.getElementById("BMICal").addEventListener("click", function () {
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("DietCode").style.display = "none";
+    document.getElementById("exercise").style.display = "none";
+    document.getElementById("service").style.display = "none";
+    document.getElementById("BMICalc").style.display = "block";
+})
+let Diet = document.getElementById("Diet").addEventListener("click", function () {
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("service").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
+    document.getElementById("exercise").style.display = "none";
+    document.getElementById("DietCode").style.display = "block";
+})
+let exercise = document.getElementById("exerciseClick").addEventListener("click" , function(){
+    document.getElementById("shHidTim").style.display = "none";
+    document.getElementById("learnDis").style.display = "none";
+    document.getElementById("shHid").style.display = "none";
+    document.getElementById("serviceTshirt").style.display = "none";
+    document.getElementById("service").style.display = "none";
+    document.getElementById("BMICalc").style.display = "none";
+    document.getElementById("exercise").style.display = "block";
+    document.getElementById("DietCode").style.display = "none";
+})
+
 
 // تغییر لیست مکمل ها در صفحه های یک دو سه چهار
 
@@ -247,13 +297,22 @@ let page4 = document.getElementById("page4").addEventListener("click", function 
     });
 })
 
-
 // الرت بعد از لود صفحه برای خرید مکمل
 
 // setTimeout(function () {
 //     confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!")
 // }, 4000);
 
+
+// BMI
+function BMIFunc() {
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+    var heightOrg = height / 100;
+    var BMIFirst = Number(weight) / Number(heightOrg) / Number(heightOrg);
+    var totalBMI = BMIFirst.toFixed(2);
+    document.getElementById("BMIResponse").innerHTML = " شاخص توده بدنی شما " + totalBMI + " است ";
+}
 
 
 // اسامی تیم (بیشتر و کمتر)
@@ -346,79 +405,7 @@ window.onclick = function (event) {
 }
 
 
-
-
-
-// BMi
-
-function BMIFunc() {
-    var weight = document.getElementById("weight").value;
-    var height = document.getElementById("height").value;
-    var heightOrg = height / 100;
-    var BMIFirst = Number(weight) / Number(heightOrg) / Number(heightOrg);
-    var totalBMI = BMIFirst.toFixed(2);
-    document.getElementById("BMIResponse").innerHTML = " شاخص توده بدنی شما " + totalBMI + " است ";
-}
-
-let srviceCLick = document.getElementById("ServicesClick").addEventListener("click", function () {
-    document.getElementById("shHidTim").style.display = "none";
-    document.getElementById("learnDis").style.display = "none";
-    document.getElementById("shHid").style.display = "none";
-    document.getElementById("serviceTshirt").style.display = "none";
-    document.getElementById("DietCode").style.display = "none";
-    document.getElementById("BMICalc").style.display = "none";
-    document.getElementById("service").style.display = "block";
-})
-let ServicesTshirtClick = document.getElementById("ServicesTshirtClick").addEventListener("click", function () {
-    document.getElementById("shHidTim").style.display = "none";
-    document.getElementById("learnDis").style.display = "none";
-    document.getElementById("shHid").style.display = "none";
-    document.getElementById("service").style.display = "none";
-    document.getElementById("DietCode").style.display = "none";
-    document.getElementById("BMICalc").style.display = "none";
-    document.getElementById("serviceTshirt").style.display = "block";
-})
-let BMICal = document.getElementById("BMICal").addEventListener("click", function () {
-    document.getElementById("shHidTim").style.display = "none";
-    document.getElementById("learnDis").style.display = "none";
-    document.getElementById("shHid").style.display = "none";
-    document.getElementById("serviceTshirt").style.display = "none";
-    document.getElementById("DietCode").style.display = "none";
-    document.getElementById("service").style.display = "none";
-    document.getElementById("BMICalc").style.display = "block";
-})
-let Diet = document.getElementById("Diet").addEventListener("click", function () {
-    document.getElementById("shHidTim").style.display = "none";
-    document.getElementById("learnDis").style.display = "none";
-    document.getElementById("shHid").style.display = "none";
-    document.getElementById("serviceTshirt").style.display = "none";
-    document.getElementById("service").style.display = "none";
-    document.getElementById("BMICalc").style.display = "none";
-    document.getElementById("DietCode").style.display = "block";
-})
-
-
-
-
-
-// دکمه ی کپی
-
-// function handleCopy(className) {
-//     // debugger
-//     const r = document.createRange();
-//     var divsClass = document.getElementsByClassName("modalBody").value;
-//     r.selectNode(divsClass);
-//     window.getSelection().removeAllRanges();
-//     window.getSelection().addRange(r);
-//     document.execCommand("copy");
-//     window.getSelection().removeAllRanges();
-//     alert("کپی شد");
-// }
-
-
-
 // تعداد و قیمت محصول
-
 
 let vayDobisNumber = 1;
 let vayDobisPrice = 1219000;

@@ -267,7 +267,7 @@ video{
   .dropdown a:hover {background-color: #ddd;}
   .show {display: block;}
 
-  #service , #serviceTshirt , #BMICalc , #DietCode{
+  #service , #serviceTshirt , #BMICalc , #DietCode , #exercise{
       display: none;
   }
   .serviceCard{
@@ -793,6 +793,33 @@ table {
   }
   .paddVal{
     padding: 0 10px 10px 10px;
+  }
+  .exerciseImg{
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+  }
+  .exerciseTitle{
+      font-size: 18px;
+      font-weight: bold;
+      color: darkgoldenrod;
+  }
+  .exerciseParagraf{
+      text-align: justify;
+      font-size: 14px;
+      line-height: 30px;
+      color: darkslategray;
+  }
+  .exerciseBtn{
+      background-color: darkgoldenrod;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+      color: white;
+      border-radius: 5px;
+  }
+  #exerciseTable{
+      display: none;
   }
 }
 
