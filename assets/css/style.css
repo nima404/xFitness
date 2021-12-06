@@ -743,10 +743,13 @@ table {
     text-align: justify;
     color: green;
   }
-  #tableWG{
+  #tableWG1{
+    display: none;
+}
+  #tableWG {
       display: none;
   }
-  #toggleWG{
+  #toggleWG , #toggleWG1{
       display: flex;
       align-items: center;
     background: darkgoldenrod;
@@ -3902,10 +3905,13 @@ table {
     text-align: justify;
     color: green;
   }
-  #tableWG{
+  #tableWG1{
       display: none;
   }
-  #toggleWG{
+  #tableWG {
+      display: none;
+  }
+  #toggleWG , #toggleWG1{
       display: flex;
       align-items: center;
     background: darkgoldenrod;

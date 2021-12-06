@@ -157,6 +157,12 @@ $(document).ready(function(){
     });
   });
 
+  $(document).ready(function(){
+    $("#toggleWG1").click(function(event){
+        event.preventDefault();
+      $("#tableWG1").toggle();
+    });
+  });
 
 
 
