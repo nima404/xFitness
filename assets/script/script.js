@@ -117,6 +117,28 @@ function copyToClipboardpastLossSilver(element) {
     document.getElementById("saveCorrect").innerHTML = "اطلاعات شما در کلیپ بورد شما ذخیره شد ، در صورت صحیح بودن اطلاعات روی دکمه ثبت سفارش کلیک نمایید و سپس پیام کپی شده را انجا جای گذاری کنید."
 }
 
+// exercise
+function copyToClipboardexercise(element){
+    var fname = document.getElementById("fname").value;
+    var sexuality = document.getElementById("sexuality").value;
+    var old = document.getElementById("old").value;
+    var heightWG = document.getElementById("heightWG").value;
+    var wheighttWG = document.getElementById("wheighttWG").value;
+    var phoneNumber = document.getElementById("phoneNum").value;
+
+    document.getElementById("pastLossSilver").innerHTML =  "دوره کاهش وزن مبتدی (نقره ای)" + " " + "<br>" + fname + " " + "<br>" + "شماره همراه :" + " " + Number(phoneNumber) + " " + "<br>" + "سن :" + " " + Number(old) + " " + "<br>" + "قد :" + " " + Number(heightWG) + " " + "<br>" +
+        "وزن :" + " " + Number(wheighttWG)
+        ;
+
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    document.getElementById("saveCorrect").innerHTML = "اطلاعات شما در کلیپ بورد شما ذخیره شد ، در صورت صحیح بودن اطلاعات روی دکمه ثبت سفارش کلیک نمایید و سپس پیام کپی شده را انجا جای گذاری کنید."
+}
+
 
 
 

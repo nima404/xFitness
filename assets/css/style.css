@@ -688,7 +688,7 @@ table {
     border-radius: 5px;
     font-size: 13px;
   }
-  #sexuality{
+  #sexuality , #sexualityex{
       width: 100%;
     height: 35px;
     border: none;
@@ -829,7 +829,7 @@ table {
         background-image: url(../img/BackEdit1-min.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50vh;
+        height: 55vh;
 
         /* min-height: 500px;  */
 
@@ -900,7 +900,7 @@ table {
     background: none;
     border: none;
     color: white;
-    margin: 20px 5px 0 0;
+    margin: 20px 0px 0 0;
     font-size: 12px;
 }
 
@@ -1001,7 +1001,7 @@ video{
   }
   .texteffectEdit{
       text-align: center;
-      margin-top: 14vh;
+      margin-top: 16vh;
       font-size: 28px;
   }
   .card-header{
@@ -1021,8 +1021,8 @@ video{
     border: none;
     background: none;
     font-size: 12px;
+    font-weight: bold;
   }
-
   .dropdown {
     position: relative;
     display: inline-block;
@@ -1034,12 +1034,11 @@ video{
     background-color: #f1f1f1f6;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.178);
     z-index: 1;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
-  
   .dropdown-content a {
       font-size: 13px;
     color: black;
@@ -1056,9 +1055,9 @@ video{
       width: 100px;
   }
   .dropdown a:hover {background-color: #ddd;}
-  
   .show {display: block;}
-  #service , #serviceTshirt , #BMICalc{
+
+  #service , #serviceTshirt , #BMICalc , #DietCode , #exercise{
       display: none;
   }
   .serviceCard{
@@ -1119,7 +1118,7 @@ video{
     box-shadow: 0px 0px 2px 0px rgb(189 189 189);
     border-radius: 5px;
     width: 60%;
-    height: 5                                                                                                                               vh;
+    height: 5vh;
     font-size: 12px;
   }
   .searchInput:focus{
@@ -1149,22 +1148,23 @@ video{
     border-radius: 0px 0px 50px 50px;
   }
   .copyBtn{
-    background: none;
-    border: none;
-    box-shadow: 0 0 2px 0 darkgoldenrod;
-    border-radius: 5px;
-    padding: 10px;
-    color: darkgoldenrod;
-    font-weight: bold;
+        background: darkgoldenrod;
+        border: none;
+        box-shadow: 0 0 2px 0 darkgoldenrod;
+        border-radius: 5px;
+        padding: 9px;
+        color: white;
+        font-weight: bold;
+        width: 90%;
   }
 
 .modalBody{
-display: none;
+    display: none;
     background: white;
-    padding: 10px;
+    padding: 5px;
     color: black;
     font-weight: bolder;
-    font-size: 10px;
+    font-size: 11px;
 }
 .posEstyle{
     border-radius: 8px;
@@ -1186,12 +1186,13 @@ display: none;
     padding: 15px;
 }
 .endTheCart{
-    width: 50%;
+    margin: 0 auto;
+    width: 80%;
     border: 2px solid darkgoldenrod;
     background: none;
     border-radius: 5px;
     margin: 5px;
-    padding: 10px;
+    padding: 8px;
     font-size: 15px;
     color: darkgoldenrod;
     font-weight: bold;
@@ -1307,9 +1308,309 @@ display: none;
     width: 50% !important;
     padding: 8px !important;
 }
-#mokamel2 , #mokamel3{
+#mokamel2 , #mokamel3 , #mokamel4{
     display: none;
 }
+.rulledt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rullinput{
+    display: inline-block;
+}
+.rulllabale{
+    display: inline-block;
+    font-size: 12px;
+}
+.rulcolor{
+    color: #0d6efd;
+}
+.titleInfoMokamel{
+    color: darkgoldenrod;
+}
+.titleInfoMokamel:focus{
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+}
+.titleInfoMokamel i{
+    color: darkgoldenrod;
+}
+.paragrafInfoMokamel{
+    text-align: justify;
+    font-size: 13px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.DietPic{
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+    display: block;
+    margin: 5px;
+}
+.DietParagrafFirst{
+    text-align: justify;
+    color: darkslategray;
+    font-size: 13px;
+    line-height: 30px;
+}
+.DietTitle{
+    font-size: 18px;
+    font-weight: bold;
+    color: darkgoldenrod;
+    text-align: center;
+}
+table {
+    border-collapse: collapse !important;
+    width: 100%;
+  }
+  
+  td {
+    border: 1px solid #dddddd !important;
+    text-align: center !important;
+    font-size: 12px;
+  }
+  th{
+    border: 1px solid #dddddd !important;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+  }
+  tr:nth-child(even) {
+    background-color: rgba(184, 135, 11, 0.671);
+    color: white;
+  }
+  .WeightGain{
+      text-align: right;
+      font-family: 'Vazir-FD';
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+  }
+  .PDFDownloadOne{
+      text-decoration: none;
+      color: blue;
+      display: inline-block;
+      font-size: 12px;
+  }
+  .strongParagraf{
+      color: darkslategray;
+      font-size: 13px;
+  }
+  .WeightGainCardPic{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .WeightGainCard{
+      border-radius: 8px;
+      box-shadow: 0 0 2px 0 rgb(184, 184, 184);
+  }
+  .cardSpan{
+    margin: 0 7px 0 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .changeNum{
+      text-decoration: line-through !important;
+      color: lightslategray !important;
+      font-weight: normal !important;
+  }
+  .cardWGTitle{
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+  }
+  .cardWGTitle span{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .cardWGTitleTow span{
+      color: gray !important;
+  }
+  .padStyl{
+      padding: 5px;
+  }
+  .divtakhfif{
+      display: inline-block;
+      width: 10%;
+  }
+  .spantakhfif{
+    display: inline-block;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 5px;
+    padding: 0px 9px 0 9px;
+    color: white;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  .orgTakhfifDiv{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .orgMani , .orgValyou{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .TomanSpan{
+    font-size: 9px;
+    font-weight: bold;
+    color: lightslategray;
+  }
+  .wGLable{
+      font-size: 12px;
+      color: rgb(60, 97, 97);
+  }
+  .wGInput{
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  #sexuality , #sexualityex{
+      width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px; 
+  }
+  .PwGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    box-shadow: 0 0 6px 0px rgb(223 223 223);
+    border-radius: 5px;
+  }
+  .fInputWidth{
+      height: 50%;
+  }
+  .endWGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    color: darkgoldenrod;
+  }
+  .fa-caret-left , .fa-caret-right{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .saveInfo{
+    background: none;
+    border: 2px solid darkgoldenrod;
+    border-radius: 5px;
+    width: 40%;
+    padding: 8px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+  .sendInfo{
+    background: darkgoldenrod;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    width: 55%;
+  }
+  #saveCorrect{
+    font-size: 12px;
+    line-height: 30px;
+    text-align: justify;
+    color: green;
+  }
+  #tableWG{
+      display: none;
+  }
+  #toggleWG{
+      display: flex;
+      align-items: center;
+    background: darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fa-caret-down{
+      padding: 5px;
+  }
+  .reqToW{
+    text-align: right;
+    font-family: 'Vazir-FD';
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #past , #pastWeghtLoss{
+    font-size: 13px;
+    color: rgb(60, 97, 97);
+  }
+  .backToHome{
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+  }
+  .bhIcon{
+    font-size: 18px !important;
+    color: black !important;
+    padding: 5px !important;
+  }
+  .GroupingProgramTitle{
+    font-size: 15px;
+    font-family: 'Vazir-FD';
+    font-weight: bold;
+    padding: 15px;
+  }
+  .GroupingProgramParagraf{
+    font-size: 14px;
+    padding: 15px;
+  }
+  .paddVal{
+    padding: 0 10px 10px 10px;
+  }
+  .exerciseImg{
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+  }
+  .exerciseTitle{
+      font-size: 18px;
+      font-weight: bold;
+      color: darkgoldenrod;
+  }
+  .exerciseParagraf{
+      text-align: justify;
+      font-size: 14px;
+      line-height: 30px;
+      color: darkslategray;
+  }
+  .exerciseBtn{
+      background-color: darkgoldenrod;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+      color: white;
+      border-radius: 5px;
+  }
+  #exerciseTable{
+      display: none;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width:992px){
@@ -1318,7 +1619,7 @@ display: none;
         background-image: url(../img/BackEdit1-min.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50vh;
+        height: 55vh;
 
         /* min-height: 500px;  */
 
@@ -1389,7 +1690,7 @@ display: none;
     background: none;
     border: none;
     color: white;
-    margin: 20px 5px 0 0;
+    margin: 20px 0px 0 0;
     font-size: 12px;
 }
 
@@ -1490,7 +1791,7 @@ video{
   }
   .texteffectEdit{
       text-align: center;
-      margin-top: 14vh;
+      margin-top: 16vh;
       font-size: 28px;
   }
   .card-header{
@@ -1510,8 +1811,8 @@ video{
     border: none;
     background: none;
     font-size: 12px;
+    font-weight: bold;
   }
-
   .dropdown {
     position: relative;
     display: inline-block;
@@ -1523,12 +1824,11 @@ video{
     background-color: #f1f1f1f6;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.178);
     z-index: 1;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
-  
   .dropdown-content a {
       font-size: 13px;
     color: black;
@@ -1545,9 +1845,9 @@ video{
       width: 100px;
   }
   .dropdown a:hover {background-color: #ddd;}
-  
   .show {display: block;}
-  #service , #serviceTshirt , #BMICalc{
+
+  #service , #serviceTshirt , #BMICalc , #DietCode , #exercise{
       display: none;
   }
   .serviceCard{
@@ -1608,7 +1908,7 @@ video{
     box-shadow: 0px 0px 2px 0px rgb(189 189 189);
     border-radius: 5px;
     width: 60%;
-    height: 5                                                                                                                               vh;
+    height: 5vh;
     font-size: 12px;
   }
   .searchInput:focus{
@@ -1638,22 +1938,23 @@ video{
     border-radius: 0px 0px 50px 50px;
   }
   .copyBtn{
-    background: none;
-    border: none;
-    box-shadow: 0 0 2px 0 darkgoldenrod;
-    border-radius: 5px;
-    padding: 10px;
-    color: darkgoldenrod;
-    font-weight: bold;
+        background: darkgoldenrod;
+        border: none;
+        box-shadow: 0 0 2px 0 darkgoldenrod;
+        border-radius: 5px;
+        padding: 9px;
+        color: white;
+        font-weight: bold;
+        width: 90%;
   }
 
 .modalBody{
-display: none;
+    display: none;
     background: white;
-    padding: 10px;
+    padding: 5px;
     color: black;
     font-weight: bolder;
-    font-size: 10px;
+    font-size: 11px;
 }
 .posEstyle{
     border-radius: 8px;
@@ -1675,12 +1976,13 @@ display: none;
     padding: 15px;
 }
 .endTheCart{
-    width: 50%;
+    margin: 0 auto;
+    width: 80%;
     border: 2px solid darkgoldenrod;
     background: none;
     border-radius: 5px;
     margin: 5px;
-    padding: 10px;
+    padding: 8px;
     font-size: 15px;
     color: darkgoldenrod;
     font-weight: bold;
@@ -1796,18 +2098,317 @@ display: none;
     width: 50% !important;
     padding: 8px !important;
 }
-#mokamel2 , #mokamel3{
+#mokamel2 , #mokamel3 , #mokamel4{
     display: none;
 }
+.rulledt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rullinput{
+    display: inline-block;
+}
+.rulllabale{
+    display: inline-block;
+    font-size: 12px;
+}
+.rulcolor{
+    color: #0d6efd;
+}
+.titleInfoMokamel{
+    color: darkgoldenrod;
+}
+.titleInfoMokamel:focus{
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+}
+.titleInfoMokamel i{
+    color: darkgoldenrod;
+}
+.paragrafInfoMokamel{
+    text-align: justify;
+    font-size: 13px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.DietPic{
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+    display: block;
+    margin: 5px;
+}
+.DietParagrafFirst{
+    text-align: justify;
+    color: darkslategray;
+    font-size: 13px;
+    line-height: 30px;
+}
+.DietTitle{
+    font-size: 18px;
+    font-weight: bold;
+    color: darkgoldenrod;
+    text-align: center;
+}
+table {
+    border-collapse: collapse !important;
+    width: 100%;
+  }
+  
+  td {
+    border: 1px solid #dddddd !important;
+    text-align: center !important;
+    font-size: 12px;
+  }
+  th{
+    border: 1px solid #dddddd !important;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+  }
+  tr:nth-child(even) {
+    background-color: rgba(184, 135, 11, 0.671);
+    color: white;
+  }
+  .WeightGain{
+      text-align: right;
+      font-family: 'Vazir-FD';
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+  }
+  .PDFDownloadOne{
+      text-decoration: none;
+      color: blue;
+      display: inline-block;
+      font-size: 12px;
+  }
+  .strongParagraf{
+      color: darkslategray;
+      font-size: 13px;
+  }
+  .WeightGainCardPic{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .WeightGainCard{
+      border-radius: 8px;
+      box-shadow: 0 0 2px 0 rgb(184, 184, 184);
+  }
+  .cardSpan{
+    margin: 0 7px 0 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .changeNum{
+      text-decoration: line-through !important;
+      color: lightslategray !important;
+      font-weight: normal !important;
+  }
+  .cardWGTitle{
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+  }
+  .cardWGTitle span{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .cardWGTitleTow span{
+      color: gray !important;
+  }
+  .padStyl{
+      padding: 5px;
+  }
+  .divtakhfif{
+      display: inline-block;
+      width: 10%;
+  }
+  .spantakhfif{
+    display: inline-block;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 5px;
+    padding: 0px 9px 0 9px;
+    color: white;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  .orgTakhfifDiv{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .orgMani , .orgValyou{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .TomanSpan{
+    font-size: 9px;
+    font-weight: bold;
+    color: lightslategray;
+  }
+  .wGLable{
+      font-size: 12px;
+      color: rgb(60, 97, 97);
+  }
+  .wGInput{
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  #sexuality , #sexualityex{
+      width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px; 
+  }
+  .PwGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    box-shadow: 0 0 6px 0px rgb(223 223 223);
+    border-radius: 5px;
+  }
+  .fInputWidth{
+      height: 50%;
+  }
+  .endWGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    color: darkgoldenrod;
+  }
+  .fa-caret-left , .fa-caret-right{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .saveInfo{
+    background: none;
+    border: 2px solid darkgoldenrod;
+    border-radius: 5px;
+    width: 40%;
+    padding: 8px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+  .sendInfo{
+    background: darkgoldenrod;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    width: 55%;
+  }
+  #saveCorrect{
+    font-size: 12px;
+    line-height: 30px;
+    text-align: justify;
+    color: green;
+  }
+  #tableWG{
+      display: none;
+  }
+  #toggleWG{
+      display: flex;
+      align-items: center;
+    background: darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fa-caret-down{
+      padding: 5px;
+  }
+  .reqToW{
+    text-align: right;
+    font-family: 'Vazir-FD';
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #past , #pastWeghtLoss{
+    font-size: 13px;
+    color: rgb(60, 97, 97);
+  }
+  .backToHome{
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+  }
+  .bhIcon{
+    font-size: 18px !important;
+    color: black !important;
+    padding: 5px !important;
+  }
+  .GroupingProgramTitle{
+    font-size: 15px;
+    font-family: 'Vazir-FD';
+    font-weight: bold;
+    padding: 15px;
+  }
+  .GroupingProgramParagraf{
+    font-size: 14px;
+    padding: 15px;
+  }
+  .paddVal{
+    padding: 0 10px 10px 10px;
+  }
+  .exerciseImg{
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+  }
+  .exerciseTitle{
+      font-size: 18px;
+      font-weight: bold;
+      color: darkgoldenrod;
+  }
+  .exerciseParagraf{
+      text-align: justify;
+      font-size: 14px;
+      line-height: 30px;
+      color: darkslategray;
+  }
+  .exerciseBtn{
+      background-color: darkgoldenrod;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+      color: white;
+      border-radius: 5px;
+  }
+  #exerciseTable{
+      display: none;
+  }
 }
 
 @media only screen and (min-width: 993px) and (max-width:1200px){
-
     .navbarOrg{
         background-image: url(../img/BackEdit1-min.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50vh;
+        height: 55vh;
 
         /* min-height: 500px;  */
 
@@ -1878,7 +2479,7 @@ display: none;
     background: none;
     border: none;
     color: white;
-    margin: 20px 5px 0 0;
+    margin: 20px 0px 0 0;
     font-size: 12px;
 }
 
@@ -1979,7 +2580,7 @@ video{
   }
   .texteffectEdit{
       text-align: center;
-      margin-top: 14vh;
+      margin-top: 16vh;
       font-size: 28px;
   }
   .card-header{
@@ -1999,8 +2600,8 @@ video{
     border: none;
     background: none;
     font-size: 12px;
+    font-weight: bold;
   }
-
   .dropdown {
     position: relative;
     display: inline-block;
@@ -2012,12 +2613,11 @@ video{
     background-color: #f1f1f1f6;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.178);
     z-index: 1;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
-  
   .dropdown-content a {
       font-size: 13px;
     color: black;
@@ -2034,9 +2634,9 @@ video{
       width: 100px;
   }
   .dropdown a:hover {background-color: #ddd;}
-  
   .show {display: block;}
-  #service , #serviceTshirt , #BMICalc{
+
+  #service , #serviceTshirt , #BMICalc , #DietCode , #exercise{
       display: none;
   }
   .serviceCard{
@@ -2097,7 +2697,7 @@ video{
     box-shadow: 0px 0px 2px 0px rgb(189 189 189);
     border-radius: 5px;
     width: 60%;
-    height: 5                                                                                                                               vh;
+    height: 5vh;
     font-size: 12px;
   }
   .searchInput:focus{
@@ -2127,22 +2727,23 @@ video{
     border-radius: 0px 0px 50px 50px;
   }
   .copyBtn{
-    background: none;
-    border: none;
-    box-shadow: 0 0 2px 0 darkgoldenrod;
-    border-radius: 5px;
-    padding: 10px;
-    color: darkgoldenrod;
-    font-weight: bold;
+        background: darkgoldenrod;
+        border: none;
+        box-shadow: 0 0 2px 0 darkgoldenrod;
+        border-radius: 5px;
+        padding: 9px;
+        color: white;
+        font-weight: bold;
+        width: 90%;
   }
 
 .modalBody{
-display: none;
+    display: none;
     background: white;
-    padding: 10px;
+    padding: 5px;
     color: black;
     font-weight: bolder;
-    font-size: 10px;
+    font-size: 11px;
 }
 .posEstyle{
     border-radius: 8px;
@@ -2164,12 +2765,13 @@ display: none;
     padding: 15px;
 }
 .endTheCart{
-    width: 50%;
+    margin: 0 auto;
+    width: 80%;
     border: 2px solid darkgoldenrod;
     background: none;
     border-radius: 5px;
     margin: 5px;
-    padding: 10px;
+    padding: 8px;
     font-size: 15px;
     color: darkgoldenrod;
     font-weight: bold;
@@ -2285,9 +2887,309 @@ display: none;
     width: 50% !important;
     padding: 8px !important;
 }
-#mokamel2 , #mokamel3{
+#mokamel2 , #mokamel3 , #mokamel4{
     display: none;
 }
+.rulledt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rullinput{
+    display: inline-block;
+}
+.rulllabale{
+    display: inline-block;
+    font-size: 12px;
+}
+.rulcolor{
+    color: #0d6efd;
+}
+.titleInfoMokamel{
+    color: darkgoldenrod;
+}
+.titleInfoMokamel:focus{
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+}
+.titleInfoMokamel i{
+    color: darkgoldenrod;
+}
+.paragrafInfoMokamel{
+    text-align: justify;
+    font-size: 13px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.DietPic{
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+    display: block;
+    margin: 5px;
+}
+.DietParagrafFirst{
+    text-align: justify;
+    color: darkslategray;
+    font-size: 13px;
+    line-height: 30px;
+}
+.DietTitle{
+    font-size: 18px;
+    font-weight: bold;
+    color: darkgoldenrod;
+    text-align: center;
+}
+table {
+    border-collapse: collapse !important;
+    width: 100%;
+  }
+  
+  td {
+    border: 1px solid #dddddd !important;
+    text-align: center !important;
+    font-size: 12px;
+  }
+  th{
+    border: 1px solid #dddddd !important;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+  }
+  tr:nth-child(even) {
+    background-color: rgba(184, 135, 11, 0.671);
+    color: white;
+  }
+  .WeightGain{
+      text-align: right;
+      font-family: 'Vazir-FD';
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+  }
+  .PDFDownloadOne{
+      text-decoration: none;
+      color: blue;
+      display: inline-block;
+      font-size: 12px;
+  }
+  .strongParagraf{
+      color: darkslategray;
+      font-size: 13px;
+  }
+  .WeightGainCardPic{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .WeightGainCard{
+      border-radius: 8px;
+      box-shadow: 0 0 2px 0 rgb(184, 184, 184);
+  }
+  .cardSpan{
+    margin: 0 7px 0 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .changeNum{
+      text-decoration: line-through !important;
+      color: lightslategray !important;
+      font-weight: normal !important;
+  }
+  .cardWGTitle{
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+  }
+  .cardWGTitle span{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .cardWGTitleTow span{
+      color: gray !important;
+  }
+  .padStyl{
+      padding: 5px;
+  }
+  .divtakhfif{
+      display: inline-block;
+      width: 10%;
+  }
+  .spantakhfif{
+    display: inline-block;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 5px;
+    padding: 0px 9px 0 9px;
+    color: white;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  .orgTakhfifDiv{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .orgMani , .orgValyou{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .TomanSpan{
+    font-size: 9px;
+    font-weight: bold;
+    color: lightslategray;
+  }
+  .wGLable{
+      font-size: 12px;
+      color: rgb(60, 97, 97);
+  }
+  .wGInput{
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  #sexuality , #sexualityex{
+      width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px; 
+  }
+  .PwGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    box-shadow: 0 0 6px 0px rgb(223 223 223);
+    border-radius: 5px;
+  }
+  .fInputWidth{
+      height: 50%;
+  }
+  .endWGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    color: darkgoldenrod;
+  }
+  .fa-caret-left , .fa-caret-right{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .saveInfo{
+    background: none;
+    border: 2px solid darkgoldenrod;
+    border-radius: 5px;
+    width: 40%;
+    padding: 8px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+  .sendInfo{
+    background: darkgoldenrod;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    width: 55%;
+  }
+  #saveCorrect{
+    font-size: 12px;
+    line-height: 30px;
+    text-align: justify;
+    color: green;
+  }
+  #tableWG{
+      display: none;
+  }
+  #toggleWG{
+      display: flex;
+      align-items: center;
+    background: darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fa-caret-down{
+      padding: 5px;
+  }
+  .reqToW{
+    text-align: right;
+    font-family: 'Vazir-FD';
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #past , #pastWeghtLoss{
+    font-size: 13px;
+    color: rgb(60, 97, 97);
+  }
+  .backToHome{
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+  }
+  .bhIcon{
+    font-size: 18px !important;
+    color: black !important;
+    padding: 5px !important;
+  }
+  .GroupingProgramTitle{
+    font-size: 15px;
+    font-family: 'Vazir-FD';
+    font-weight: bold;
+    padding: 15px;
+  }
+  .GroupingProgramParagraf{
+    font-size: 14px;
+    padding: 15px;
+  }
+  .paddVal{
+    padding: 0 10px 10px 10px;
+  }
+  .exerciseImg{
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+  }
+  .exerciseTitle{
+      font-size: 18px;
+      font-weight: bold;
+      color: darkgoldenrod;
+  }
+  .exerciseParagraf{
+      text-align: justify;
+      font-size: 14px;
+      line-height: 30px;
+      color: darkslategray;
+  }
+  .exerciseBtn{
+      background-color: darkgoldenrod;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+      color: white;
+      border-radius: 5px;
+  }
+  #exerciseTable{
+      display: none;
+  }
 }
 
 @media only screen and (min-width: 1201px){
@@ -2355,8 +3257,8 @@ display: none;
 
 .carslimg{
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     margin: 8px;
     box-shadow: 0 0 2px 1px darkgoldenrod;
@@ -2367,8 +3269,8 @@ display: none;
     background: none;
     border: none;
     color: white;
-    margin: 20px 5px 0 0;
-    font-size: 17px;
+    margin: 20px 0px 0 0;
+    font-size: 12px;
 }
 
 #shHid{
@@ -2435,8 +3337,9 @@ footer{
 }
 .callWithLi{
     font-size: 13px;
+    /* margin: 3px; */
+    display: inline-block;
     color: darkslateblue;
-    margin: 12px;
 }
 .callWithUl a{
     text-decoration: none;
@@ -2467,8 +3370,8 @@ video{
   }
   .texteffectEdit{
       text-align: center;
-      margin-top: 35vh;
-      font-size: 35px;
+      margin-top: 16vh;
+      font-size: 28px;
   }
   .card-header{
       background-color: white !important;
@@ -2486,9 +3389,9 @@ video{
     color: white;
     border: none;
     background: none;
-    font-size: 17px;
+    font-size: 12px;
+    font-weight: bold;
   }
-
   .dropdown {
     position: relative;
     display: inline-block;
@@ -2500,12 +3403,11 @@ video{
     background-color: #f1f1f1f6;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.178);
     z-index: 1;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
-  
   .dropdown-content a {
       font-size: 13px;
     color: black;
@@ -2522,9 +3424,9 @@ video{
       width: 100px;
   }
   .dropdown a:hover {background-color: #ddd;}
-  
   .show {display: block;}
-  #service , #serviceTshirt , #BMICalc{
+
+  #service , #serviceTshirt , #BMICalc , #DietCode , #exercise{
       display: none;
   }
   .serviceCard{
@@ -2585,7 +3487,7 @@ video{
     box-shadow: 0px 0px 2px 0px rgb(189 189 189);
     border-radius: 5px;
     width: 60%;
-    height: 5                                                                                                                               vh;
+    height: 5vh;
     font-size: 12px;
   }
   .searchInput:focus{
@@ -2615,22 +3517,23 @@ video{
     border-radius: 0px 0px 50px 50px;
   }
   .copyBtn{
-    background: none;
-    border: none;
-    box-shadow: 0 0 2px 0 darkgoldenrod;
-    border-radius: 5px;
-    padding: 10px;
-    color: darkgoldenrod;
-    font-weight: bold;
+        background: darkgoldenrod;
+        border: none;
+        box-shadow: 0 0 2px 0 darkgoldenrod;
+        border-radius: 5px;
+        padding: 9px;
+        color: white;
+        font-weight: bold;
+        width: 90%;
   }
 
 .modalBody{
-display: none;
+    display: none;
     background: white;
-    padding: 10px;
+    padding: 5px;
     color: black;
     font-weight: bolder;
-    font-size: 10px;
+    font-size: 11px;
 }
 .posEstyle{
     border-radius: 8px;
@@ -2652,12 +3555,13 @@ display: none;
     padding: 15px;
 }
 .endTheCart{
-    width: 50%;
+    margin: 0 auto;
+    width: 80%;
     border: 2px solid darkgoldenrod;
     background: none;
     border-radius: 5px;
     margin: 5px;
-    padding: 10px;
+    padding: 8px;
     font-size: 15px;
     color: darkgoldenrod;
     font-weight: bold;
@@ -2773,11 +3677,307 @@ display: none;
     width: 50% !important;
     padding: 8px !important;
 }
-#mokamel2 , #mokamel3{
+#mokamel2 , #mokamel3 , #mokamel4{
     display: none;
 }
-.videoWeb{
-    width: 70%;
-    height: 80%;
+.rulledt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.rullinput{
+    display: inline-block;
+}
+.rulllabale{
+    display: inline-block;
+    font-size: 12px;
+}
+.rulcolor{
+    color: #0d6efd;
+}
+.titleInfoMokamel{
+    color: darkgoldenrod;
+}
+.titleInfoMokamel:focus{
+    outline: none !important;
+    border: none;
+    box-shadow: none;
+}
+.titleInfoMokamel i{
+    color: darkgoldenrod;
+}
+.paragrafInfoMokamel{
+    text-align: justify;
+    font-size: 13px;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.DietPic{
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+    display: block;
+    margin: 5px;
+}
+.DietParagrafFirst{
+    text-align: justify;
+    color: darkslategray;
+    font-size: 13px;
+    line-height: 30px;
+}
+.DietTitle{
+    font-size: 18px;
+    font-weight: bold;
+    color: darkgoldenrod;
+    text-align: center;
+}
+table {
+    border-collapse: collapse !important;
+    width: 100%;
+  }
+  
+  td {
+    border: 1px solid #dddddd !important;
+    text-align: center !important;
+    font-size: 12px;
+  }
+  th{
+    border: 1px solid #dddddd !important;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 5px;
+  }
+  tr:nth-child(even) {
+    background-color: rgba(184, 135, 11, 0.671);
+    color: white;
+  }
+  .WeightGain{
+      text-align: right;
+      font-family: 'Vazir-FD';
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+  }
+  .PDFDownloadOne{
+      text-decoration: none;
+      color: blue;
+      display: inline-block;
+      font-size: 12px;
+  }
+  .strongParagraf{
+      color: darkslategray;
+      font-size: 13px;
+  }
+  .WeightGainCardPic{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .WeightGainCard{
+      border-radius: 8px;
+      box-shadow: 0 0 2px 0 rgb(184, 184, 184);
+  }
+  .cardSpan{
+    margin: 0 7px 0 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .changeNum{
+      text-decoration: line-through !important;
+      color: lightslategray !important;
+      font-weight: normal !important;
+  }
+  .cardWGTitle{
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+  }
+  .cardWGTitle span{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .cardWGTitleTow span{
+      color: gray !important;
+  }
+  .padStyl{
+      padding: 5px;
+  }
+  .divtakhfif{
+      display: inline-block;
+      width: 10%;
+  }
+  .spantakhfif{
+    display: inline-block;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 5px;
+    padding: 0px 9px 0 9px;
+    color: white;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  .orgTakhfifDiv{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .orgMani , .orgValyou{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .TomanSpan{
+    font-size: 9px;
+    font-weight: bold;
+    color: lightslategray;
+  }
+  .wGLable{
+      font-size: 12px;
+      color: rgb(60, 97, 97);
+  }
+  .wGInput{
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  #sexuality , #sexualityex{
+      width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 2px 0 rgb(194 194 194);
+    border-radius: 5px;
+    font-size: 13px; 
+  }
+  .PwGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    box-shadow: 0 0 6px 0px rgb(223 223 223);
+    border-radius: 5px;
+  }
+  .fInputWidth{
+      height: 50%;
+  }
+  .endWGparagraf{
+    text-align: justify;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 15px;
+    color: darkgoldenrod;
+  }
+  .fa-caret-left , .fa-caret-right{
+    font-size: 12px;
+    color: darkgoldenrod;
+  }
+  .saveInfo{
+    background: none;
+    border: 2px solid darkgoldenrod;
+    border-radius: 5px;
+    width: 40%;
+    padding: 8px;
+    color: darkgoldenrod;
+    font-weight: bold;
+  }
+  .sendInfo{
+    background: darkgoldenrod;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    width: 55%;
+  }
+  #saveCorrect{
+    font-size: 12px;
+    line-height: 30px;
+    text-align: justify;
+    color: green;
+  }
+  #tableWG{
+      display: none;
+  }
+  #toggleWG{
+      display: flex;
+      align-items: center;
+    background: darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fa-caret-down{
+      padding: 5px;
+  }
+  .reqToW{
+    text-align: right;
+    font-family: 'Vazir-FD';
+    font-size: 18px;
+    font-weight: bold;
+  }
+  #past , #pastWeghtLoss{
+    font-size: 13px;
+    color: rgb(60, 97, 97);
+  }
+  .backToHome{
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+  }
+  .bhIcon{
+    font-size: 18px !important;
+    color: black !important;
+    padding: 5px !important;
+  }
+  .GroupingProgramTitle{
+    font-size: 15px;
+    font-family: 'Vazir-FD';
+    font-weight: bold;
+    padding: 15px;
+  }
+  .GroupingProgramParagraf{
+    font-size: 14px;
+    padding: 15px;
+  }
+  .paddVal{
+    padding: 0 10px 10px 10px;
+  }
+  .exerciseImg{
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+  }
+  .exerciseTitle{
+      font-size: 18px;
+      font-weight: bold;
+      color: darkgoldenrod;
+  }
+  .exerciseParagraf{
+      text-align: justify;
+      font-size: 14px;
+      line-height: 30px;
+      color: darkslategray;
+  }
+  .exerciseBtn{
+      background-color: darkgoldenrod;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+      color: white;
+      border-radius: 5px;
+  }
+  #exerciseTable{
+      display: none;
+  }
 }
