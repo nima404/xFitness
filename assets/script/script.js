@@ -119,15 +119,16 @@ function copyToClipboardpastLossSilver(element) {
 
 // exercise
 function copyToClipboardexercise(element){
-    var fname = document.getElementById("fname").value;
-    var sexuality = document.getElementById("sexuality").value;
-    var old = document.getElementById("old").value;
-    var heightWG = document.getElementById("heightWG").value;
-    var wheighttWG = document.getElementById("wheighttWG").value;
+    var fname = document.getElementById("fnameex").value;
+    var sexuality = document.getElementById("sexualityex").value;
+    var old = document.getElementById("oldex").value;
+    var heightWG = document.getElementById("heightWGex").value;
+    var wheighttWG = document.getElementById("wheighttWGex").value;
     var phoneNumber = document.getElementById("phoneNum").value;
+    var Injury = document.getElementById("Injury").value;
 
-    document.getElementById("pastLossSilver").innerHTML =  "دوره کاهش وزن مبتدی (نقره ای)" + " " + "<br>" + fname + " " + "<br>" + "شماره همراه :" + " " + Number(phoneNumber) + " " + "<br>" + "سن :" + " " + Number(old) + " " + "<br>" + "قد :" + " " + Number(heightWG) + " " + "<br>" +
-        "وزن :" + " " + Number(wheighttWG)
+    document.getElementById("pastexercise").innerHTML =  "برنامه تمرینی" + " " + "<br>" + fname + " " + "<br>" + "شماره همراه :" + " " + Number(phoneNumber) + " " + "<br>" + "سن :" + " " + Number(old) + " " + "<br>" + "قد :" + " " + Number(heightWG) + " " + "<br>" +
+        "وزن :" + " " + Number(wheighttWG) + " " + "<br>" + "جنسیت: " + " " + String(sexuality) + " " + "<br>" + "اسیب دیدگی: " + " " + String(Injury)
         ;
 
     var $temp = $("<input>");
