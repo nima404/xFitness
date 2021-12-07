@@ -140,7 +140,16 @@ function copyToClipboardexercise(element){
     document.getElementById("saveCorrect").innerHTML = "اطلاعات شما در کلیپ بورد شما ذخیره شد ، در صورت صحیح بودن اطلاعات روی دکمه ثبت سفارش کلیک نمایید و سپس پیام کپی شده را انجا جای گذاری کنید."
 }
 
+// mokamel
+function handleCopy(element){
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
 
+    document.getElementById("copyFinished").innerHTML = "سفارشات شما در کلیپ بورد شما کپی شده ، بعد از کلیک روی ثبت سفارش و ورود به صفحه ی واتساپ ، متن کپی شده را paste کنید."
+}
 
 
 
@@ -326,11 +335,11 @@ let page4 = document.getElementById("page4").addEventListener("click", function 
     });
 })
 
-// الرت بعد از لود صفحه برای خرید مکمل
 
-// setTimeout(function () {
-//     confirm("برای خرید مکمل به قسمت خدمات رجوع کنید..!")
-// }, 4000);
+// الرت بعد از لود صفحه برای خرید مکمل یا ...
+setTimeout(function () {
+    confirm("برای خرید یا درخواست مکمل ، برنامه غذایی | تمرینی به قسمت خدمات رجوع کنید \n در نظر داشته باشید بعد از ثبت سفارش و وارد شدن به صفحه ی واتساپ ، متن کپی شده را paste  کنید. \n در نظر داشته باشید که هزینه پیک به عهده خریدار مکمل میباشید\n داخل شهر تهران : 20هزار تومان \n شهرستان ها : 30 هزارتومان")
+}, 5000);
 
 
 // BMI
